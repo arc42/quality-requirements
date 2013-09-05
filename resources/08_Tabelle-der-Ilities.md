@@ -4,6 +4,11 @@
 Draußen im Dschungel der Realität warten Dutzende verschiedener Qualitätsanforderungen oder Qualitätsziele auf ihre Erfüllung. Hier der Versuch, diese etwas präziser zu definieren.
 
 
+| Q-Merkmal    | Bedeutung  | Oberbegriffe |
+| :----------- | :--------- | :----------- |
+ 
+
+
 **Qualitätsmerkmal**
 **Bedeutung**
 **Oberbegriffe**

@@ -21,10 +21,13 @@ Anmerkung: Die Effizienz vorhandener Software können Sie "am lebenden Objekt" o
 
 Geschäftsziel(e):
 Effektives Testen, Test mit großen Datenmengen.
+
 Auslöser:
 Ein Tester benötigt für den Test des XY-Systems Testdaten.
+
 Reaktion:
 Der Testdaten-Generator erzeugt 1 Gigabyte an passenden, fachlich korrekten Testdaten.
+
 Zielwert:
 Laufzeit weniger als eine Stunde.
 
@@ -32,10 +35,13 @@ Laufzeit weniger als eine Stunde.
 
 Geschäftsziel(e):
 Genaues Reporting über Laufzeiten und genaue Fehlerdiagnose ohne Beeinträchtigung von Laufzeiten.
+
 Auslöser:
 Benutzer, Tester oder Administrator ruft eine Diagnosefunktion auf.
+
 Reaktion:
 Das System arbeitet ohne Einschränkung weiter.
+
 Zielwert:
 Alle Funktionen und Transaktionen des Systems laufen funktional korrekt. Laufzeiten sind gegenüber abgeschaltetem Diagnose-Subsystem höchstens 5% höher.
 
@@ -44,10 +50,13 @@ Alle Funktionen und Transaktionen des Systems laufen funktional korrekt. Laufzei
 
 Geschäftsziel(e):
 Performanter und pünktlicher Monatsabschluss
+
 Auslöser / Stimulus:
 Die Controlling- oder Finanz-Abteilung startet nach Buchungsschluss den Monatsabschluss.
+
 Reaktion:
 Das System generiert alle notwendigen Reports und Listen.
+
 Zielwert:
 Die Generierung endet spätestens nach 4h Laufzeit, erste (einfache) Reports stehen dem Controlling nach 30 Min Laufzeit zur Verfügung.
 
@@ -55,22 +64,29 @@ Die Generierung endet spätestens nach 4h Laufzeit, erste (einfache) Reports ste
 
 Geschäftsziel(e):
 Risikoarme Änderungen und Erweiterungen.
+
 Auslöser / Stimulus:
 Entwickler führt eine Änderung am Quellcode im Subsystem XY durch und startet anschliessend die automatisierte Testsuite (der Initegrations- und Unittsts) dieses Subsystems. 
+
 Reaktion:
 Das Testframework führt sämtliche Testfälle aus und berichtet die Testergebnisse an den Benutzer.
+
 Zielwert:
 Sämtliche Testfälle sind in weniger als 15 Minuten komplett ausgeführt.
+
 Bemerkung: Last-, Performance- oder Stresstests können unabhängig von den Integrationstests auch länger laufen. Diese sind nicht Bestandteil dieses Szenarios.
 
 #### Szenario: In 90% aller Fälle erhalten Benutzer die XY-Daten innerhalb von 3 Sekunden. 
 
 Geschäftsziel(e):
 Paralleles Arbeiten mehrerer Benutzer ist mit akzeptabler Laufzeit möglich
+
 Auslöser / Stimulus:
 10 echt parallel arbeitende Benutzer fordern vom System die XY-Daten an.
+
 Reaktion:
 Das System zeigt bei allen anfordernden Benutzern die korrekten Daten an.
+
 Zielwert:
 Bei mindestens 9 von 10 dieser Benutzer dauert diese Anfrage 3 Sekunden oder weniger (in 90% der Anfragen nach den XY-Daten antwortet das System in 3 Sekunden oder schneller).
 
@@ -78,11 +94,14 @@ Bei mindestens 9 von 10 dieser Benutzer dauert diese Anfrage 3 Sekunden oder wen
 
 Geschäftsziel(e):
 Fähigkeit des Systems, seine Funktionsfähigkeit, insbesondere an der GUI, auch bei mehreren parallelen Benutzern zu erhalten.
+
 Auslöser:
 200 oder mehr Benutzer sind am System angemeldet.
 20 oder mehr Benutzer arbeiten gleichzeitig im XY-Dialog aus oder starten eine YZ-Berechnung.
+
 Reaktion:
 Das System arbeitet normal und bedient sämtliche Benutzer.
+
 Zielwert:
 Die Reaktionen des Systems im XY-Dialog erfolgen innerhalb von 2 Sekunden.
 Das System führt die YZ-Berechnung in weniger als 5 Sekunden durch. 
@@ -92,8 +111,10 @@ Bemerkung: Skalierbarkeit
 
 Geschäftsziel(e):
 Reaktive Benutzeroberfläche steigert Bedienkomfort.
+
 Auslöser:
 Benutzer hat einen spezifischen Report konfiguriert und speichert diesen über die "speichern" Funktion ab.
+
 Reaktion und Zielwert:
 Das System speichert die gesamte Reportdefinition (im xml-Format) in weniger als 1 Sekunde. 
 
@@ -102,8 +123,10 @@ Das System speichert die gesamte Reportdefinition (im xml-Format) in weniger als
 
 Geschäftsziel(e):
 Reaktive Benutzeroberfläche steigert Bedienkomfort.
+
 Auslöser:
 Benutzer startet die Konfigurationsoberfläche für Reports.
+
 Reaktion und Zielwert:
 Beim Start der Report-Konfigurationsoberfläche erscheint eine gemäß des Benutzeprofils aufbereitete grafische Oberfläche in weniger als 2 Sekunden.
 
