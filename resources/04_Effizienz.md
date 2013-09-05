@@ -131,4 +131,15 @@ Reaktion und Zielwert:
 Beim Start der Report-Konfigurationsoberfläche erscheint eine gemäß des Benutzeprofils aufbereitete grafische Oberfläche in weniger als 2 Sekunden.
 
 
+#### Szenario: Die Anwendung soll als Sockel nur 1 GB RAM benötigen und pro gleichzeitig eingeloggten User nicht mehr als weitere 5 MB
+
+Geschäftsziel(e):
+Die Anwendung soll zur Verfügung gestellte Systemressourcen effizient nutzen und Wachstum der Mitarbeiter ermöglichen.
+
+Auslöser:
+Ein Benutzer meldet sich am System an.
+
+Reaktion und Zielwert:
+Die Anwendung soll als Sockel nur 1 GB RAM benötigen und pro gleichzeitig eingeloggten User nicht mehr als weitere 5 MB. Nach dem Logout müssen die 5 MB wieder zur freien Verfügung stehen.
+
 
