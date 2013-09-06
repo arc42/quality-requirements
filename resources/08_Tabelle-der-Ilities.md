@@ -4,34 +4,32 @@
 Draußen im Dschungel der Realität warten Dutzende verschiedener Qualitätsanforderungen oder Qualitätsziele auf ihre Erfüllung. Hier der Versuch, diese etwas präziser zu definieren.
 
 
-| Q-Merkmal    | Bedeutung  | Oberbegriffe |
-| :----------- | :--------- | :----------- |
- 
 
+ 
+| Q-Merkmal        | Bedeutung           | Oberbegriffe   |
+| :-------------   |:--------------------| :------------- |
+| Absturzsicherheit |                    | Zuverlässigkeit |
+| Administrierbarkeit | Benötigter Aufwand zur Administration (Verwaltung) einer Software | Betreibbarkeit|
+| Analysierbarkeit | Aufwand, um Mängel oder Ursachen von Versagen zu diagnostizieren oder um änderungsbedürftige Teile zu bestimmen | Änderbarkeit |
+| Änderbarkeit | Aufwand, der zur Durchführung vorgegebener Änderungen notwendig ist. Änderungen sind Korrekturen, Verbesserungen oder Anpassungen der Umgebung, Infrastruktur, Betriebsmittel, der Anforderungen, der internen Struktur, der Implementierung oder technischer Konzepte. |
+| Angemessenheit | Liefern der richtigen oder vereinbarten Ergebnisse oder Wirkungen, z.B. die benötigte Genauigkeit berechneter Ergebnisse.| Funktionalität |
+| Anpassbarkeit | Fähigkeit der Software zur Anpassung an verschiedene Umgebungen oder Nutzungsszenarien. | Änderbarkeit |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+
+## Steinbruch - durch miserable Konvertierung aus Word-docx entstanden
 
 **Qualitätsmerkmal**
 **Bedeutung**
 **Oberbegriffe**
-Absturzsicherheit
 
-Zuverlässigkeit
-Administrierbarkeit
-Benötigter Aufwand zur Administration (Verwaltung) einer Software
-Betreibbarkeit, 
-Analysierbarkeit
-Aufwand, um Mängel oder Ursachen von Versagen zu diagnostizieren oder um änderungsbedürftige Teile zu bestimmen
-Änderbarkeit
-Änderbarkeit
-Aufwand, der zur Durchführung vorgegebener Änderungen notwendig ist. 
-Änderungen sind Korrekturen, Verbesserungen oder Anpassungen der Umgebung, Infrastruktur, Betriebsmittel, der Anforderungen, der internen Struktur, der Implementierung oder technischer Konzepte.
 
-Angemessenheit
-Liefern der richtigen oder vereinbarten Ergebnisse oder Wirkungen, z.B. die benötigte Genauigkeit berechneter Ergebnisse.
-Funktionalität
-Anpassbarkeit
-Fähigkeit der Software zur Anpassung an verschiedene Umgebungen oder Nutzungsszenarien.
 
-Änderbarkeit
+
 Antwortzeit
 Zeit, bis die Software ein gewünschtes Ergebnis erzielt oder errechnet.
 Effizienz
