@@ -40,3 +40,12 @@ Ein automatischer Installer (Skript, Programm) installiert auf Basis einer Ubunt
 
 Zielwert:
 Die gesamte Installation dauert auf Basis eines bereits installierten Ubuntu-Linux höchstens 30 Minuten.
+
+#### Szenario: Langlebigkeit
+
+Die Software kann &uuml;ber 20 Jahre hinweg auf jeweils aktueller Hardware und Software (Betriebssysteme, DB-Systeme usw.)  portiert werden,
+wozu nicht mehr als 5 Personentage pro Monat investiert werden m&uuml;ssen.
+
+#### Szenario: Unabh&auml;ngigkeit der Installation von Zuf&auml;llen des Internets
+
+Die Software l&auml;sst sich auf einem System  installieren, ohne dass ein Internetzugang vorhanden ist.
