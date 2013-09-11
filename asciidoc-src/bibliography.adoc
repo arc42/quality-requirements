@@ -1,0 +1,15 @@
+
+[bibliography]
+
+* [[[bass09]]] Len Bass et.al.: Software Architecture in Practice. Addision-Wesley, 2. Auflage 2009.
+
+* [[[clements01]]] Paul Clements et.al.: Evaluating Software Architectures. Addision-Wesley, 2001.
+
+* [[[robertson12]]] S. und J. Robertson: Mastering the Requirements Process - Getting Requirements Right. Addision-Wesley, 3. Auflage 2012.
+
+* [[[rupp09]]] Chris Rupp et.al: Requirements Engineering und -management. Hanser-Verlag, 5. Auflage 2009.
+
+* [[[eeles05]]] Peter Eeles: Capturing Architectural Requirements. http://www.ibm.com/developerworks/rational/library/4706.html. Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.
+
+
+

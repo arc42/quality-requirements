@@ -1,0 +1,26 @@
+// header file for quality-requirements
+//
+// Includes all the rest
+// ====================================
+
+= Beispiele für Qualitätsanforderungen an Software 
+Dr. Gernot Starke <gernot.starke@innoq.com>
+v0.5 
+:toc: 
+:imagesdir: ./images
+:homepage: http://arc42.bitbucket.org/quality-requirements
+:numbered:
+
+// TODO: funktioniert nicht
+//:icons: font
+
+include::01_intro.adoc[]
+
+include::02_aenderbarkeit.adoc[]
+
+include::03_benutzbarkeit.adoc[]
+
+
+
+
+
