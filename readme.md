@@ -22,7 +22,10 @@ Ich freue mich über konstruktive Kritik und Verbesserungsvorschläge sowie Beit
 
 ## Changes
 
-* 9. September 2013: Umstellung auf AsciiDoc für besseres Tagging, Website-Export etc.
-* 4. September 2013: (Automatische) Konvertierung in Markdown
+* September 2013: Umstellung auf gradle-build
+* September 2013: Umstellung auf AsciiDoc für besseres Tagging, Website-Export etc.
+* September 2013: (Automatische) Konvertierung in Markdown
 * Juli 2013: (Automatische) Konvertierung in docx, für Kompatibilität
 * Dezember 2012: Initiale Version (in Scrivener)
+
+

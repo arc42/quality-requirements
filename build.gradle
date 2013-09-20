@@ -14,6 +14,7 @@ apply plugin: 'asciidoctor'
 
 
 asciidoctor {
+    sourceDocumentName = new File("${sourceDir}/index.adoc")
     outputDir = new File("$buildDir/docs")
     options = [
     

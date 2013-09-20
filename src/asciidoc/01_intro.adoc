@@ -4,7 +4,9 @@
 
 :numbered!:
 == Über Qualität
-Die Qualität eines Produktes oder Systems ist ganz allgemein als die Summe seiner Eigenschaften definiert.
+Die Qualität eines Produktes oder Systems ist ganz allgemein als Menge von Eigenschaften oder Merkmalen definiert.
+
+
 
 In der Praxis haben sich einige Kategorien (Oberbegriffe) für häufig auftretende _Qualitätsanforderungen_ 
 (synonym: Qualitätsziele) etabliert, im wesentlichen durch das DIN/ISO 9126 Begriffsmodell geprägt.
@@ -32,9 +34,6 @@ Sie eine umfangreiche Tabelle der Q-Merkmale mit ihren Synonymen und
 Oberbegriffen.
 
 
-IMPORTANT: Der Anhang selbst fehlt noch
-
-
 
 :numbered!:
 === Quellen
@@ -44,7 +43,6 @@ Die Ideen zu den hier aufgeführten Szenarien und Qualitätsanforderungen
 stammen aus unterschiedlichen Quellen und Projekten. Ich habe alle
 überarbeitet und weitgehend neutralisiert. Die Erklärungen von
 Qualitätsmerkmalen stammen teilweise aus DIN/ISO 9126 bzw. dem FURPS-Modell+.
-
 include::bibliography.adoc[]
 
 
