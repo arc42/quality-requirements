@@ -6,13 +6,13 @@ Die Ideen zu den hier aufgeführten Szenarien und Qualitätsanforderungen stamme
 
 
 ## Download ##
-Zur Zeit gibt es diese Szenarien nur in docx-Format. 
+Zur Zeit gibt es diese Szenarien in html, docx und docbook Format. 
 
 Download [hier, direkt von BitBucket](https://bitbucket.org/arc42/quality-requirements/downloads/Beispiele-fu%CC%88r-Qualita%CC%88tsziele-short.docx "Qualitätsanforderungen-Beispiele-docx").
 
-* Eine erste Version in Markdown-Format liegt unter /resources. 
-* Dazu gehört pandoc, umdie einzelnen Files zusammenzuführen.
-
+* Quellen liegen in asciidoc-Format unter /src/asciidoc.
+* Notwendig zum übersetzen der adoc-Texte: entweder asciidoc oder asciidoctor  
+* Zur Konvertierung in docx: pandoc
 
 
 
