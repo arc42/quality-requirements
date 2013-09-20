@@ -1,13 +1,10 @@
-
-
-
-# Sonstige Qualitätsanforderungen
+## Sonstige Qualitätsanforderungen
 
 Da hätten wir noch eine nahzu beliebige Menge weiterer Qualitätsanforderungen, beispielsweise Funktionalität. Oder diverse Synonyme bereits vorgestellter Q-Merkmale :-)
 
 Einige Definitionen:
 
-## Funktionalität:
+### Funktionalität:
 
 Vorhandensein von Funktionen mit festgelegten Eigenschaften; diese Funktionen erfüllen die definierten Anforderungen. Zu Funktionalität gehören nach DIN/ISO 9126 noch folgende Teilmerkmale:
 
@@ -17,9 +14,10 @@ Vorhandensein von Funktionen mit festgelegten Eigenschaften; diese Funktionen er
 * _Ordnungsmäßigkeit_: Erfüllung von anwendungsspezifischen Normen, Vereinbarungen, gesetzlichen Bestimmungen und ähnlichen Vorschriften.
 
 
-## Sonstige Szenarien
+### Sonstige Szenarien
 
-#### Szenario: Ein Werkzeug zur Performancemessung muss für unterschiedliche Datenbanksysteme zur Verfügung stehen. 
+##### Szenario: 
+Ein Werkzeug zur Performancemessung muss für unterschiedliche Datenbanksysteme zur Verfügung stehen. 
 Qualitätsziele: Portabilität, Effizienz, Betreibbarkeit
 
 Geschäftsziel(e):
@@ -34,7 +32,9 @@ Das Werkzeug stellt die Verbindung zum jeweiligen DBMS erfolgreich her - im Werk
 Zielwert:
 Der "connect" zur Datenbank erfolgt innerhalb von 30 Sekunden.
 
-#### Szenario: Die Kernfunktionen der Mac-OS Software können unter iOS und Android wiederverwendet werden. 
+#### Szenario: Kernfunktion portabel auf iOS und Android
+Die Kernfunktionen der Mac-OS Software können unter iOS und Android wiederverwendet werden. 
+
 Qualitätsziele: Wiederverwendbarkeit, Austauschbarkeit
 
 Geschäftsziel(e):
@@ -52,6 +52,7 @@ Ausnahme hiervon sind direkte Aufrufe der jeweiligen Betriebssystemfunktionen.
 
 
 #### Szenario: 60% Testabdeckung für Unit-Tests. 
+
 Qualitätsziele: Testbarkeit, Änderbarkeit
 
 Geschäftsziel(e):

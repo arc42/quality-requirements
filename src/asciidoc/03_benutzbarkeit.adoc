@@ -164,6 +164,6 @@ Erhöhe die Akzeptanz und Produktivität der Arbeit mit dem System.
 Auslöser::
 Alle Anforderungen an das System.
 
-Zielwert::
+Zielwert:: 
 Das System erfordert keine Benutzerinteraktion außerhalb der grafischen Oberfläche.
 

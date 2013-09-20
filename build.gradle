@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenRepo name: 'Bintray Asciidoctor repo', url: 'http://dl.bintray.com/content/aalmiray/asciidoctor'
+        mavenRepo name: 'Bintray JCenter', url: 'http://jcenter.bintray.com'
+    }
+
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.4.1'
+    }
+
+}
+
+apply plugin: 'asciidoctor'
+
+
+asciidoctor {
+    outputDir = new File("$buildDir/docs")
+    options = [
+    
+        attributes: [
+                      '-o': "quality-requirements.html",
+                      toc: '3'
+      
+                    ]
+              ]
+}
+

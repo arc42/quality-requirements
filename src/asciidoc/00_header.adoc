@@ -20,6 +20,15 @@ include::02_aenderbarkeit.adoc[]
 
 include::03_benutzbarkeit.adoc[]
 
+include::04_effizienz.adoc[]
+
+include::05_zuverlaessigkeit.adoc[]
+
+include::06_betreibbarkeit.adoc[]
+
+include::07_sonstige_anforderungen.adoc[]
+
+include::tabelle_der_q_merkmale.adoc[]
 
 
 
