@@ -1,140 +1,155 @@
-## Sonstige Qualitätsanforderungen
+== Sonstige Qualitätsanforderungen
 
 Da hätten wir noch eine nahzu beliebige Menge weiterer Qualitätsanforderungen, beispielsweise Funktionalität. Oder diverse Synonyme bereits vorgestellter Q-Merkmale :-)
 
 Einige Definitionen:
 
-### Funktionalität:
+=== Funktionalität:
 
 Vorhandensein von Funktionen mit festgelegten Eigenschaften; diese Funktionen erfüllen die definierten Anforderungen. Zu Funktionalität gehören nach DIN/ISO 9126 noch folgende Teilmerkmale:
 
-* _Richtigkeit_: Liefern der richtigen oder vereinbarten Ergebnisse oder Wirkungen, z.B. die benötigte Genauigkeit von berechneten Werten.
-* _Angemessenheit_: Eignung der Funktionen für spezifizierte Aufgaben, z.B. aufgaben-orientierte Zusammensetzung von Funktionen aus Teilfunktionen.
-* _Interoperabilität_: Fähigkeit, mit vorgegebenen Systemen zusammenzuwirken. Hierunter fällt auch die Einbettung in die Betriebsinfrastruktur.
-* _Ordnungsmäßigkeit_: Erfüllung von anwendungsspezifischen Normen, Vereinbarungen, gesetzlichen Bestimmungen und ähnlichen Vorschriften.
+*Richtigkeit*:: Liefern der richtigen oder vereinbarten Ergebnisse oder Wirkungen, z.B. die benötigte Genauigkeit von berechneten Werten.
+*Angemessenheit*:: Eignung der Funktionen für spezifizierte Aufgaben, z.B. aufgaben-orientierte Zusammensetzung von Funktionen aus Teilfunktionen.
+*Interoperabilität*:: Fähigkeit, mit vorgegebenen Systemen zusammenzuwirken. Hierunter fällt auch die Einbettung in die Betriebsinfrastruktur.
+*Ordnungsmäßigkeit*:: Erfüllung von anwendungsspezifischen Normen, Vereinbarungen, gesetzlichen Bestimmungen und ähnlichen Vorschriften.
 
 
-### Sonstige Szenarien
+=== Sonstige Szenarien
 
-##### Szenario: 
-Ein Werkzeug zur Performancemessung muss für unterschiedliche Datenbanksysteme zur Verfügung stehen. 
-Qualitätsziele: Portabilität, Effizienz, Betreibbarkeit
+==== Szenario: Verfügbarkeit für unterschiedliche Datenbanksysteme
+Das System (Werkzeug) dient zur Performancemessung für Datenbanksysteme. 
+Es muss für unterschiedliche Datenbanksysteme zur Verfügung stehen. 
 
-Geschäftsziel(e):
+[horizontal]
+Geschäftsziel::
+Portabilität, Effizienz, Betreibbarkeit.
 Vielseitiges Werkzeug, soll für unterschiedliche Datenbanksysteme zur Verfügung stehen
 
-Auslöser/Stimulus
+Auslöser::
 Das Werkzeug wird (per Dialog, Kommandozeile oder programmatisch) mit einem Datenbanksystem verbunden ("connected"): Oracle, DB2, Sybase, MySQL, PostgreSQL
 
-Reaktion:
+Reaktion::
 Das Werkzeug stellt die Verbindung zum jeweiligen DBMS erfolgreich her - im Werkzeug ist die DB-Struktur sichtbar.
 
-Zielwert:
+Zielwert::
 Der "connect" zur Datenbank erfolgt innerhalb von 30 Sekunden.
 
-#### Szenario: Kernfunktion portabel auf iOS und Android
+==== Szenario: Kernfunktion portabel auf iOS und Android
 Die Kernfunktionen der Mac-OS Software können unter iOS und Android wiederverwendet werden. 
 
-Qualitätsziele: Wiederverwendbarkeit, Austauschbarkeit
+[horizontal]
+Qualitätsziele:: 
+Wiederverwendbarkeit, Austauschbarkeit
 
-Geschäftsziel(e):
+Geschäftsziel::
 Schnelle Time-to-Market, reduzierte Entwicklungskosten, Marktvergrößerung
 
-Auslöser / Stimulus:
+Auslöser::
 Code ist für Mac-OS entwickelt
 
-Reaktion:
+Reaktion::
 Der Code ist weitmöglich (soweit die Technologie das zulässt) sowohl unter iOS und Android wieder verwendbar.
 
-Zielwert:
+Zielwert::
 Das Entwicklungsteam soll die Kernfunktionen wiederverwenden, ohne sie komplett neu implementieren beziehungsweise entwerfen zu müssen.
+
 Ausnahme hiervon sind direkte Aufrufe der jeweiligen Betriebssystemfunktionen.
 
 
-#### Szenario: 60% Testabdeckung für Unit-Tests. 
+==== Szenario: 60% Testabdeckung für Unit-Tests. 
 
-Qualitätsziele: Testbarkeit, Änderbarkeit
+[horizontal]
+Qualitätsziele:: Testbarkeit, Änderbarkeit
 
-Geschäftsziel(e):
+Geschäftsziel::
 Einfache Erweiter- und Änderbarkeit durch hohe Testabdeckung, schnelle Rückmeldung über mögliche Nebenwirkungen bei Codeänderungen.
 
-Auslöser / Stimulus:
+Auslöser::
 Entwickler entwickelt oder ändert eine Funktion / Methode / Klasse.
 
-Reaktion:
+Reaktion::
 Die betroffene Funktion / Methode / Klasse wird durch Unit-Tests überprüft.
 
-Zielwert:
+Zielwert::
 Über 60% Pfadabdeckung wird durch die Unit-Tests erreicht.
 
 
-#### Szenario: Einfaches Hinzufügen neuer Tests. 
+==== Szenario: Einfaches Hinzufügen neuer Tests. 
+
+[horizontal]
 Qualitätsziele: Testbarkeit, Änderbarkeit
 
-Geschäftsziel(e):
+Geschäftsziel::
 Fähigkeit, neue Tests einfach in bestehende Test-Suites zu integrieren.
 
-Auslöser / Stimulus:
+Auslöser::
 Tester möchte neuen Test zu einer bestehenden Testsuite hinzufügen 
 
-Reaktion:
+Reaktion::
 Der Test wird zugefügt ohne den Code des Systems selbst (d.h. Den Produktivcode) zu modifizieren.
 
-Zielwert:
+Zielwert::
 Es ist kein Re-Compile oder Neukonfiguration des Systems (genauer: des Produktivcodes) nötig.
-Anmerkung: Testcode oder Testkonfigurationen dürfen jedoch verändert werden.
+
+Anmerkung:: Testcode oder Testkonfigurationen dürfen jedoch verändert werden.
 
 
-#### Szenario: Werden zwei stochastische Testreihen ausgeführt, sind die Resultate zu 90% ähnlich . 
-Qualitätsziele: Testbarkeit, Konsistenz, Nachvollziehbarkeit
+==== Szenario: Ähnliche Resultate bei stochastischen Testreihen
+Werden zwei stochastische Testreihen ausgeführt, sind die Resultate zu 90% ähnlich.
 
-Geschäftsziel(e):
+[horizontal]
+Qualitätsziele:: Testbarkeit, Konsistenz, Nachvollziehbarkeit. 
 Konsistente Testergebnisse auch bei stochastischen Tests oder Testreihen.
 
-Auslöser / Stimulus:
+Auslöser::
 Testszenario oder Testreihe mit Anteil an zufällig bestimmten Testdaten wird ausgeführt 
 
-Reaktion:
+Reaktion::
 Ähnliche Testergebnisse.
 
-Zielwert:
+Zielwert::
 Die Ergebnisse zweier Testreihen sind bei 90% aller Einzeltests ähnlich.
 
-#### Szenario: Ein Tester möchte mehrere Testszenarien mit einem einzelnen Befehl durchführen können. 
-Qualitätsziele: Testbarkeit, Effizienz
+==== Szenario: Testausführung mit einelnem Befehl
+Ein Tester möchte mehrere Testszenarien mit einem einzelnen Befehl durchführen können. 
 
-Geschäftsziel(e):
-Ausführung mehrerer Testszenarien im Batch
 
-Auslöser / Stimulus:
+[horizontal]
+Geschäftsziel::
+Effizienz, Testbarkeit 
+
+Auslöser::
 Testadministrator oder Tester möchte mehrere Tests oder Testszenarien durchführen 
 
-Reaktion:
+Reaktion::
 Aggregation oder Hintereinander-Ausführung mehrerer Tests.
 
-Zielwert:
+Zielwert::
 Ausführung mehrerer Tests benötigt nur einen einzigen Befehl des Testers oder Testadministrators.
 
 
-#### Szenario: Die X-Daten des Y-Systems sollen für ein externes Werkzeug zur Anforderungsanalyse und -management (etwa: Requisite-Pro, Enterprise-Architect oä) zugänglich sein. 
-Qualitätsziel: Interoperabilität
+==== Szenario: X-Daten für externe Systeme zugänglich
+Die X-Daten des Y-Systems sollen für ein externes Werkzeug zur Anforderungsanalyse und -management (etwa: Requisite-Pro, Enterprise-Architect oä) zugänglich sein. 
 
-Geschäftsziel(e):
+[horizontal]
+Qualitätsziel:: Interoperabilität
+
+Geschäftsziel(e)::
 Datenkompatibilität mit marktüblichen Werkzeugen zur Anforderungsanalyse zählt als Vorteil gegenüber Mitbewerbern.
 
-Auslöser / Stimulus:
+Auslöser::
 Ein Endbenutzer möchte die X-Daten des Y-Systems in eines der unterstützten Anforderungstools überführen. 
 
-Kontext:
+Kontext::
 20 Benutzer haben X-Daten in Form einzelner Projekte im System erfasst.
 Jedes dieser Projekte enthält mindestens ein, höchstens 100 unterschiedliche Requirements.
 
-Reaktion:
+Reaktion::
 Das Y-System exportiert die betreffenden X-Daten in das Anforderungstool (Requisite-Pro oder Enterprise-Architect).
 
-Zielwert:
-- Beim Export der Daten treten keine Fehler auf.
-- Von den im Y-System enthaltenen Requirements werden mindestens 98% korrekt exportiert.
-- Sämtliche nicht exportierten Requirements werden den betroffenen Benutzern als Fehler gemeldet.
+Zielwert::
+* Beim Export der Daten treten keine Fehler auf.
+* Von den im Y-System enthaltenen Requirements werden mindestens 98% korrekt exportiert.
+* Sämtliche nicht exportierten Requirements werden den betroffenen Benutzern als Fehler gemeldet.
 
 

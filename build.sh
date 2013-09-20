@@ -17,8 +17,7 @@ if command -v asciidoctor  >/dev/null 2>&1; then
     else
         ASCIIDOC="asciidoc"
     fi
-#ASCIIDOC="asciidoc"
-#ASCIIDOC="asciidoctor"
+
 
 echo "using your " $ASCIIDOC " executable..."
 
@@ -31,22 +30,28 @@ mkdir -p $TARGET
 
 #
 echo "generate html version" 
+#############################
 #
 $ASCIIDOC $ADOCOPTION -b html5 -o $TARGET/$FILENAME.html $SOURCE/$FILENAME.adoc
 
 #
 echo "generate docbooc version"
+#############################
 #
 $ASCIIDOC $ADOCOPTION -b docbook -o $TARGET/$FILENAME.docbook $SOURCE/$FILENAME.adoc
 
 
 #
 echo "generate docx from docbook"
+#############################
 #
 pandoc --from docbook --to docx --output $TARGET/$FILENAME.docx $TARGET/$FILENAME.docbook
 
 
-
+#
+echo "generate wiki-markdown from docbook" 
+pandoc --from docbook --to rst --output $TARGET/$FILENAME.rst $TARGET/$FILENAME.docbook
+#
 
 ###########################################################
 #

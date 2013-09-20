@@ -1,3 +1,5 @@
+project.description = "arc42 - Examples for Software Quality Requirements"
+
 buildscript {
     repositories {
         mavenRepo name: 'Bintray Asciidoctor repo', url: 'http://dl.bintray.com/content/aalmiray/asciidoctor'
@@ -5,7 +7,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.4.1'
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.5.0'
     }
 
 }
@@ -17,12 +19,11 @@ asciidoctor {
     sourceDocumentName = new File("${sourceDir}/index.adoc")
     outputDir = new File("$buildDir/docs")
     options = [
-    
-        attributes: [
-                      '-o': "quality-requirements.html",
+        '--OUT_FILE': "quality-requirements.html",
+        attributes: [ OUT_FILE: "quality-requirements",
                       toc: '3'
-      
                     ]
               ]
 }
+
 
