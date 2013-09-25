@@ -56,6 +56,10 @@ include::bibliography.adoc[]
 Ideen und Anregungen zu einigen Szenarien auch von Firebrand-Softwarearchitectures. 
 
 
+=== Lizenz
+
+include::lizenz.adoc[]
+
 
 
 

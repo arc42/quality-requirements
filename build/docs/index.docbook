@@ -1,0 +1,3806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" lang="en">
+<articleinfo>
+<title>Beispiele für Qualitätsanforderungen an Software</title>
+<date>v0.6</date>
+<author>
+<firstname>Dr.</firstname>
+<othername>Gernot</othername>
+<surname>Starke</surname>
+<email>gernot.starke@innoq.com</email>
+</author>
+
+<authorinitials>DGS</authorinitials>
+
+
+
+</articleinfo>
+<section id="__ber_qualit_t">
+<title>Über Qualität</title>
+<simpara>Die Qualität eines Produktes oder Systems ist ganz allgemein als Menge von Eigenschaften oder Merkmalen definiert.</simpara>
+<simpara>In der Praxis haben sich einige Kategorien (Oberbegriffe) für häufig auftretende <emphasis>Qualitätsanforderungen</emphasis>
+(synonym: Qualitätsziele) etabliert, im wesentlichen durch das DIN/ISO 9126 Begriffsmodell geprägt.</simpara>
+<section id="_die_kategorien">
+<title>Die Kategorien</title>
+<itemizedlist>
+<listitem>
+<simpara><link linkend="aenderbarkeit">Änderbarkeit</link></simpara>
+</listitem>
+<listitem>
+<simpara><link linkend="benutzbarkeit">Benutzbarkeit</link></simpara>
+</listitem>
+<listitem>
+<simpara><link linkend="effizienz">Effizienz</link></simpara>
+</listitem>
+<listitem>
+<simpara><link linkend="zuverlaessigkeit">Zuverlässigkeit</link></simpara>
+</listitem>
+<listitem>
+<simpara><link linkend="betreibbarkeit">Betreibbarkeit</link></simpara>
+</listitem>
+<listitem>
+<simpara><link linkend="sonstige">Sonstiges (u.a. Funktionalität)</link></simpara>
+</listitem>
+</itemizedlist>
+
+</section>
+<section id="_einordnung_kann_mehrdeutig_sein">
+<title>Einordnung kann mehrdeutig sein</title>
+<simpara>Manche Qualitätsziele oder -anforderungen gehören zu mehreren
+"Oberbegriffen" oder Kategorien - die Zuordnung der Beispiele zu
+Kategorien oder Kpiteln fiel mir deswegen manchmal schwer.</simpara>
+<simpara>Falls Sie Ihre spezifischen Qualitätsanforderungen in der Gliederung
+nicht finden, so schauen Sie bitte im Anhang: <link linkend="qmerkmale">Q-Merkmale</link> - dort finden
+Sie eine umfangreiche Tabelle der Q-Merkmale mit ihren Synonymen und
+Oberbegriffen.</simpara>
+</section>
+<section id="_quellen">
+<title>Quellen</title>
+<simpara>Die Ideen zu den hier aufgeführten Szenarien und Qualitätsanforderungen
+stammen aus unterschiedlichen Quellen und Projekten. Ich habe alle
+überarbeitet und weitgehend neutralisiert. Die Erklärungen von
+Qualitätsmerkmalen stammen teilweise aus DIN/ISO 9126 bzw. dem FURPS-Modell+.</simpara>
+<bibliodiv>
+<bibliomixed>
+<bibliomisc><anchor id="bass09" xreflabel="[bass09]"/>[bass09] Len Bass et.al.: Software Architecture in Practice. Addision-Wesley, 2. Auflage 2009.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc><anchor id="clements01" xreflabel="[clements01]"/>[clements01] Paul Clements et.al.: Evaluating Software Architectures. Addision-Wesley, 2001.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc><anchor id="robertson12" xreflabel="[robertson12]"/>[robertson12] S. und J. Robertson: Mastering the Requirements Process - Getting Requirements Right. Addision-Wesley, 3. Auflage 2012.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc><anchor id="rupp09" xreflabel="[rupp09]"/>[rupp09] Chris Rupp et.al: Requirements Engineering und -management. Hanser-Verlag, 5. Auflage 2009.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc><anchor id="eeles05" xreflabel="[eeles05]"/>[eeles05] Peter Eeles: Capturing Architectural Requirements. <ulink url="http://www.ibm.com/developerworks/rational/library/4706.html">http://www.ibm.com/developerworks/rational/library/4706.html</ulink>. Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.</bibliomisc>
+</bibliomixed>
+</bibliodiv>
+
+</section>
+<section id="_mitwirkende">
+<title>Mitwirkende</title>
+<itemizedlist>
+<listitem>
+<simpara>Christoph Iserlohn (innoQ), neue Szenarien</simpara>
+</listitem>
+<listitem>
+<simpara>Oliver Tigges (innoQ), neue Szenarien</simpara>
+</listitem>
+<listitem>
+<simpara>Alex Heusingfeld (innoQ), Infrastruktur, AsciiDoc</simpara>
+</listitem>
+<listitem>
+<simpara>Roland Krummenacher &amp; div. N.N.: Reviews, Korrekturen</simpara>
+</listitem>
+</itemizedlist>
+
+<simpara>Ideen und Anregungen zu einigen Szenarien auch von Firebrand-Softwarearchitectures.</simpara>
+</section>
+<section id="_lizenz">
+<title>Lizenz</title>
+<simpara>Copyright 2012-2013 the original author (Gernot Starke) or authors and contributors.</simpara>
+<simpara>Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</simpara>
+
+<literallayout class="monospaced">http://www.apache.org/licenses/LICENSE-2.0</literallayout>
+
+
+<simpara>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</simpara>
+</section>
+</section>
+<section id="__nderbarkeit">
+<title>Änderbarkeit</title>
+<section id="_was_bedeutet_nderbarkeit">
+<title>Was bedeutet Änderbarkeit?</title>
+<simpara>Änderbarkeit: Aufwand, der zur Durchführung vorgegebener Änderungen notwendig ist.</simpara>
+<simpara>Änderungen sind dabei Korrekturen, Verbesserungen oder Anpassungen an
+Änderungen der Umgebung, der Anforderungen &amp; der funktionalen
+Spezifikationen.</simpara>
+<simpara>Zur Änderbarkeit gehören gemäß DIN/ISO 9126 folgende Teilmerkmale:</simpara>
+<variablelist>
+<varlistentry>
+<term><emphasis role="strong">Analysierbarkeit:</emphasis></term>
+<listitem>
+<simpara>Aufwand, um Mängel oder Ursachen von Versagen zu
+diagnostizieren oder um änderungsbedürftige Teile zu bestimmen.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Modifizierbarkeit:</emphasis></term>
+<listitem>
+<simpara>Aufwand zur Ausführung von Verbesserungen, zur
+Fehlerbeseitigung oder Anpassung an Umgebungsänderungen</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Stabilität:</emphasis></term>
+<listitem>
+<simpara>Wahrscheinlichkeit des Auftretens unerwarteter Wirkungen
+von Änderungen.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Testbarkeit:</emphasis></term>
+<listitem>
+<simpara>Aufwand, der zur Prüfung der geänderten Software
+notwendig ist</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<simpara>Umgangssprachlich heißt Änderbarkeit oftmals Flexibilität, Anpassbarkeit, Wartbarkeit
+oder Erweiterbarkeit.</simpara>
+</section>
+<section id="_szenarien_f_r_nderbarkeit">
+<title>Szenarien für Änderbarkeit</title>
+<section id="_szenario_neuer_konnektor">
+<title>Szenario: Neuer Konnektor</title>
+<simpara>Wenn die Datenimport-Komponente Daten aus einer zusätzlichen
+Datenquelle einlesen soll, so muss der dafür notwendige Konnektor
+innerhalb von drei Personenmonaten entwickelt, integriert und in Betrieb
+genommen werden können.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Flexibilität, Reaktionsfähigkeit, Entgegenkommen</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Der neue Konnektor ist programmiert und in Betrieb.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>3 Personenmonate</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_j_hrliche_aktualisierung">
+<title>Szenario: Jährliche Aktualisierung</title>
+<simpara>Das Datenformat des jährlichen Buchungsreports wird jedes Jahr am 31. Dezember aktualisiert,
+um den gesetzlichen und steuerlichen Änderungen zu genügen. Das System muss das neue Format erzeugen können.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Betriebsbereitschaft</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Die Buchungs- und Reportingkomponente ist geändert und liefert
+für den Buchungsreport das neue Format.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die Änderung muss in weniger als 80 Personenstunden umgesetzt
+werden können.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_plugins_entwickeln">
+<title>Szenario: Plugins entwickeln</title>
+<simpara>Ein unabhängiger Entwickler kann PlugIns für das System
+erstellen.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Ermögliche der "Community", die Basisfunktionalität
+des Systems zu erweitern</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Unabhängiger Entwickler (eine "third party") möchte eigene
+Erweiterung ("PlugIn") für das System erstellen</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Unabhängige Entwickler sind in der Lage, auf Basis
+vordefinierter Erweiterungspunkte das System zu erweitern. Dafür sind
+nebem dem System ausschliesslich Open Source Komponenten notwendig.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Einfache PlugIns sollen innerhalb von 8 Personenstunden
+umsetzbar sein.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_wechsel_des_algorithmus">
+<title>Szenario: Wechsel des Algorithmus</title>
+<simpara>Wechsel des Algorithmus zur Routenberechnung.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Setze Änderungen oder Verbesserungen in der
+Routenoptimierung möglichst schnell und einfach um</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Entwickler möchte einen neuen / anderen Algorithmus zur
+Berechnung passender Routen entwickeln und in das Gesamtsystem
+integrieren.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Es gibt keinerlei Seiteneffekte auf andere Bausteine des
+Systems.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Es lediglich ein einziger Softwarebaustein (Modul, Komponente,
+Package) betroffen, der eigentliche Austausch des alten gegen den neuen
+Algorithmus geschieht innerhalb von 4h (inklusive eventuelle Anpassungen
+der Build-Umgebung).</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_neues_feld_in_stammdaten">
+<title>Szenario: Neues Feld in Stammdaten</title>
+<simpara>Ein Entwickler möchte ein neues Feld in die XY-Stammdaten aufnehmen.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Fähigkeit zur Änderung / Anpassung des Domänenmodells
+(fachliche Datenstruktur) inklusive Oberfläche und Datenbank.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Die Fach-, Business- oder Marketingabteilung
+benötigt in den Stammdaten ein neues Attribut vom Typ "String" (maximale
+Länge 80 Zeichen)</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Ein Entwickler identifziert die zugehörigen Programmteile,
+nimmt die notwendigen Erweiterungen vor, testet die Erweiterungen in
+Integrations- und Systemtestumgebung.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Alle notwendigen Änderungen und zugehörigen Tests sind
+innerhalb von 40h (Aufwand) abgeschlossen.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_unterst_tze_ansi_sql_92_kompatibe_datenbanksysteme">
+<title>Szenario: Unterstütze ANSI SQL-92 kompatibe Datenbanksysteme.</title>
+<simpara>Biete das System Kunden mit verschiedenen DB-Systeme an.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Flexibilität, biete das System Kunden mit
+unterschiedlichen Datenbanksystemen an.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Ein Kunde möchte das System mit einer (für uns
+neuen) (ANSI-SQL-92 kompatiblen) Datenbank verwenden.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Entwickler und Tester nehmen das System mit der Datenbank in
+Betrieb und führen sämtliche Systemtests durch, insbesondere die SQL-92
+Kompatibilitätstests.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Sofern die Datenbank die Kompatibilitätstests erfolgreich
+durchläuft, sind auch alle übrigen Systemtests erfolgreich.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_verst_ndlichkeit_von_generiertem_code">
+<title>Szenario: Verständlichkeit von generiertem Code</title>
+<simpara>Generierter Code für Testfälle ist leicht verständlich und
+manuell modifizierbar.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Qualitätsziele</simpara>
+</entry>
+<entry>
+<simpara>Verständlichkeit, Testbarkeit, Modifizierbarkeit</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Tester können den automatisch generierten Code für
+Testfälle leicht verstehen und eigenen Bedürfnissen anpassen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Ein Tester beschreibt einen Testfall in einer
+(semi-formalen) Sprache.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Testcode (in C, Java oder C#) für bestimmte Teile des Systems
+wird durch den XY-Generator automatisch auf Basis dieser
+Testfallbeschreibung erzeugt.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Ein Tester kann den generierten (C- oder Java) Quellcode für
+einen Testfall im Mittel in weniger als 30 Minuten verstehen und
+einfache Änderungen daran vornehmen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Anmerkung</simpara>
+</entry>
+<entry>
+<simpara>Im hier genannten Szenario ändern Tester generierten Code. Je
+nach Art des Codegenerators könnte dieser geänderte Code bei
+Neugenerierung überschrieben werden. Entsprechende Anforderungen müssten
+in anderen Szenarien gestellt werden.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_schnelle_lokalisierung_von_fehlern">
+<title>Szenario: Schnelle Lokalisierung von Fehlern</title>
+<simpara>Entwickler kann die Ursache fehlgeschlagener Testfälle in
+kurzer Zeit lokalisieren.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Kurze Fehlerbehebungszeiten, gute Änderbarkeit,
+geringes Risiko bei Änderungen</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Entwickler, Tester oder das Build-System führen
+automatische Testfälle (Unit- oder Integrationstests) aus.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Ein Testfall schlägt fehl. Aus den Fehler- und/oder
+Log-Nachrichten kann ein Entwickler die Ursache/den Auslöser des Fehlers
+in kurzer Zeit lokalisieren.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Entwickler findet die Ursache durchschnittlich in weniger als
+10 Minuten.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_neue_funktion">
+<title>Szenario: Neue Funktion</title>
+<itemizedlist>
+<listitem>
+<simpara>Der Auftraggeber fordert eine neue Funktion im System.</simpara>
+</listitem>
+<listitem>
+<simpara>Entwickler identifizieren kurzer Zeit die für diese Erweiterung passende Stelle innerhalb des Quellcodes.</simpara>
+</listitem>
+</itemizedlist>
+
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Eine neue Funktion soll in kurzer Zeit implementiert
+werden können.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Änderungsanforderung</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Entwickler suchen innerhalb des Quellcodes die geeignete
+Stelle für die Erweiterung.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Entwickler finden die geeignete Stelle in weniger als zwei
+Stunden.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_kurze_implementierungszeit_f_r_neue_funktion">
+<title>Szenario: Kurze Implementierungszeit für neue Funktion</title>
+<simpara>Eine neue Funktion mittlerer Komplexität soll in kurzer Zeit
+implementiert werden können.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Eine neue Funktion mittlerer Komplexität soll in
+kurzer Zeit implementiert werden können.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Änderungsanforderung</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<simpara>Reaktion und Zielwert: Entwickler implementieren diese Funktion
+inklusive automatisierter Testfälle (Unit-Tests) innerhalb von weniger
+als 5 PT.</simpara>
+</section>
+<section id="_szenario_erweiterte_logmeldungen">
+<title>Szenario: Erweiterte Logmeldungen</title>
+<simpara>Das bisherige Format der Logmeldungen genügt für den Betreiber
+nicht mehr. Sämtliche Logmeldungen müssen um zusätzliche Informationen
+ergänzt werden.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Flexible Anpassung an geänderte/erweiterte
+Anforderungen beim Logging.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Betreiber benötigt zusätzliche Informationen in
+Logmeldungen (beispielsweise IP-Adresse des ausführenden Webservers,
+Session-ID oÄ).</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Entwickler müssen die betroffenen Stellen im
+Quellcode innerhalb von als 40h anpassen können. Anmerkung: Für dieses
+Szenarion ist das Verhältnis aus Zielwert und Umfang des betroffenen
+Quellcodes (LoC) relevant:</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_report_in_kurzer_zeit_implementieren">
+<title>Szenario: Report in kurzer Zeit implementieren</title>
+<simpara>Ein Entwickler möchte einen Report über alle Buchungen eines
+Tages implementieren</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Eine neue Funktion (geringer Komplexität) soll in
+kurzer Zeit umsetz- und testbar sein</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Auftraggeber benötigt die Ergebnisse des
+Buchungsreports</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<itemizedlist>
+<listitem>
+<simpara>Entwickler implementiert diese Funktion innerhalb von 3 Arbeitstagen.</simpara>
+</listitem>
+<listitem>
+<simpara>Tester testet diese Funktion gegen die Spezifikation innerhalb von 2 Arbeitstagen.</simpara>
+</listitem>
+</itemizedlist>
+
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_schnittstelle_um_authentifizierung_erweitern">
+<title>Szenario: Schnittstelle um Authentifizierung erweitern</title>
+<simpara>Entwickler erweitert die externe XY-Schnittstelle um
+Authentifizierung.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Die XY-Schnittstelle benötigt ab sofort eine sichere
+Authentifizerung.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Regularien oder Kundenanforderungen erfordern eine
+sichere Authentifizierung über OAuth 2.0 der XY-Schnittstelle</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion und Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Entwickler erweitern die Schnittstelle um OAuth
+2.0 innerhalb von 5 PT Entwicklungszeit.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_kommerzielle_durch_open_source_datenbank_ersetzen">
+<title>Szenario: Kommerzielle durch Open-Source Datenbank ersetzen</title>
+<simpara>Das verwendete Datenbanksystem muss von einem kommerziellen
+durch ein Open-Source System ersetzt werden können.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Bei Bedarf und in bestimmten Einsatzszenarien des
+Systems müssen Lizenzkosten reduziert werden.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Betreiber/Kunde des Systems möchte die LIzenzkosten
+des verwendeten Datenbanksystems reduzieren.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Entwickler können die standardmässig verwendete Oracle (™)
+Datenbank durch eine quelloffene (etwa: MySQL oder PostgreS ersetzen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<itemizedlist>
+<listitem>
+<simpara>Der Wechsel der Datenbank ist mit weniger als 40 PT Aufwand
+durchführbar.</simpara>
+</listitem>
+<listitem>
+<simpara>Alle funktionalen Anforderungen werden danach erfüllt, nachgewiesen
+durch Integrations-, System- und Abnahmetests.</simpara>
+</listitem>
+<listitem>
+<simpara>Die Laufzeiten der wichtigsten 15 Anwendungsfälle verschlechtert sich
+gegenüber der kommerziellen Datenbank um höchstens 15%.</simpara>
+</listitem>
+<listitem>
+<simpara>Die Laufzeiten aller übrigen Anwendungsfälle verschlechtert sich
+gegenüber der kommerziellen Dankbank um höchstens 25%.</simpara>
+</listitem>
+</itemizedlist>
+
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_gesch_ftsprozess_erweitern">
+<title>Szenario: Geschäftsprozess erweitern</title>
+<simpara>Der XY-Geschäftsprozess kann zur Laufzeit um zusätzlicher
+Verarbeitungsschritte ergänzt werden</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Dynamische Erweiterung des Geschäftsprozesses XY trägt
+zur Zufriedenheit der Anwender bei.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Zur Anpassung an Marktbedürfnisse erweitert ein
+Entwickler oder Architekt den Geschäftsprozess XY um einen zusätzlichen
+Schritt, während die aktiven Prozessinstanzen von XY vom System
+bearbeitet werden.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Kontext</simpara>
+</entry>
+<entry>
+<simpara>Mehr als 20 Benutzer haben unvollständige Projekte (Daten) auf
+Basis des aktuellen XY-Prozesses gespeichert.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<simpara>Reaktion / Zielwert: Das System aktualisiert selbständig und ohne
+Datenverlust die vorhandenen Daten der unvollständigen Projekte
+(automatische Migration der Benutzerspezifischen Daten auf die neue
+Version von XY).</simpara>
+<simpara>Die Änderung des XY-Prozesses dauert nicht länger als 80 Personenstunden
+(Aufwand).</simpara>
+</section>
+<section id="_szenario">
+<title>Szenario:</title>
+<simpara>Der einzelne Verarbeitungsschritt AB innerhalb des
+Anwendungsfalls XY wird von der Regulierungsbehörde für ungültig erklärt
+und im System entfernt. Die vom System bearbeiteten Daten sind nicht
+betroffen.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Die Änderung am Anwendungsfall XY kann mit geringen
+Kosten und ohne negative Auswirkungen durchgeführt werden.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Der Gesetzgeber, vertreten durch die
+Regulierungsbehörde, untersagt die Verwendung des Verarbeitungsschrittes
+AB.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Ein Entwickler oder Architekt entfernt im System den
+Verarbeitungsschritt AB (durch löschen der entsprechenden Aufrufe oder
+durch Neukonfiguration der Prozessabläufe).</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die Änderung erfordert höchstens 24 Zeitstunden mit höchstens
+48 Personenstunden Aufwand. Nach dieser Zeit ist das System wieder
+völlig funktionsfähig.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<simpara>Diese Änderung hat keine Auswirkung auf die im System vorhandenen Daten
+der Anwender/Kunden bezüglich des XY-Anwendungsfalles. Eine
+(automatische) Migration einiger Daten ist zulässig, darf allerdings die
+24 Zeitstunden-Grenze nicht überschreiten.</simpara>
+</section>
+<section id="_szenario_erweiterung_um_automatisierte_testsuite">
+<title>Szenario: Erweiterung um automatisierte Testsuite</title>
+<simpara>Erweitere das X-Subsystem um eine vollständig automatisierte
+Testsuite.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Verbessere die Änderbarkeit und Testbarkeit des
+Systems.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Kunde kündigt umfangreiche Änderungswünsche am
+X-Subsystem an. Die bessere Änderbarkeit und Testbarkeit reduzieren das
+Risiko dieser Änderungen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Entwickler implementieren Unit- und Integrationstests für
+sämtliche Klassen sowie Schnittstellen des Subsystems X.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Gesamtaufwand der Änderungen liegt unter 200 Personentagen.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<simpara>Szenario: Neuer Typ von Client
+Erweitere das XY-System um einen mobilen Client (Android,
+iOS), ohne die Performance der übrigen GUI-Teile zu beeinträchtigen.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziele</simpara>
+</entry>
+<entry>
+<simpara>Einführung neuer Zugangswege verbreitert die
+mögliche Kundenbasis und steigert die Attraktivität des Systems.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Kunden und Verbraucher erwarten (wie
+selbstverständlich) native mobile Clients als Bestandteil des
+Produktportfolios.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Entwicklungsteam entwirft und implementiert mobile Clients
+für das XY-System sowie die dazu benötigte (Daten-)Schnittstelle.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>- Die bisherigen (Browser- und Rich-)Clients werden in ihrer
+Performance in keiner Weise beeinträchtigt. - Bei 100 parallelen
+Browser-Benutzern und 100 gleichzeitig angemeldeten mobilen Clients
+dürfen maximal 3% der Datenzugriffe maximal 20% mehr Zeit beanspruchen
+als vor der Einführung der mobilen Clients.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Anmerkung</simpara>
+</entry>
+<entry>
+<simpara>Dieses Szenario beschreibt mehrere Qualitätsmerkmale:
+Attraktivität, Effizienz/Performance, Verfügbarkeit, Robustheit und
+Änderbarkeit.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_unabh_ngige_erweiterung_eines_subsystems">
+<title>Szenario: Unabhängige Erweiterung eines Subsystems</title>
+<simpara>Erweiterungen oder Änderungen eines Subsystems sollen
+unabhängig von allen anderen Subsystemen möglich sein.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Leichte Änderbarkeit, schnelle Reaktion auf Fehler.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Entwicklungsteam ändern innerhalb eines
+Subsystems - die Aussenschnittstellen dieses Subsystems bleiben dabei
+identisch!</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Kein anderes Subsystem muss geändert werden. Für sämtliche
+anderen Subsysteme gilt:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Der Quellcode bleibt identisch</simpara>
+</listitem>
+<listitem>
+<simpara>Compile-, Build- und Testprozesse bleiben identisch</simpara>
+</listitem>
+<listitem>
+<simpara>Deployment-, Installation und Konfiguration bleiben identisch</simpara>
+</listitem>
+</itemizedlist>
+
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Anmerkung</simpara>
+</entry>
+<entry>
+<simpara>Diese Anforderung bedeutet, dass sämtliche Subsysteme nur
+über ihre öffentlichen ("offiziellen") Schnittstellen kommunizieren -
+und kein Subsystem Interna eines anderen verwendet oder ausnutzt.
+Herausfordernd insbesondere bei Kopplung über Daten oder
+Datenstrukturen.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+</section>
+</section>
+<section id="benutzbarkeit">
+<title>Benutzbarkeit</title>
+<section id="_was_bedeutet_benutzbarkeit">
+<title>Was bedeutet Benutzbarkeit?</title>
+<simpara>Aufwand, der zur Benutzung erforderlich ist, und individuelle Beurteilung der Benutzung durch eine festgelegte oder vorausgesetzte Benutzer-gruppe. Hierunter fällt auch der Bereich Softwareergonomie.</simpara>
+<simpara>Zu Benutzbarkeit gehören nach DIN/ISO 9126 folgende Teilmerkmale:</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara><emphasis role="strong">Verständlichkeit</emphasis></simpara>
+</entry>
+<entry>
+<simpara>Aufwand für den Benutzer, das Konzept und die Anwendung zu verstehen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara><emphasis role="strong">Erlernbarkeit</emphasis></simpara>
+</entry>
+<entry>
+<simpara>Aufwand für den Benutzer, die Anwendung zu erlernen (z.B. Bedienung, Ein-, Ausgabe)</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara><emphasis role="strong">Bedienbarkeit</emphasis></simpara>
+</entry>
+<entry>
+<simpara>Aufwand für den Benutzer, die Anwendung zu bedienen.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenarien_f_r_benutzbarkeit">
+<title>Szenarien für Benutzbarkeit</title>
+<section id="_szenario_einfache_benutzbarkeit_von_testwerkzeug">
+<title>Szenario: Einfache Benutzbarkeit von Testwerkzeug</title>
+<simpara>Das interaktive Testwerkzeug muss einfach benutzbar sein. Tester (für den Benutzer-Akzeptanztest) müssen innerhalb von zwei Stunden die Bedienung erlernen können.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Produktive und schnelle Akzeptanztests, schnelle Durchläufe</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Ein BA-Tester testet mit dem Testwerkzeug ein neues Release der Software.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Der Tester kann das Testwerkzeug vollständig bedienen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Benötigt dafür weniger als zwei Stunden Einarbeitung.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_konsistente_tastaturk_rzel">
+<title>Szenario: Konsistente Tastaturkürzel</title>
+<simpara>Endanwender / Endbenutzer können identische Tastaturkürzel ("keyboard shortcuts") in allen, unabhängig voneinander entwickelten, Modulen des Systems verwenden.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Konsistente Benutzerführung ("User experience") im gesamten Produkt</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Benutzer möchte Tastatur zur Navigation innerhalb des Systems verwenden</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Benutzer kann die gleichen Funktionen wie bei der Benutzung der Maus ausführen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die Tastaturkürzel sind einheitlich vergeben. Bei Verwendung der Tastatur können sämtliche Funktionen schneller oder mindestens genauso schnell wie bei Nutzung der Maus verwendet werden.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_schnelle_erfassbarkeit_von_informationen">
+<title>Szenario: Schnelle Erfassbarkeit von Informationen</title>
+<simpara>Benutzer soll auch Informationen, die nicht im Zusammenhang mit der aktuellen Bildschirmmaske stehen, schnell erfassen können.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Qualitätsziele</simpara>
+</entry>
+<entry>
+<simpara>Benutzbarkeit, Effizienz</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Einfache Benutzbarkeit, einfache Navigierbarkeit innerhalb des Systems</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Der Benutzer arbeitet mit dem System. Während der Bearbeitung einer Bildschirmmaske möchte er zu einem gänzlich anderen Thema Informationen erfassen oder bearbeiten.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Der Benutzer kann einfach zu dem gewünschten Thema navigieren und nach dessen Bearbeitung einfach zum aktuellen Thema zurückkehren.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Navigation zum gewünschten Thema erfolgt in weniger als 10 Sekunden, die Rückkehr zum aktuellen Thema erfolgt mit nur einem Knopfdruck / Mausklick.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_hinweis_auf_fehleingaben">
+<title>Szenario: Hinweis auf Fehleingaben</title>
+<simpara>Benutzer werden grundsätzlich auf inkonsistente oder fehlerhafte Eingaben hingewiesen.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Konsistenz bei Benutzereingaben</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Benutzer gibt Daten ein.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System nimmt korrekte Eingabedaten an, weist inkonsistente oder fehlerhafte Eingabedaten zurück.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Im Falle inkonsistenter oder fehlerhafter Eingabedaten gibt das System eine passende Meldung, die den Fehler oder die Inkonsistenz eindeutig und einfach aufzeigt.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_benutzerfreundliches_verhalten_bei_backend_prozess">
+<title>Szenario: Benutzerfreundliches Verhalten bei Backend-Prozess</title>
+<simpara>Falls ein Benutzer die pdf-Generierung des XY-Reports unterbricht, hält das System diese Generierung an und übergibt die Kontrolle innerhalb von 15 Sekunden wieder an die Benutzeroberfläche.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Verbessere die Benutzbarkeit der pdf-Generierung</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Benutzer möchte die pdf-Generierung des XY-Reports unterbrechen (etwa aufgrund vorheriger Fehleingaben oder sonstiger Gründe) und klickt den "Abbrechen"-Button</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System unterbricht die Generierung, speichert den bisherigen Generierungszustand (für eventuelle Fortsetzungen) und übergibt die Kontrolle an die Benutzeroberfläche.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Benutzer erhält Kontrolle über das UI innerhalb von 15 Sekunden (d.h. In spätestens 15 Sekunden haben alle beteiligten Generierungsprozesse den Abbrechen-Befehl erfolgreich quittiert).</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Bemerkung</simpara>
+</entry>
+<entry>
+<simpara>Die Generierung dieses Reports läuft in mehreren parallelen Threads (oder Prozessen), eventuell sogar auf mehreren unterschiedlichen Prozessoren oder (virtuellen) Maschinen. Die Unterbrechung muss synchron und konsistent über alle diese Ausführungsinstanzen erfolgen.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_aussagekr_ftige_fehlermeldungen_ohne_absturz">
+<title>Szenario: Aussagekräftige Fehlermeldungen ohne Absturz</title>
+<simpara>Falls eine Fehlersituation auftritt, wird dies dem Benutzer in aussagekräftigen Meldungen angezeigt. Das System stürzt bei Ausnahmesituationen (Speicherüberlauf, Hardwarefehler) nicht ab, sondern fährt höchstens kontrolliert heruntre.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Verbessere die Benutzbarkeit (und gefühlte Zuverlässigkeit). Ermögliche Benutzern, zu Fehlern führende Kombinationen von Eingabedaten zu korrigieren, ohne dass das System abstürzt.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Ein Fehler / Ausnahmesituation in der Infrastruktur tritt auf (Speicherüberlauf, Out-of-Memory, Hardwarefehler).</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System erkennt den Fehler, meldet (soweit möglich) an den Benutzer und fährt kontrolliert herunter.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Fehlererkennung erfolgt innrehalb von 15 Sekunden, Meldung an Benutzer (sofern noch möglich) innerhalb von 1 Sekunde, herunterfahren innerhalb von 15 Sekunden.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_status_lang_laufender_prozesse_erkennbar">
+<title>Szenario: Status lang laufender Prozesse erkennbar</title>
+<simpara>Das System zeigt den Fortschritt der lange laufenden XY-Konvertierungsprozesse in der grafischen Oberfläche dem Benutzer an.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Anmerkung</simpara>
+</entry>
+<entry>
+<simpara>Diese XY-Konvertierung dauert 1-18 Stunden.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Fortschrittsüberwachung, Benutzerfreundlichkeit</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Benutzer möchte über Fortschritt der lang laufenden Berechnungen/Prozesse informiert werden.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System zeigt die Anzahl der bisher verarbeiteten Datensätze, das verarbeitete Datenvolumen in Megabyte sowie den geschätzten verbleibenden Restaufwand an der GUI an.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die Aktualisierung dieser Informationen erfolgt mindestens alle 60 Sekunden - höchstens alle 5 Sekunden.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_einhaltung_der_windows_8_user_experience_guidelines">
+<title>Szenario: Einhaltung der Windows-8 User Experience Guidelines</title>
+<simpara>Das System soll den Auflagen und Vorschlägen der Microsoft Windows User Experience Guidelines für Windows-8 entsprechen.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Einheitliches, dem Windows-8 Look-and-Feel entsprechendes Aussehen und Verhalten.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Die Benutzeroberfläche und interaktiven Komponenten des Systems sollen neu gestaltet und implementiert werden.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Ein fachkundiger Auditor testiert die Übereinstimmung mit o.g. Guidelines ohne Einschränkung.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_benutzerinteraktionen_an_grafischer_oberfl_che">
+<title>Szenario: Benutzerinteraktionen an grafischer Oberfläche</title>
+<simpara>Sämtliche Benutzerinteraktion und -meldungen im System sind als GUI implementiert.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Erhöhe die Akzeptanz und Produktivität der Arbeit mit dem System.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Alle Anforderungen an das System.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Das System erfordert keine Benutzerinteraktion außerhalb der grafischen Oberfläche.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+</section>
+</section>
+<section id="_effizienz">
+<title>Effizienz</title>
+<section id="_was_bedeutet_effizienz">
+<title>Was bedeutet Effizienz?</title>
+<simpara>Nach DIN/ISO 9126: Verhältnis zwischen dem Leistungsniveau der Software und dem Umfang der eingesetzten Betriebsmittel unter festgelegten Bedingungen.</simpara>
+<simpara>In der Praxis oftmals vereinfacht als <emphasis>Performance</emphasis>, Verarbeitungsgeschwindigkeit, Antwortzeit, Skalierbarkeit, Durchsatz, Speicherbedarf oder Mengengerüst bezeichnet.</simpara>
+<simpara>Nach DIN/ISO 9126 gehören zu Effizienz folgende Teilmerkmale:</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis>Zeitverhalten</emphasis>: Antwort- und Verarbeitungszeiten sowie Durchsatz bei der Funktionsausführung.</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis>Verbrauchsverhalten</emphasis>: Anzahl, Menge und Dauer der benötigten Betriebsmittel für die Erfüllung der Funktionen.</simpara>
+</listitem>
+</itemizedlist>
+
+<simpara>Anmerkung: Die Effizienz vorhandener Software können Sie "am lebenden Objekt" objektiv messen. Insofern ist die Prüfung, ob Effizienzanforderungen an Software erreicht werden, verhältnismäßig einfach möglich.</simpara>
+</section>
+<section id="_szenarien_f_r_effizienz">
+<title>Szenarien für Effizienz</title>
+<section id="_szenario_schnelle_erzeugung_von_testdaten">
+<title>Szenario: Schnelle Erzeugung von Testdaten</title>
+<simpara>Schnelle Erzeugung großer Mengen an Testdaten für das XY-System.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Effektives Testen, Test mit großen Datenmengen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Ein Tester benötigt für den Test des XY-Systems Testdaten.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Der Testdaten-Generator erzeugt 1 Gigabyte an passenden, fachlich korrekten Testdaten.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Laufzeit weniger als eine Stunde.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_diagnose_hat_kaum_auswirkungen_auf_ausf_hrungszeit">
+<title>Szenario: Diagnose hat kaum Auswirkungen auf Ausführungszeit</title>
+<simpara>Das Diagnose-Subsystem beeinflusst die Ausführungszeit von Funktionen und Transaktionen des Systems nur in geringem Umfang .</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Genaues Reporting über Laufzeiten und genaue Fehlerdiagnose ohne Beeinträchtigung von Laufzeiten.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Benutzer, Tester oder Administrator ruft eine Diagnosefunktion auf.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System arbeitet ohne Einschränkung weiter.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Alle Funktionen und Transaktionen des Systems laufen funktional korrekt. Laufzeiten sind gegenüber abgeschaltetem Diagnose-Subsystem höchstens 5% höher.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_generierung_von_reports_in_weniger_als_4h">
+<title>Szenario: Generierung von Reports in weniger als 4h</title>
+<simpara>Generierung aller für den Monatsabschluss erforderlichen Reports und Listen innerhalb von 4h Laufzeit.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Performanter und pünktlicher Monatsabschluss</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Die Controlling- oder Finanz-Abteilung startet nach Buchungsschluss den Monatsabschluss.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System generiert alle notwendigen Reports und Listen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die Generierung endet spätestens nach 4h Laufzeit, erste (einfache) Reports stehen dem Controlling nach 30 Min Laufzeit zur Verfügung.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_integrationstests_in_weniger_als_15_minuten">
+<title>Szenario: Integrationstests in weniger als 15 Minuten</title>
+<simpara>Sämtliche Integrationstests des Subsystems XY können innerhalb von 15 Minuten automatisiert ausgeführt werden.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Risikoarme Änderungen und Erweiterungen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Entwickler führt eine Änderung am Quellcode im Subsystem XY durch und startet anschliessend die automatisierte Testsuite (der Initegrations- und Unittsts) dieses Subsystems.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das Testframework führt sämtliche Testfälle aus und berichtet die Testergebnisse an den Benutzer.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Sämtliche Testfälle sind in weniger als 15 Minuten komplett ausgeführt.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Bemerkung</simpara>
+</entry>
+<entry>
+<simpara>Last-, Performance- oder Stresstests können unabhängig von den Integrationstests auch länger laufen. Diese sind nicht Bestandteil dieses Szenarios.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_daten_innerhalb_von_3_sekunden">
+<title>Szenario: Daten innerhalb von 3 Sekunden</title>
+<simpara>In 90% aller Fälle erhalten Benutzer die XY-Daten innerhalb von 3 Sekunden.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Paralleles Arbeiten mehrerer Benutzer ist mit akzeptabler Laufzeit möglich</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>10 echt parallel arbeitende Benutzer fordern vom System die XY-Daten an.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System zeigt bei allen anfordernden Benutzern die korrekten Daten an.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Bei mindestens 9 von 10 dieser Benutzer dauert diese Anfrage 3 Sekunden oder weniger (in 90% der Anfragen nach den XY-Daten antwortet das System in 3 Sekunden oder schneller).</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_hohe_performanz_bei_200_gleichzeitigen_benutzern">
+<title>Szenario: Hohe Performanz bei 200 gleichzeitigen Benutzern</title>
+<simpara>Bei 200 oder mehr gleichzeitig angemeldeten Benutzern verhält
+sich das System immer noch performant.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Fähigkeit des Systems, seine Funktionsfähigkeit, insbesondere an der GUI, auch bei mehreren parallelen Benutzern zu erhalten.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<itemizedlist>
+<listitem>
+<simpara>200 oder mehr Benutzer sind am System angemeldet.</simpara>
+</listitem>
+<listitem>
+<simpara>20 oder mehr Benutzer arbeiten gleichzeitig im XY-Dialog aus oder starten eine YZ-Berechnung.</simpara>
+</listitem>
+</itemizedlist>
+
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System arbeitet normal und bedient sämtliche Benutzer.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die Reaktionen des Systems im XY-Dialog erfolgen innerhalb von 2 Sekunden.
+Das System führt die YZ-Berechnung in weniger als 5 Sekunden durch.
+Bemerkung: Skalierbarkeit</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_umfangreiche_reports_in_weniger_als_1_sekunde">
+<title>Szenario: Umfangreiche Reports in weniger als 1 Sekunde</title>
+<simpara>Das XY-System soll auch umfangreiche benutzerdefinierte Reports in weniger als 1 Sekunde speichern.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Reaktive Benutzeroberfläche steigert Bedienkomfort.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<simpara>Auslöser:
+Benutzer hat einen spezifischen Report konfiguriert und speichert diesen über die "speichern" Funktion ab.</simpara>
+<simpara>Reaktion und Zielwert:
+Das System speichert die gesamte Reportdefinition (im xml-Format) in weniger als 1 Sekunde.</simpara>
+</section>
+<section id="_szenario_konfigurationsoberfl_che_erscheint_in_weniger_als_2_sekunden">
+<title>Szenario: Konfigurationsoberfläche erscheint in weniger als 2 Sekunden</title>
+<simpara>An Benutzerprofil angepasste grafische Konfigurationsoberfläche erscheint in weniger als 2 Sekunden.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Reaktive Benutzeroberfläche steigert Bedienkomfort.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Benutzer startet die Konfigurationsoberfläche für Reports.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion und Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Beim Start der Report-Konfigurationsoberfläche erscheint eine gemäß des Benutzeprofils aufbereitete grafische Oberfläche in weniger als 2 Sekunden.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_nutzung_von_h_chstens_1gb_ram">
+<title>Szenario: Nutzung von höchstens 1GB RAM</title>
+<simpara>Die Anwendung soll als Sockel nur 1 GB RAM benötigen und pro gleichzeitig eingeloggten User nicht mehr als weitere 5 MB</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Die Anwendung soll zur Verfügung gestellte Systemressourcen effizient nutzen und Wachstum der Mitarbeiter ermöglichen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Ein Benutzer meldet sich am System an.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion und Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die Anwendung soll als Sockel nur 1 GB RAM benötigen und pro gleichzeitig eingeloggten User nicht mehr als weitere 5 MB. Nach dem Logout müssen die 5 MB wieder zur freien Verfügung stehen.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+</section>
+</section>
+<section id="_zuverl_ssigkeit">
+<title>Zuverlässigkeit</title>
+<section id="_was_bedeutet_zuverl_ssigkeit">
+<title>Was bedeutet Zuverlässigkeit?</title>
+<simpara>Fähigkeit der Software, ihr Leistungsniveau unter festgelegten Bedingungen über einen festgelegten Zeitraum zu bewahren.</simpara>
+<simpara>Zu Zuverlässigkeit gehören nach DIN/ISO 9126 folgende Teilmerkmale:</simpara>
+<variablelist>
+<varlistentry>
+<term><emphasis role="strong">Reife:</emphasis></term>
+<listitem>
+<simpara>Geringe Versagenshäufigkeit durch Fehlzustände.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Fehlertoleranz:</emphasis></term>
+<listitem>
+<simpara>Fähigkeit, ein spezifiziertes Leistungsniveau bei Software-Fehlern oder Nicht-Einhaltung ihrer spezifizierten Schnittstelle zu bewahren.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Wiederherstellbarkeit:</emphasis></term>
+<listitem>
+<simpara>Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten wiederzugewinnen.</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</section>
+<section id="_szenarien_f_r_zuverl_ssigkeit">
+<title>Szenarien für Zuverlässigkeit</title>
+<section id="_szenario_detaillierte_auskunft_ber_fehler">
+<title>Szenario: Detaillierte Auskunft über Fehler</title>
+<simpara>Wenn der Datenimport fehlschlägt, gibt das System detaillierte Auskunft über den/die aufgetretenen Fehler.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Fähigkeit, Fehler im Datenimport schnell zu identifzieren, lokalisieren und zu beheben.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Datenimport schlägt fehl.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>System sammelt die für Fehlerdiagnose und -behebung relevanten Informationen (Art des Fehlers, betroffene Datensätze, Zeit, letzte erfolgreiche ausgeführte Aktion etc.)</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Relevante Informationen werden in weniger als 30 Sekunden nach Auftreten des Fehlers ins Logfile geschrieben und per smtp-Mail an &lt;[<ulink url="mailto:x@y.com">x@y.com</ulink>](mailto:x@y.com)&gt; geschickt.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_messgenauigkeit_f_r_zeitmessungen">
+<title>Szenario: Messgenauigkeit für Zeitmessungen</title>
+<simpara>Das Diagnose-Subsystem soll die gleiche Messgenauigkeit für Zeitmessungen besitzen, wie entsprechende externe Werkzeuge.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Externe Messwerkzeuge für die Ausführungszeiten von Transaktionen liefern identische Ergebnisse zum internen Diagnose-Subsystem.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Ein Benutzer stößt im System eine beliebige Transaktion an. Die interne Diagnose ist dabei auf "ein" konfiguriert.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das interne Diagnose-Subsystem speichert die Anfangs- und Endzeit der Transaktion.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die vom internen Diagnose-Subsystem gemessenen Zeiten stimmen im Bereich von 5% mit Werten überein, die externe Werkzeuge für diesselbe Transaktion ermittelt haben.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_ausfallsicherung_f_r_container">
+<title>Szenario: Ausfallsicherung für Container</title>
+<simpara>Das System besitzt eine Ausfallsicherung für den Servlet-Container.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Problemlose Behandlung genereller Fehler- und Ausfallsituationen</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Der Servlet-Container stürzt aufgrund eines Softwareproblems ab-
+Hardware und Betriebssystem sind weiterhin verfügbar.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion und Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Das Monitoringsystem entdeckt den Ausfall innerhalb von 1 Sekunde, stellt innerhalb von 15 Sekunden einen Ersatz-Container bereit und ist nach spätestens 120 Sekunden wieder voll funktionsfähig.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Bemkerungen</simpara>
+</entry>
+<entry>
+<simpara>Für ein konkretes System wäre hierbei zusätzlich zu spezifizieren, ob und in welchem Umfang die gerade aktiven Sessions des ausgefallenen Containers gesichert und auf das Ersatzsystem übertragen werden müssen.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_keine_abst_rze_bei_speicherknappheit">
+<title>Szenario: Keine Abstürze bei Speicherknappheit</title>
+<simpara>Das System verarbeitet während der pdf-Generierung und Dateikonvertierung (im Speicher) Daten im Bereich bis zu mehreren Gigabyte. Sollte es zu Speicherknappheit oder -überlauf kommen, darf das System nicht abstürzen, sondern muss aussagekräftige Log-Meldungen schreiben, die Generierung kontrolliert beenden und die Benutzer darüber benachrichtigen.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Zuverlässigkeit des Systems auch bei umfangreichen und voluminösen Generierungs- und Konvertierungsaufgaben.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Das System generiert oder konvertiert Daten, eventuell verteilt auf mehrere Threads, Prozesse oder Knoten. Es tritt an mindestens einem dieser Threads, Prozesse oder Knoten ein Speicherüberlauf auf.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System beendet die entsprechenden Prozesse kontrolliert und speichert den Zwischenstand der Generierung/Konvertierung zur späteren Verwendung ab. Es erzeugt eine passende Logmeldung und informiert den jeweiligen Benutzer über die Situation.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Speicherüberlauf wird innerhalb von 15 Sekunden erkannt, alle beteiligten Prozesse innerhalb weiterer 15 Sekunden kontrolliert beendet.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Bemerkung</simpara>
+</entry>
+<entry>
+<simpara>auch Benutzerbarkeit</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_funktionale_korrektheit_auch_bei_unterspannung">
+<title>Szenario: Funktionale Korrektheit auch bei Unterspannung</title>
+<simpara>Das System verhält sich auch bei Unterspannungen der Hardware-Sensoren (bis zu 15% unterhalb der Nennspannung) in allen Belangen funktional korrekt.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Zuverlässigkeit</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Die Spannung der Hardware-Sensoren (z.B. Sensor zur Messung der Papier-Transportgeschwindigkeit, der Durchflussgeschwindigkeitoä) sinkt höchstens 15% unterhalb der vorgeschriebenen Nennspannung.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Alle Systemfunktionen arbeiten korrekt weiter.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Bemerkung</simpara>
+</entry>
+<entry>
+<simpara>Einige Sensor-Typen verhalten sich bei Unterspannung unkontrollierbar, manche arbeiten langsamer, andere ungenau, andere gar nicht mehr. Die Systemfunktionen müssen daher die Spannung der Sensoren überwachen und auf Spannungsprobleme entsprechend reagieren.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_kein_datenverlust_bei_spannungsverlust_oder_unterspannung">
+<title>Szenario: Kein Datenverlust bei Spannungsverlust oder Unterspannung.</title>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Robustheit gegenüber Schwankungen oder Ausfällen der elektrischen Versorgung. Das System verliert bei Spannungsverlust oder Unterspannung (der gesamten Netzversorgung) keine Daten.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Die Versorgungsspannung fällt aus oder schwankt um bis zu 25%.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System ist lange genug durch redundante Stromversorgung gesichert, um im Falle des Verlustes der regulären Stromversorgung noch sämtliche im Speicher befindlichen Daten konsistenz auf langfristigen Speichermedien sichern zu können.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Spannungsverlust oder Unterspannung wird innerhalb von 200msec erkannt.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_das_system_bietet_eine_ausfallsicherung_des_servlet_containers">
+<title>Szenario: Das System bietet eine Ausfallsicherung des Servlet-Containers.</title>
+<variablelist>
+<varlistentry>
+<term>Geschäftsziel(e)</term>
+<listitem>
+<simpara>Das System soll Ausfälle der allgemeinen Infrastruktur (insbesondere Servlet-Container) problemlos und ohne Absturz behandeln.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Auslöser</term>
+<listitem>
+<simpara>Der (für viele Systemfunktionen notwendige) Servlet-Container fällt aus.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Reaktion</term>
+<listitem>
+<simpara>Das System erkennt den Ausfall und transferiert alle noch zur Verfügung stehenden Daten/Sessions auf einen Ersatz-Servlet-Container.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Zielwert</term>
+<listitem>
+<itemizedlist>
+<listitem>
+<simpara>Entdecke den Fehler im Servlet-Container innerhalb von 1 Sekunde.</simpara>
+</listitem>
+<listitem>
+<simpara>Fährt den Hot/Cold-Standby Servlet-Container innerhalb von 30 Sekunden hoch.</simpara>
+</listitem>
+<listitem>
+<simpara>Nach 180 Sekunden hat das System die gesamte Funktionalität von vor dem Ausfall wieder hergestellt.</simpara>
+</listitem>
+</itemizedlist>
+
+</listitem>
+</varlistentry>
+</variablelist>
+
+</section>
+<section id="_szenario_stabilit_t_auch_bei_dauerbenutzung">
+<title>Szenario: Stabilität auch bei Dauerbenutzung</title>
+<simpara>Auch im Dauerbetrieb verhält sich das System gegenüber Online-Benutzern angemessen stabil und robust.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Stabilität, Benutzerkomfort</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Endbenutzer verwenden das System für mindestens 8 Stunden ohne Neustart, Abmeldung oder sonstige Unterbrechung.
+Dabei sind ständig mindestens 20 parallele Benutzer am System angemeldet - höchstens 1000 parallele Benutzer.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das System funktioniert für alle angemeldeten Benutzer korrekt.
+Für den oder die die lange angemeldeten Benutzer gilt dies ebenfalls.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>In der gesamten Zeit tritt bei den Benutzern kein Absturz auf.
+Anmerkung: Es muss für die Benutzer zumindest so aussehen, als verhalte sich das System stabil. Serverseitige Probleme muss das System gegenüber den Benutzern kaschieren oder durch Standby-Systeme oder Failover kompensieren können.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+</section>
+</section>
+<section id="_betreibbarkeit">
+<title>Betreibbarkeit</title>
+<section id="_was_bedeutet_betreibbarkeit">
+<title>Was bedeutet Betreibbarkeit?</title>
+<simpara>Betreibbarkeit wird in DIN/ISO 9126 nicht definiert.</simpara>
+<simpara>In der Praxis gehören hierzu folgende Teilmerkmale:</simpara>
+<variablelist>
+<varlistentry>
+<term><emphasis role="strong">Analysierbarkeit:</emphasis></term>
+<listitem>
+<simpara>Aufwand, um Mängel oder Ursachen von Versagen zu diagnostizieren oder um änderungsbedürftige Teile zu bestimmen.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Installierbarkeit:</emphasis></term>
+<listitem>
+<simpara>Aufwand, der zum Installieren der Software in einer festgelegten Umgebung notwendig ist.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Übertragbarkeit:</emphasis></term>
+<listitem>
+<simpara>Eignung der Software, von einer Umgebung in eine andere übertragen zu werden. Umgebung kann organisatorische Umgebung, Hardware- oder Software-Umgebung einschließen. Teilweise als "Portabilität" bezeichnet.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Austauschbarkeit:</emphasis></term>
+<listitem>
+<simpara>Möglichkeit, diese Software anstelle einer spezifizierten anderen in der Umgebung jener Software zu verwenden, sowie der dafür notwendige Aufwand.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Koexistenz:</emphasis></term>
+<listitem>
+<simpara>Fähigkeit der Software, neben einer anderen mit ähnlichen oder gleichen Funktionen zu arbeiten</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</section>
+<section id="_szenarien_f_r_betreibbarkeit">
+<title>Szenarien für Betreibbarkeit</title>
+<section id="_szenario_2">
+<title>Szenario:</title>
+<simpara>Das Werkzeug zur Messung der aktuellen Datenbank-Performance muss sowohl unter MySQL, Oracle und DB2 laufen.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das Werkzeug muss eine Verbindung zu allen genannten Datenbanken aufbauen können und die jeweilige DB-Struktur anzeigen können.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Initialisierung und Erkennung des verbundenen DB-Typs erfolgt in weniger als 30 Sekunden.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_automatische_installation">
+<title>Szenario: Automatische Installation</title>
+<simpara>Das XY-System lässt sich inklusive sämtlicher benötigten Softwarekomponenten vollständig automatisiert installieren.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Kurze Releasezyklen, um schnelle Erweiterungen oder Fehlerbehebungen produktiv setzen zu können</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Betreiber (oder Administrator) möchte neue Version von XY (innerhalb einer neuen virtuellen Maschine bzw. neuen Hardware) installieren</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Ein automatischer Installer (Skript, Programm) installiert auf Basis einer Ubuntu-Linux Standardinstallation sowohl alle Teile des XY-Systems wie auch sämtliche benötigten zusätzlichen Software- komponenten (etwa: Datenbank, Middleware, Crypto-Module). Sämtliche benötigten Daten (etwa: Datenbank-Initialisierung, LDAP-Standardbenutzer) werden mit angelegt.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die gesamte Installation dauert auf Basis eines bereits installierten Ubuntu-Linux höchstens 30 Minuten.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_langlebigkeit">
+<title>Szenario: Langlebigkeit</title>
+<simpara>Die Software kann &uuml;ber 20 Jahre hinweg auf jeweils aktueller Hardware und Software (Betriebssysteme, DB-Systeme usw.)  portiert werden, wozu nicht mehr als 5 Personentage pro Monat investiert werden m&uuml;ssen.</simpara>
+</section>
+<section id="_szenario_installation_ohne_internetzugang">
+<title>Szenario: Installation ohne Internetzugang</title>
+<simpara>Unabh&auml;ngigkeit der Installation von Zuf&auml;llen des Internets</simpara>
+<simpara>Die Software l&auml;sst sich auf einem System  installieren, ohne dass ein Internetzugang vorhanden ist.</simpara>
+</section>
+</section>
+</section>
+<section id="_sonstige_qualit_tsanforderungen">
+<title>Sonstige Qualitätsanforderungen</title>
+<simpara>Da hätten wir noch eine nahzu beliebige Menge weiterer Qualitätsanforderungen, beispielsweise Funktionalität. Oder diverse Synonyme bereits vorgestellter Q-Merkmale :-)</simpara>
+<simpara>Einige Definitionen:</simpara>
+<section id="_funktionalit_t">
+<title>Funktionalität:</title>
+<simpara>Vorhandensein von Funktionen mit festgelegten Eigenschaften; diese Funktionen erfüllen die definierten Anforderungen. Zu Funktionalität gehören nach DIN/ISO 9126 noch folgende Teilmerkmale:</simpara>
+<variablelist>
+<varlistentry>
+<term><emphasis role="strong">Richtigkeit</emphasis></term>
+<listitem>
+<simpara>Liefern der richtigen oder vereinbarten Ergebnisse oder Wirkungen, z.B. die benötigte Genauigkeit von berechneten Werten.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Angemessenheit</emphasis></term>
+<listitem>
+<simpara>Eignung der Funktionen für spezifizierte Aufgaben, z.B. aufgaben-orientierte Zusammensetzung von Funktionen aus Teilfunktionen.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Interoperabilität</emphasis></term>
+<listitem>
+<simpara>Fähigkeit, mit vorgegebenen Systemen zusammenzuwirken. Hierunter fällt auch die Einbettung in die Betriebsinfrastruktur.</simpara>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term><emphasis role="strong">Ordnungsmäßigkeit</emphasis></term>
+<listitem>
+<simpara>Erfüllung von anwendungsspezifischen Normen, Vereinbarungen, gesetzlichen Bestimmungen und ähnlichen Vorschriften.</simpara>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</section>
+<section id="_sonstige_szenarien">
+<title>Sonstige Szenarien</title>
+<section id="_szenario_verf_gbarkeit_f_r_unterschiedliche_datenbanksysteme">
+<title>Szenario: Verfügbarkeit für unterschiedliche Datenbanksysteme</title>
+<simpara>Das System (Werkzeug) dient zur Performancemessung für Datenbanksysteme.
+Es muss für unterschiedliche Datenbanksysteme zur Verfügung stehen.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel</simpara>
+</entry>
+<entry>
+<simpara>Portabilität, Effizienz, Betreibbarkeit.
+Vielseitiges Werkzeug, soll für unterschiedliche Datenbanksysteme zur Verfügung stehen</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Das Werkzeug wird (per Dialog, Kommandozeile oder programmatisch) mit einem Datenbanksystem verbunden ("connected"): Oracle, DB2, Sybase, MySQL, PostgreSQL</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das Werkzeug stellt die Verbindung zum jeweiligen DBMS erfolgreich her - im Werkzeug ist die DB-Struktur sichtbar.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Der "connect" zur Datenbank erfolgt innerhalb von 30 Sekunden.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_kernfunktion_portabel_auf_ios_und_android">
+<title>Szenario: Kernfunktion portabel auf iOS und Android</title>
+<simpara>Die Kernfunktionen der Mac-OS Software können unter iOS und Android wiederverwendet werden.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Qualitätsziele</simpara>
+</entry>
+<entry>
+<simpara>Wiederverwendbarkeit, Austauschbarkeit</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Geschäftsziel</simpara>
+</entry>
+<entry>
+<simpara>Schnelle Time-to-Market, reduzierte Entwicklungskosten, Marktvergrößerung</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Code ist für Mac-OS entwickelt</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Der Code ist weitmöglich (soweit die Technologie das zulässt) sowohl unter iOS und Android wieder verwendbar.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Das Entwicklungsteam soll die Kernfunktionen wiederverwenden, ohne sie komplett neu implementieren beziehungsweise entwerfen zu müssen.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+<simpara>Ausnahme hiervon sind direkte Aufrufe der jeweiligen Betriebssystemfunktionen.</simpara>
+</section>
+<section id="_szenario_60_testabdeckung_f_r_unit_tests">
+<title>Szenario: 60% Testabdeckung für Unit-Tests.</title>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Qualitätsziele</simpara>
+</entry>
+<entry>
+<simpara>Testbarkeit, Änderbarkeit</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Geschäftsziel</simpara>
+</entry>
+<entry>
+<simpara>Einfache Erweiter- und Änderbarkeit durch hohe Testabdeckung, schnelle Rückmeldung über mögliche Nebenwirkungen bei Codeänderungen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Entwickler entwickelt oder ändert eine Funktion / Methode / Klasse.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Die betroffene Funktion / Methode / Klasse wird durch Unit-Tests überprüft.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Über 60% Pfadabdeckung wird durch die Unit-Tests erreicht.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_einfaches_hinzuf_gen_neuer_tests">
+<title>Szenario: Einfaches Hinzufügen neuer Tests.</title>
+<simpara>Tester sollen mit geringem Aufwand neue Tests zu bestehenden Testsuites hinzufügen können.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Qualitätsziele</simpara>
+</entry>
+<entry>
+<simpara>Testbarkeit, Änderbarkeit</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Geschäftsziel</simpara>
+</entry>
+<entry>
+<simpara>Fähigkeit, neue Tests einfach in bestehende Test-Suites zu integrieren.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Tester möchte neuen Test zu einer bestehenden Testsuite hinzufügen</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Der Test wird zugefügt ohne den Code des Systems selbst (d.h. Den Produktivcode) zu modifizieren.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Es ist kein Re-Compile oder Neukonfiguration des Systems (genauer: des Produktivcodes) nötig.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Anmerkung</simpara>
+</entry>
+<entry>
+<simpara>Testcode oder Testkonfigurationen dürfen jedoch verändert werden.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_hnliche_resultate_bei_stochastischen_testreihen">
+<title>Szenario: Ähnliche Resultate bei stochastischen Testreihen</title>
+<simpara>Werden zwei stochastische Testreihen ausgeführt, sind die Resultate zu 90% ähnlich.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Qualitätsziele</simpara>
+</entry>
+<entry>
+<simpara>Testbarkeit, Konsistenz, Nachvollziehbarkeit.
+Konsistente Testergebnisse auch bei stochastischen Tests oder Testreihen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Testszenario oder Testreihe mit Anteil an zufällig bestimmten Testdaten wird ausgeführt</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Ähnliche Testergebnisse.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Die Ergebnisse zweier Testreihen sind bei 90% aller Einzeltests ähnlich.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_testausf_hrung_mit_einelnem_befehl">
+<title>Szenario: Testausführung mit einelnem Befehl</title>
+<simpara>Ein Tester möchte mehrere Testszenarien mit einem einzelnen Befehl durchführen können.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Geschäftsziel</simpara>
+</entry>
+<entry>
+<simpara>Effizienz, Testbarkeit</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Testadministrator oder Tester möchte mehrere Tests oder Testszenarien durchführen</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Aggregation oder Hintereinander-Ausführung mehrerer Tests.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<simpara>Ausführung mehrerer Tests benötigt nur einen einzigen Befehl des Testers oder Testadministrators.</simpara>
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+<section id="_szenario_x_daten_f_r_externe_systeme_zug_nglich">
+<title>Szenario: X-Daten für externe Systeme zugänglich</title>
+<simpara>Die X-Daten des Y-Systems sollen für ein externes Werkzeug zur Anforderungsanalyse und -management (etwa: Requisite-Pro, Enterprise-Architect oä) zugänglich sein.</simpara>
+<informaltable tabstyle="horizontal" frame="none" colsep="0" rowsep="0">
+<tgroup cols="2">
+<colspec colwidth="15*"/>
+<colspec colwidth="85*"/>
+<tbody valign="top">
+<row>
+<entry>
+<simpara>Qualitätsziel</simpara>
+</entry>
+<entry>
+<simpara>Interoperabilität</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Geschäftsziel(e)</simpara>
+</entry>
+<entry>
+<simpara>Datenkompatibilität mit marktüblichen Werkzeugen zur Anforderungsanalyse zählt als Vorteil gegenüber Mitbewerbern.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Auslöser</simpara>
+</entry>
+<entry>
+<simpara>Ein Endbenutzer möchte die X-Daten des Y-Systems in eines der unterstützten Anforderungstools überführen.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Kontext</simpara>
+</entry>
+<entry>
+<simpara>20 Benutzer haben X-Daten in Form einzelner Projekte im System erfasst.
+Jedes dieser Projekte enthält mindestens ein, höchstens 100 unterschiedliche Requirements.</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Reaktion</simpara>
+</entry>
+<entry>
+<simpara>Das Y-System exportiert die betreffenden X-Daten in das Anforderungstool (Requisite-Pro oder Enterprise-Architect).</simpara>
+</entry>
+</row>
+<row>
+<entry>
+<simpara>Zielwert</simpara>
+</entry>
+<entry>
+<itemizedlist>
+<listitem>
+<simpara>Beim Export der Daten treten keine Fehler auf.</simpara>
+</listitem>
+<listitem>
+<simpara>Von den im Y-System enthaltenen Requirements werden mindestens 98% korrekt exportiert.</simpara>
+</listitem>
+<listitem>
+<simpara>Sämtliche nicht exportierten Requirements werden den betroffenen Benutzern als Fehler gemeldet.</simpara>
+</listitem>
+</itemizedlist>
+
+</entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+
+</section>
+</section>
+</section>
+<section id="_anhang_q_merkmale">
+<title>Anhang: Q-Merkmale</title>
+<simpara>Draußen im Dschungel der Realität warten Dutzende verschiedener Qualitätsanforderungen oder
+Qualitätsziele auf ihre Erfüllung. Hier der Versuch, diese etwas präziser zu definieren und
+zu kategorisieren.</simpara>
+<informaltable frame="topbot"
+    rowsep="1" colsep="1">
+  
+  <tgroup cols="3">
+    
+    <colspec colname="col_1" colwidth="33*"/>
+    
+    <colspec colname="col_2" colwidth="33*"/>
+    
+    <colspec colname="col_3" colwidth="33*"/>
+    
+    
+    <thead>
+      
+      <row>
+        
+        <entry align="left" valign="top">Q-Merkmal</entry>
+        
+        <entry align="left" valign="top">Bedeutung</entry>
+        
+        <entry align="left" valign="top">Oberbegriffe</entry>
+        
+      </row>
+      
+    </thead>
+    
+    <tbody>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Absturzsicherheit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Administrierbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Benötigter Aufwand zur Administration (Verwaltung) einer Software</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Betreibbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Analysierbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Aufwand, um Mängel oder Ursachen von Versagen zu diagnostizieren oder um änderungsbedürftige Teile zu bestimmen</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Änderbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Änderbarkeit</emphasis></simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Aufwand, der zur Durchführung vorgegebener Änderungen notwendig ist. Änderungen sind Korrekturen, Verbesserungen oder Anpassungen der Umgebung, Infrastruktur, Betriebsmittel, der Anforderungen, der internen Struktur, der Implementierung oder technischer Konzepte.</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Angemessenheit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Liefern der richtigen oder vereinbarten Ergebnisse oder Wirkungen, z.B. die benötigte Genauigkeit berechneter Ergebnisse.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Funktionalität</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Anpassbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit der Software zur Anpassung an verschiedene Umgebungen oder Nutzungsszenarien.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Änderbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Antwortzeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zeit, bis die Software ein gewünschtes Ergebnis erzielt oder errechnet.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Auditierbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Prüfbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Ausfallsicherheit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Ausschaltzeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Austauschbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Möglichkeit (und der dafür nötiger Aufwand), diese Software anstelle einer spezifizierten anderen in der Umgebung jener Software zu verwenden.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Übertragbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Autonomie</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit eines Systems, sein Leistungsniveau unabhängig von anderen Systemen zu erbringen.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Betreibbarkeit</emphasis></simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Bedienbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Aufwand für den Benutzer, die Anwendung zu bedienen.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Benutzbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Benutzbarkeit</emphasis></simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Aufwand, der zur Benutzung erforderlich ist, und individuelle Beurteilung der Benutzung durch eine festgelegte oder vorausgesetzte Benutzergruppe.</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Benutzerfreundlichkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Siehe Benutzbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Benutzbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Berechenbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Betreibbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>* Fähigkeit zur Erfüllung vorgegebener Aufgaben im Rahmen allgemeiner Anforderungen an Wirtschaftlichkeit, Verfügbarkeit, Sicherheit etc.
+* Möglichkeit das System mit wirtschaftlich und organisatorisch angemessenem Aufwand in seiner Ablaufumgebung zu betreiben</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Administrierbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Datensicherheit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Sicherheit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Durchsatz</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Effizienz</emphasis></simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Verhältnis zwischen dem Leistungsniveau der Software und dem Umfang der eingesetzten Betriebsmittel unter festgelegten Bedingungen</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Performance</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Einfachheit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>- Einfache Bedienbarkeit
+- Einfache Änderbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Bedienbarkeit, Änderbarkeit,</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Einheitlichkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Verständlichkeit, Bedienbarkeit, Änderbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Erlernbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Aufwand für den Benutzer, die Anwendung zu erlernen (z.B. Bedienung, Ein-, Ausgabe)</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Bedienbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Erweiterbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Änderbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Fehlertoleranz</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit, ein spezifiziertes Leistungsniveau bei Softwarefehlern oder Nichteinhaltung spezifizierter Schnittstellen zu bewahren</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Flexibilität</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Anpassungsfähigkeit an wechselnde Umstände. Möglichkeit zur einfachen Einarbeitung von Änderungen, Erweiterungen oder Behebung von Fehlern.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Änderbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Funktionalität</emphasis></simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Vorhandensein von Funktionen mit festgelegten Eigenschaften;diese Funktionen erfüllen die definierten Anforderungen</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Gefahrlosigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Genauigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit, Funktionalität</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Geschwindigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Glaubwürdigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Maß der Bereitschaft von Benutzern eines Systems, dessen Ergebnisse als gültig zu akzeptieren.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit, Robustheit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Größe</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Umfang der Software, etwa in Lines-of-Code oder in Byte</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Gültigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>i.d.R. bezogen auf Daten</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit, Funktionalität</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Installierbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Aufwand, der zum Installieren der Software in einer festgelegten Umgebung notwendig ist</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Übertragbarkeit</emphasis>, Betreibbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Integrität</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Interoperabilität</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit, mit vorgegebenen Systemen zusammenzuwirken.Hierunter fällt auch die Einbettung in die Betriebsumgebung oder technische Infrastruktur.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Kompatibilität</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Konfigurierbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Betreibbarkeit, Änderbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Konformität</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Grad, zu dem die Software Normen oder Vereinbarungen erfüllt. Differenziert nach Merkmalen (etwa bezüglich Normen zur Sicherheit oder Zuverlässigkeit)</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Konsistenz</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Synonym: Integrität.
+* Bezüglich Daten: Maß, in dem Daten sowie deren Beziehungen deren Gültigkeitsregeln genügen.
+* Bezüglich Verhalten: Maß, in dem sich ein System schlüssig und nachvollziehbar verhält.</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Korrektheit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Eigenschaft eines Systems, seiner Spezifikation zu genügen.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Funktionalität, Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Latenz</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Synonym: Verzögerungszeit. Zeit vom Ende eines Ereignisses bis zum Beginn der Reaktion auf dieses Ereignis.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Laufzeiteffizienz</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Sparsamkeit eines Systems (meist: eines Algorithmus) bezüglich der Resource "Rechenzeit"</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Leistungsfähigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit eines Systems, spezifizierte Dienste oder Leistungen zu erbringen.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Lokalisierbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Anpassungsfähigkeit an landes- oder sprachspezifische Anforderungen.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Bedienbarkeit, Änderbarkeit, Flexibilität</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Modifizierbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Aufwand zur Ausführung von Verbesserungen, zur Fehlerbeseitigung oder Anpassung an Umgebungsänderungen.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Änderbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Modularität</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zerlegung eines Systems in Einzelbausteine mit definierten Schnittstellen.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Änderbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Nachvollziehbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Nichtabstreitbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Sicherheit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Nichtangreifbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Sicherheit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Normgerechtigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Siehe Konformität.</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Ordnungsmäßigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Erfüllung von anwendungsspezifischen Normen, Vereinbarungen, gesetzlichen Bestimmungen und ähnlichen Vorschriften</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Funktionalität</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Performanz</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Siehe Effizienz.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Personalisierbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Änderbarkeit, Betreibbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Portabilität</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Grad der Plattformunabhängigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Übertragbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Prüfbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Aufwand, der zur Prüfung der Software notwendig ist, insbesondere nach Änderungen</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Reaktionszeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Reife</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Geringe Versagenshäufigkeit durch Fehlzustände</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Richtigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Eignung der Funktionen für spezifizierte Aufgaben.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Korrektheit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Robustheit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Sicherheit</emphasis></simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit, unberechtigten Zugriff, sowohl versehentlich als auch vorsätzlich, auf Programme und Daten zu verhindern.</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Skalierbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit eines Systems, unter Nutzung zusätzlicher Resourcen seine Kapazitäten zur Leistungserbringung zu steigern.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Stabilität</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Wahrscheinlichkeit des Auftretens unerwarteter Wirkungen, entweder aufgrund von Benutzung oder Änderungen</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit, Robustheit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Startup-Zeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zeit, die das System zum Start, d.h. bis zum Herstellen der (vollständigen oder teilweisen) Betriebsbereitschaft benötigt.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Strapazierfähigkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Testbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Überprüfbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Übertragbarkeit</emphasis></simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Wie leicht lässt sich die Software in eine andere (Hardware-, Software- oder organisatorische) Umgebung übertragen?</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Überwachbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit, (Betriebs-)Ablauf, Störungsfreiheit, Auslastung, Ressourcennutzung oder sonstige Eigenschaften zur Laufzeit ohne funktionale Beeinträchtigung zu beobachten.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Betreibbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Unterstützbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Betreibbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Verbrauchsverhalten</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Anzahl und Dauer der benötigten Betriebsmittel für die Erfüllung der Funktionen</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Verfügbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit, Robustheit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Verständlichkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>1.) Externe <subscript>: Aufwand für den Benutzer, das Konzept und die Anwendung zu verstehen
+2.) Interne </subscript>: Aufwand, die interne Struktur, deren Konzepte und Implementierung zu verstehen</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>1.) Benutzbarkeit
+2.) Wartbarkeit,</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Verteilbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Betreibbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Vertraulichkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Sicherheit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Vorhersagbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Wartbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Welchen Aufwand erfordert es, vorgegebene Änderungen an der Software durchzuführen?</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Änderbarkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Wiederherstellbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten wiederzugewinnen.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Zeitverhalten</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Antwort- und Verarbeitungszeiten sowie Durchsatz bei der Funktionsausführung</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Effizienz, Performance</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Zugriffsschutz</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Maßnahmen gegen unerwünschten Zugriff auf Resourcen oder Systemteile</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Sicherheit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Zuverlässigkeit</emphasis></simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Fähigkeit der Software, ihr Leistungsniveau unter festgelegten Bedingungen über einen festgelegten Zeitraum zu bewahren</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Robustheit</simpara></entry>
+        
+      </row>
+      
+    </tbody>
+    
+  </tgroup>
+</informaltable>
+
+</section>
+</article>
