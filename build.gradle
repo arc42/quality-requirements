@@ -21,7 +21,7 @@ asciidoctor {
     options = [
         '--OUT_FILE': "quality-requirements.html",
         attributes: [ OUT_FILE: "quality-requirements",
-                      toc: '3'
+                      toc: ''
                     ]
               ]
 }

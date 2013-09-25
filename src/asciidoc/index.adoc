@@ -5,8 +5,11 @@
 
 = Beispiele für Qualitätsanforderungen an Software 
 Dr. Gernot Starke <gernot.starke@innoq.com>
-v0.5 
-:toc: 
+v0.6 
+
+
+:toc2: 
+
 :imagesdir: ./images
 :homepage: http://arc42.bitbucket.org/quality-requirements
 :numbered:

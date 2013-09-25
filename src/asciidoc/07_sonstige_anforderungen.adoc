@@ -75,9 +75,10 @@ Zielwert::
 
 
 ==== Szenario: Einfaches Hinzufügen neuer Tests. 
+Tester sollen mit geringem Aufwand neue Tests zu bestehenden Testsuites hinzufügen können.
 
 [horizontal]
-Qualitätsziele: Testbarkeit, Änderbarkeit
+Qualitätsziele:: Testbarkeit, Änderbarkeit
 
 Geschäftsziel::
 Fähigkeit, neue Tests einfach in bestehende Test-Suites zu integrieren.
@@ -92,6 +93,7 @@ Zielwert::
 Es ist kein Re-Compile oder Neukonfiguration des Systems (genauer: des Produktivcodes) nötig.
 
 Anmerkung:: Testcode oder Testkonfigurationen dürfen jedoch verändert werden.
+
 
 
 ==== Szenario: Ähnliche Resultate bei stochastischen Testreihen

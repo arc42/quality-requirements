@@ -7,7 +7,7 @@ FILENAME="index"
 
 # make asciidoc verbose
 #ADOCOPTION="-v"
-ADOCOPTION=""
+ADOCOPTION="-a toc2"
 
 
 # change to asciidoc, in case you don't have asciidoctor installed!
