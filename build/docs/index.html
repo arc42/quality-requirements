@@ -498,7 +498,7 @@ Qualitätsmerkmalen stammen teilweise aus DIN/ISO 9126 bzw. dem FURPS-Modell+.</
 <p><a id="rupp09"></a>[rupp09] Chris Rupp et.al: Requirements Engineering und -management. Hanser-Verlag, 5. Auflage 2009.</p>
 </li>
 <li>
-<p><a id="eeles05"></a>[eeles05] Peter Eeles: Capturing Architectural Requirements. <a href="http://www.ibm.com/developerworks/rational/library/4706.html">http://www.ibm.com/developerworks/rational/library/4706.html</a>. Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.</p>
+<p><a id="eeles05"></a>[eeles05] Peter Eeles: <a href="http://www.ibm.com/developerworks/rational/library/4706.html">Capturing Architectural Requirements</a>. Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.</p>
 </li>
 </ul>
 </div>
@@ -3324,8 +3324,9 @@ zu kategorisieren.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ausfallsicherheit</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Zuverlässigkeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fähigkeit des Systems, auch bei Ausfall einiger Bestandteile (Hardware oder Software) ein definiertes Leistungsniveau erhalten zu können.
+Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen einzelner Netzsegmente.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zuverlässigkeit, Partitionstoleranz</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ausschaltzeit</p></td>
@@ -3477,9 +3478,13 @@ zu kategorisieren.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Konsistenz</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Synonym: Integrität.
-* Bezüglich Daten: Maß, in dem Daten sowie deren Beziehungen deren Gültigkeitsregeln genügen.
-* Bezüglich Verhalten: Maß, in dem sich ein System schlüssig und nachvollziehbar verhält.</p></td>
-<td class="tableblock halign-left valign-top"></td>
+* Bezüglich Daten:
+  + Maß, in dem Daten sowie deren Beziehungen deren Gültigkeitsregeln genügen.
+  + Clienten einer Datenbank erhalten bei identischen Anfragen identische Ergebnisse.
+* Bezüglich Verhalten: Maß, in dem sich ein System schlüssig und nachvollziehbar verhält.
+</p><p class="tableblock">Weitere Verfeinerung: Monotonic-Read-Consistency, Montonic-Write-Consistency, Read-Your-Writes-Consistency,
+Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. <a href="http://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed">http://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integrität</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Korrektheit</p></td>
@@ -3534,12 +3539,17 @@ zu kategorisieren.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Normgerechtigkeit</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Siehe Konformität.</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konformität</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ordnungsmäßigkeit</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Erfüllung von anwendungsspezifischen Normen, Vereinbarungen, gesetzlichen Bestimmungen und ähnlichen Vorschriften</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Funktionalität</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Partitionstoleranz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Das System arbeitet auch bei Ausfall einzelner Knoten, Netzsegmente oder sonstiger Systembestandteile weiter. Begriff wird insbesondere im Zusammenhang mit dem <a href="http://en.wikipedia.org/wiki/CAP_theorem">CAP-Theorem</a> und verteilten Datenbanken (<a href="http://nosql-database.org/">NoSQL-DB</a>) verwendet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Zuverlässigkeit</strong>, Ausfallsicherheit</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Performanz</p></td>
@@ -3670,8 +3680,14 @@ zu kategorisieren.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Wiederherstellbarkeit</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten wiederzugewinnen.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten
+wiederzugewinnen.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Zuverlässigkeit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wiederverwendbarkeit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eigenschaft eines Systems oder Bausteins, auch ausserhalb des ursprünglich geplanten Einsatzzwecks oder -ortes verwendet zu werden.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flexibilität, Portabilität</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Zeitverhalten</p></td>

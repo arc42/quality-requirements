@@ -77,7 +77,7 @@ Qualitätsmerkmalen stammen teilweise aus DIN/ISO 9126 bzw. dem FURPS-Modell+.</
 <bibliomisc><anchor id="rupp09" xreflabel="[rupp09]"/>[rupp09] Chris Rupp et.al: Requirements Engineering und -management. Hanser-Verlag, 5. Auflage 2009.</bibliomisc>
 </bibliomixed>
 <bibliomixed>
-<bibliomisc><anchor id="eeles05" xreflabel="[eeles05]"/>[eeles05] Peter Eeles: Capturing Architectural Requirements. <ulink url="http://www.ibm.com/developerworks/rational/library/4706.html">http://www.ibm.com/developerworks/rational/library/4706.html</ulink>. Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.</bibliomisc>
+<bibliomisc><anchor id="eeles05" xreflabel="[eeles05]"/>[eeles05] Peter Eeles: <ulink url="http://www.ibm.com/developerworks/rational/library/4706.html">Capturing Architectural Requirements</ulink>. Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.</bibliomisc>
 </bibliomixed>
 </bibliodiv>
 
@@ -3075,9 +3075,10 @@ zu kategorisieren.</simpara>
         
         <entry align="left" valign="top"><simpara>Ausfallsicherheit</simpara></entry>
         
-        <entry align="left" valign="top"></entry>
+        <entry align="left" valign="top"><simpara>Fähigkeit des Systems, auch bei Ausfall einiger Bestandteile (Hardware oder Software) ein definiertes Leistungsniveau erhalten zu können.
+Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen einzelner Netzsegmente.</simpara></entry>
         
-        <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        <entry align="left" valign="top"><simpara>Zuverlässigkeit, Partitionstoleranz</simpara></entry>
         
       </row>
       
@@ -3378,10 +3379,14 @@ zu kategorisieren.</simpara>
         <entry align="left" valign="top"><simpara>Konsistenz</simpara></entry>
         
         <entry align="left" valign="top"><simpara>Synonym: Integrität.
-* Bezüglich Daten: Maß, in dem Daten sowie deren Beziehungen deren Gültigkeitsregeln genügen.
-* Bezüglich Verhalten: Maß, in dem sich ein System schlüssig und nachvollziehbar verhält.</simpara></entry>
+* Bezüglich Daten:
+  + Maß, in dem Daten sowie deren Beziehungen deren Gültigkeitsregeln genügen.
+  + Clienten einer Datenbank erhalten bei identischen Anfragen identische Ergebnisse.
+* Bezüglich Verhalten: Maß, in dem sich ein System schlüssig und nachvollziehbar verhält.
+</simpara><simpara>Weitere Verfeinerung: Monotonic-Read-Consistency, Montonic-Write-Consistency, Read-Your-Writes-Consistency,
+Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. <ulink url="http://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed">http://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed</ulink></simpara></entry>
         
-        <entry align="left" valign="top"></entry>
+        <entry align="left" valign="top"><simpara>Integrität</simpara></entry>
         
       </row>
       
@@ -3491,7 +3496,7 @@ zu kategorisieren.</simpara>
         
         <entry align="left" valign="top"><simpara>Siehe Konformität.</simpara></entry>
         
-        <entry align="left" valign="top"></entry>
+        <entry align="left" valign="top"><simpara>Konformität</simpara></entry>
         
       </row>
       
@@ -3502,6 +3507,16 @@ zu kategorisieren.</simpara>
         <entry align="left" valign="top"><simpara>Erfüllung von anwendungsspezifischen Normen, Vereinbarungen, gesetzlichen Bestimmungen und ähnlichen Vorschriften</simpara></entry>
         
         <entry align="left" valign="top"><simpara>Funktionalität</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Partitionstoleranz</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Das System arbeitet auch bei Ausfall einzelner Knoten, Netzsegmente oder sonstiger Systembestandteile weiter. Begriff wird insbesondere im Zusammenhang mit dem <ulink url="http://en.wikipedia.org/wiki/CAP_theorem">CAP-Theorem</ulink> und verteilten Datenbanken (<ulink url="http://nosql-database.org/">NoSQL-DB</ulink>) verwendet.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara><emphasis role="strong">Zuverlässigkeit</emphasis>, Ausfallsicherheit</simpara></entry>
         
       </row>
       
@@ -3761,9 +3776,20 @@ zu kategorisieren.</simpara>
         
         <entry align="left" valign="top"><simpara>Wiederherstellbarkeit</simpara></entry>
         
-        <entry align="left" valign="top"><simpara>Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten wiederzugewinnen.</simpara></entry>
+        <entry align="left" valign="top"><simpara>Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten
+wiederzugewinnen.</simpara></entry>
         
         <entry align="left" valign="top"><simpara>Zuverlässigkeit</simpara></entry>
+        
+      </row>
+      
+      <row>
+        
+        <entry align="left" valign="top"><simpara>Wiederverwendbarkeit</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Eigenschaft eines Systems oder Bausteins, auch ausserhalb des ursprünglich geplanten Einsatzzwecks oder -ortes verwendet zu werden.</simpara></entry>
+        
+        <entry align="left" valign="top"><simpara>Flexibilität, Portabilität</simpara></entry>
         
       </row>
       

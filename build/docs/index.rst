@@ -57,9 +57,10 @@ Getting Requirements Right. Addision-Wesley, 3. Auflage 2012.
 [rupp09] Chris Rupp et.al: Requirements Engineering und -management.
 Hanser-Verlag, 5. Auflage 2009.
 
-[eeles05] Peter Eeles: Capturing Architectural Requirements.
-http://www.ibm.com/developerworks/rational/library/4706.html. Erläutert
-das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.
+[eeles05] Peter Eeles: `Capturing Architectural
+Requirements <http://www.ibm.com/developerworks/rational/library/4706.html>`__.
+Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an
+Software.
 
 Mitwirkende
 -----------
@@ -1580,7 +1581,19 @@ Versuch, diese etwas präziser zu definieren und zu kategorisieren.
 +-------------------------+-------------------------+-------------------------+
 | Auditierbarkeit         |                         | Prüfbarkeit             |
 +-------------------------+-------------------------+-------------------------+
-| Ausfallsicherheit       |                         | Zuverlässigkeit         |
+| Ausfallsicherheit       | Fähigkeit des Systems,  | Zuverlässigkeit,        |
+|                         | auch bei Ausfall        | Partitionstoleranz      |
+|                         | einiger Bestandteile    |                         |
+|                         | (Hardware oder          |                         |
+|                         | Software) ein           |                         |
+|                         | definiertes             |                         |
+|                         | Leistungsniveau         |                         |
+|                         | erhalten zu können. Im  |                         |
+|                         | Zuge von verteilten     |                         |
+|                         | Systemen auch: Toleranz |                         |
+|                         | gegenüber partiellen    |                         |
+|                         | Ausfällen einzelner     |                         |
+|                         | Netzsegmente.           |                         |
 +-------------------------+-------------------------+-------------------------+
 | Ausschaltzeit           |                         | Effizienz               |
 +-------------------------+-------------------------+-------------------------+
@@ -1733,17 +1746,37 @@ Versuch, diese etwas präziser zu definieren und zu kategorisieren.
 |                         | Sicherheit oder         |                         |
 |                         | Zuverlässigkeit)        |                         |
 +-------------------------+-------------------------+-------------------------+
-| Konsistenz              | Synonym: Integrität. \* |                         |
-|                         | Bezüglich Daten: Maß,   |                         |
+| Konsistenz              | Synonym: Integrität. \* | Integrität              |
+|                         | Bezüglich Daten: + Maß, |                         |
 |                         | in dem Daten sowie      |                         |
 |                         | deren Beziehungen deren |                         |
 |                         | Gültigkeitsregeln       |                         |
-|                         | genügen. \* Bezüglich   |                         |
-|                         | Verhalten: Maß, in dem  |                         |
-|                         | sich ein System         |                         |
-|                         | schlüssig und           |                         |
+|                         | genügen. + Clienten     |                         |
+|                         | einer Datenbank         |                         |
+|                         | erhalten bei            |                         |
+|                         | identischen Anfragen    |                         |
+|                         | identische Ergebnisse.  |                         |
+|                         | \* Bezüglich Verhalten: |                         |
+|                         | Maß, in dem sich ein    |                         |
+|                         | System schlüssig und    |                         |
 |                         | nachvollziehbar         |                         |
 |                         | verhält.                |                         |
+|                         |                         |                         |
+|                         | Weitere Verfeinerung:   |                         |
+|                         | Monotonic-Read-Consiste |                         |
+|                         | ncy,                    |                         |
+|                         | Montonic-Write-Consiste |                         |
+|                         | ncy,                    |                         |
+|                         | Read-Your-Writes-Consis |                         |
+|                         | tency,                  |                         |
+|                         | Write-Follows-Read-Cons |                         |
+|                         | istency.                |                         |
+|                         | Siehe Erläuterungen zum |                         |
+|                         | CAP-Theorem.            |                         |
+|                         | http://www.infoq.com/ar |                         |
+|                         | ticles/cap-twelve-years |                         |
+|                         | -later-how-the-rules-ha |                         |
+|                         | ve-changed              |                         |
 +-------------------------+-------------------------+-------------------------+
 | Korrektheit             | Eigenschaft eines       | Funktionalität,         |
 |                         | Systems, seiner         | Zuverlässigkeit         |
@@ -1790,7 +1823,7 @@ Versuch, diese etwas präziser zu definieren und zu kategorisieren.
 +-------------------------+-------------------------+-------------------------+
 | Nichtangreifbarkeit     |                         | Sicherheit              |
 +-------------------------+-------------------------+-------------------------+
-| Normgerechtigkeit       | Siehe Konformität.      |                         |
+| Normgerechtigkeit       | Siehe Konformität.      | Konformität             |
 +-------------------------+-------------------------+-------------------------+
 | Ordnungsmäßigkeit       | Erfüllung von           | Funktionalität          |
 |                         | anwendungsspezifischen  |                         |
@@ -1798,6 +1831,24 @@ Versuch, diese etwas präziser zu definieren und zu kategorisieren.
 |                         | gesetzlichen            |                         |
 |                         | Bestimmungen und        |                         |
 |                         | ähnlichen Vorschriften  |                         |
++-------------------------+-------------------------+-------------------------+
+| Partitionstoleranz      | Das System arbeitet     | **Zuverlässigkeit**,    |
+|                         | auch bei Ausfall        | Ausfallsicherheit       |
+|                         | einzelner Knoten,       |                         |
+|                         | Netzsegmente oder       |                         |
+|                         | sonstiger               |                         |
+|                         | Systembestandteile      |                         |
+|                         | weiter. Begriff wird    |                         |
+|                         | insbesondere im         |                         |
+|                         | Zusammenhang mit dem    |                         |
+|                         | `CAP-Theorem <http://en |                         |
+|                         | .wikipedia.org/wiki/CAP |                         |
+|                         | _theorem>`__            |                         |
+|                         | und verteilten          |                         |
+|                         | Datenbanken             |                         |
+|                         | (`NoSQL-DB <http://nosq |                         |
+|                         | l-database.org/>`__)    |                         |
+|                         | verwendet.              |                         |
 +-------------------------+-------------------------+-------------------------+
 | Performanz              | Siehe Effizienz.        | Effizienz               |
 +-------------------------+-------------------------+-------------------------+
@@ -1917,6 +1968,14 @@ Versuch, diese etwas präziser zu definieren und zu kategorisieren.
 |                         | wiederherzustellen und  |                         |
 |                         | die direkt betroffenen  |                         |
 |                         | Daten wiederzugewinnen. |                         |
++-------------------------+-------------------------+-------------------------+
+| Wiederverwendbarkeit    | Eigenschaft eines       | Flexibilität,           |
+|                         | Systems oder Bausteins, | Portabilität            |
+|                         | auch ausserhalb des     |                         |
+|                         | ursprünglich geplanten  |                         |
+|                         | Einsatzzwecks oder      |                         |
+|                         | -ortes verwendet zu     |                         |
+|                         | werden.                 |                         |
 +-------------------------+-------------------------+-------------------------+
 | Zeitverhalten           | Antwort- und            | Effizienz, Performance  |
 |                         | Verarbeitungszeiten     |                         |

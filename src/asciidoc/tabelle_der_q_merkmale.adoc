@@ -52,8 +52,9 @@ zu kategorisieren.
 
 
 | Ausfallsicherheit 
-| 
-| Zuverlässigkeit 
+| Fähigkeit des Systems, auch bei Ausfall einiger Bestandteile (Hardware oder Software) ein definiertes Leistungsniveau erhalten zu können.
+Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen einzelner Netzsegmente. 
+| Zuverlässigkeit, Partitionstoleranz 
 
 
 | Ausschaltzeit | | Effizienz 
@@ -206,9 +207,14 @@ zu kategorisieren.
 
 | Konsistenz
 | Synonym: Integrität.
-* Bezüglich Daten: Maß, in dem Daten sowie deren Beziehungen deren Gültigkeitsregeln genügen.
+* Bezüglich Daten: 
+  + Maß, in dem Daten sowie deren Beziehungen deren Gültigkeitsregeln genügen.
+  + Clienten einer Datenbank erhalten bei identischen Anfragen identische Ergebnisse.
 * Bezüglich Verhalten: Maß, in dem sich ein System schlüssig und nachvollziehbar verhält.
-|
+
+Weitere Verfeinerung: Monotonic-Read-Consistency, Montonic-Write-Consistency, Read-Your-Writes-Consistency,
+Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed
+| Integrität
 
 | Korrektheit
 | Eigenschaft eines Systems, seiner Spezifikation zu genügen.
@@ -263,12 +269,17 @@ zu kategorisieren.
 
 | Normgerechtigkeit
 | Siehe Konformität.
-|
+| Konformität
 
 
 | Ordnungsmäßigkeit
 | Erfüllung von anwendungsspezifischen Normen, Vereinbarungen, gesetzlichen Bestimmungen und ähnlichen Vorschriften
 | Funktionalität
+
+
+| Partitionstoleranz
+| Das System arbeitet auch bei Ausfall einzelner Knoten, Netzsegmente oder sonstiger Systembestandteile weiter. Begriff wird insbesondere im Zusammenhang mit dem http://en.wikipedia.org/wiki/CAP_theorem[CAP-Theorem] und verteilten Datenbanken (http://nosql-database.org/[NoSQL-DB]) verwendet.
+| **Zuverlässigkeit**, Ausfallsicherheit
 
 
 | Performanz
@@ -406,8 +417,14 @@ zu kategorisieren.
 
 
 | Wiederherstellbarkeit
-| Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten wiederzugewinnen.
+| Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten 
+wiederzugewinnen.
 | Zuverlässigkeit
+
+
+| Wiederverwendbarkeit
+| Eigenschaft eines Systems oder Bausteins, auch ausserhalb des ursprünglich geplanten Einsatzzwecks oder -ortes verwendet zu werden.
+| Flexibilität, Portabilität
 
 
 | Zeitverhalten

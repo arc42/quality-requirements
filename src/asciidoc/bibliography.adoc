@@ -9,7 +9,7 @@
 
 * [[[rupp09]]] Chris Rupp et.al: Requirements Engineering und -management. Hanser-Verlag, 5. Auflage 2009.
 
-* [[[eeles05]]] Peter Eeles: Capturing Architectural Requirements. http://www.ibm.com/developerworks/rational/library/4706.html. Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.
+* [[[eeles05]]] Peter Eeles: http://www.ibm.com/developerworks/rational/library/4706.html[Capturing Architectural Requirements]. Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.
 
 
 
