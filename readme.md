@@ -22,8 +22,9 @@ Download [hier, direkt von BitBucket](https://bitbucket.org/arc42/quality-requir
 #### Build selbst ausführen
 Entweder
 
-    gradle asciidoctor
+    gradle 
 
+startet die defaultTasks generateHTML und generateDocx,
 oder
 
     ./build.sh
@@ -31,8 +32,10 @@ oder
 * Quellen liegen in asciidoc-Format unter /src/asciidoc.
 
 #### Einschränkungen
-* gradle baut zZt nur die html-Version (d.h. ruft pandoc nicht auf, erzeugt kein docbook)
-* Deswegen sind aktuelle Versionen in docbook und docx im Build-Verzeichnis 
+* gradle baut zZt nur die html-Version sowie eine einfache (ungestylte) docx.
+
+* Daher: docx manuell korrigiert (gestyled) unter build/docs bzw. resources  
+* aktuelle Versionen (ohne styling) in docbook und docx im Build-Verzeichnis 
 
 
 ## Offene Punkte / Fehler
