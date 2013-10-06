@@ -1,8 +1,37 @@
+
+
+/***
+ * arc42 - quality requirements examples - gradle build script
+ =============================================================
+ *
+ * This is free software without any guarantees. Use at your own risk.
+ *
+ * See licence.txt for details.
+ *
+ * 
+ * Credits:
+ *   Peter Niederwieser, for instructions on how to:
+ *   - generate multiple output files from one input fileset:
+ *     http://forums.gradle.org/gradle/topics/gradle_file_structure_when_generating_multiple_output_files
+ *   - call shell commands from gradle:
+ *     http://forums.gradle.org/gradle/topics/how_to_execute_shell_command_source_or_dot_doestnt_work_with_exec
+***************************************************************/
+
+ 
 project.description = "arc42 - Examples for Software Quality Requirements"
+project.version = "0.7"
+
+
+import org.asciidoctor.gradle.AsciidoctorTask
+
+
+defaultTasks 'generateHTML', 'generateDocx'
+
 
 buildscript {
     repositories {
-        mavenRepo name: 'Bintray Asciidoctor repo', url: 'http://dl.bintray.com/content/aalmiray/asciidoctor'
+        mavenRepo name: 'Bintray Asciidoctor repo', 
+        url: 'http://dl.bintray.com/content/aalmiray/asciidoctor'
         mavenRepo name: 'Bintray JCenter', url: 'http://jcenter.bintray.com'
     }
 
@@ -12,18 +41,56 @@ buildscript {
 
 }
 
+
 apply plugin: 'asciidoctor'
 
-
-asciidoctor {
-    sourceDocumentName = new File("${sourceDir}/index.adoc")
+tasks.withType(AsciidoctorTask) { docTask ->
     outputDir = new File("$buildDir/docs")
+    sourceDocumentName = new File("${sourceDir}/index.adoc")
     options = [
-        '--OUT_FILE': "quality-requirements.html",
-        attributes: [ OUT_FILE: "quality-requirements",
-                      toc: ''
-                    ]
-              ]
+            logDocuments: true,
+            attributes: [
+                    icons: 'font',
+                    experimental: true
+            ]
+    ]
 }
 
+
+task generateHTML ( type: AsciidoctorTask,
+                    description: 'Generates HTML documentation.',
+                    group: 'Documentation') {
+    backend = 'html5'
+    options.attributes.copycss = true
+}
+
+
+task generateDocbook (  type: AsciidoctorTask,
+                        description: 'Generates DOCBOOK documentation.',
+                        group: 'Documentation') {
+    backend = 'docbook'
+
+    // TODO: the following settings do NOT work
+    // options = [ attributes: ['out-file': "lizenz.docbook" ] ]
+    // options = [ 'out-file': "lizenz.docbook" ]
+    // options = [ 'to-file': "lizenz.docbook"  ]
+
+    // asciidoc generates an xml instead of docbook extension.
+
+}
+
+task generateDocx( dependsOn: 'generateDocbook', type: Exec) {
+      description = 
+"""
+Executing shell commands does currently NOT work from within
+the IntelliJ JetGradle environment.
+"""
+    executable "sh"
+
+// calling pandoc over sh directly from gradle does not produce any output,
+// therefore I delegated docx creation to a shell script.
+
+    args "create_docx_with_pandoc.sh"
+
+}
 
