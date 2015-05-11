@@ -39,14 +39,16 @@ oder
 
 
 ## Offene Punkte / Fehler
-Siehe den [Issue-Tracker](https://bitbucket.org/arc42/quality-requirements/issues?status=new&status=open) für arc42-quality-requirements auf Bitbucket.
+Siehe den [Issue-Tracker](https://github.com/arc42/quality-requirements/issues) für arc42-quality-requirements auf Github.
+
 
 ## Feedback ##
-Ich freue mich über konstruktive Kritik und Verbesserungsvorschläge sowie Beiträge jeglicher Art :-) - in unserem [Issue-Tracker](https://bitbucket.org/arc42/quality-requirements/issues?status=new&status=open "issue-Tracker for arc42-quality-requirements on bitbucket").
+Ich freue mich über konstruktive Kritik und Verbesserungsvorschläge sowie Beiträge jeglicher Art :-) - in unserem [Issue-Tracker](https://github.com/arc42/quality-requirements/issues "issue-Tracker for arc42-quality-requirements on Github").
 
 
 ## Changes
 
+* 2015-05-11: Issue-Tracker Links korrigiert
 * 2013-09-28: Links korrigiert, Voraussetzungen, Vorgehen bei build
 * 2013-09-23: Umstellung auf gradle-build
 * 2013-09: Umstellung auf AsciiDoc für besseres Tagging, Website-Export etc.
