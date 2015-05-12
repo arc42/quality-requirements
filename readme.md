@@ -24,7 +24,7 @@ Entweder
 
     gradle
 
-startet die defaultTasks generateHTML und generateDocx,
+startet die defaultTasks generateDocx,
 oder
 
     ./build.sh

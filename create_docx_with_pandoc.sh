@@ -1,6 +1,6 @@
-#!/bin/bash          
-            
-TARGET="./build/docs"
+#!/bin/bash
+
+TARGET="./build"
 
 FILENAME="index"
 INFILEXTENSION="xml"

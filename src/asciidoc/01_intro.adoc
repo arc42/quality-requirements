@@ -7,7 +7,7 @@ Die Qualität eines Produktes oder Systems ist ganz allgemein als Menge von Eige
 
 
 
-In der Praxis haben sich einige Kategorien (Oberbegriffe) für häufig auftretende _Qualitätsanforderungen_ 
+In der Praxis haben sich einige Kategorien (Oberbegriffe) für häufig auftretende _Qualitätsanforderungen_
 (synonym: Qualitätsziele) etabliert, im wesentlichen durch das DIN/ISO 9126 Begriffsmodell geprägt.
 
 
@@ -50,16 +50,12 @@ include::bibliography.adoc[]
 
 * Christoph Iserlohn (innoQ), neue Szenarien
 * Oliver Tigges (innoQ), neue Szenarien
-* Alex Heusingfeld (innoQ), Infrastruktur, AsciiDoc 
-* Roland Krummenacher & div. N.N.: Reviews, Korrekturen       
+* Alex Heusingfeld (innoQ), Infrastruktur, AsciiDoc
+* Roland Krummenacher & div. N.N.: Reviews, Korrekturen
 
-Ideen und Anregungen zu einigen Szenarien auch von Firebrand-Softwarearchitectures. 
+Ideen und Anregungen zu einigen Szenarien auch von Firebrand-Softwarearchitectures.
 
 
 === Lizenz
 
 include::lizenz.adoc[]
-
-
-
-
