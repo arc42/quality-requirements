@@ -6,9 +6,9 @@ Die Ideen zu den hier aufgeführten Szenarien und Qualitätsanforderungen stamme
 
 
 ## Download ##
-Zur Zeit gibt es diese Szenarien in html, docx und docbook Format. 
+Zur Zeit gibt es diese Szenarien in html, docx und docbook Format.
 
-Download [hier, direkt von BitBucket](https://bitbucket.org/arc42/quality-requirements/downloads/ "Qualitätsanforderungen-Beispiele-docx").
+Download [hier, direkt von Github](https://github.com/arc42/quality-requirements/downloads/ "Qualitätsanforderungen-Beispiele-docx").
 
 ## Build / Generierung
 
@@ -22,20 +22,20 @@ Download [hier, direkt von BitBucket](https://bitbucket.org/arc42/quality-requir
 #### Build selbst ausführen
 Entweder
 
-    gradle 
+    gradle
 
 startet die defaultTasks generateHTML und generateDocx,
 oder
 
     ./build.sh
-    
+
 * Quellen liegen in asciidoc-Format unter /src/asciidoc.
 
 #### Einschränkungen
 * gradle baut zZt nur die html-Version sowie eine einfache (ungestylte) docx.
 
 * Daher: docx manuell korrigiert (gestyled) unter build/docs bzw. resources  
-* aktuelle Versionen (ohne styling) in docbook und docx im Build-Verzeichnis 
+* aktuelle Versionen (ohne styling) in docbook und docx im Build-Verzeichnis
 
 
 ## Offene Punkte / Fehler
@@ -44,6 +44,10 @@ Siehe den [Issue-Tracker](https://github.com/arc42/quality-requirements/issues) 
 
 ## Feedback ##
 Ich freue mich über konstruktive Kritik und Verbesserungsvorschläge sowie Beiträge jeglicher Art :-) - in unserem [Issue-Tracker](https://github.com/arc42/quality-requirements/issues "issue-Tracker for arc42-quality-requirements on Github").
+
+## Status
+![Issues](http://img.shields.io/github/issues/arc42/quality-requirements.svg)
+
 
 
 ## Changes
@@ -55,5 +59,3 @@ Ich freue mich über konstruktive Kritik und Verbesserungsvorschläge sowie Beit
 * 2013-08: (Automatische) Konvertierung in Markdown
 * 2013-07: (Automatische) Konvertierung in docx, für Kompatibilität
 * Dezember 2012: Initiale Version (in Scrivener)
-
-
