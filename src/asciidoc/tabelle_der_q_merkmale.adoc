@@ -1,63 +1,65 @@
 :numbered:
 
-## Anhang: Q-Merkmale
+[appendix]
+[[Q-Merkmale]]
+## Q-Merkmale
 
-Draußen im Dschungel der Realität warten Dutzende verschiedener Qualitätsanforderungen oder 
+Draußen im Dschungel der Realität warten Dutzende verschiedener Qualitätsanforderungen oder
 Qualitätsziele auf ihre Erfüllung. Hier der Versuch, diese etwas präziser zu definieren und
 zu kategorisieren.
 
 
 
- 
-[cols="3", frame="topbot", options="header"] 
+
+[cols="3", frame="topbot", options="header"]
 |=======
-| Q-Merkmal        
-| Bedeutung 
-| Oberbegriffe 
+| Q-Merkmal
+| Bedeutung
+| Oberbegriffe
 
 
-| Absturzsicherheit 
-|                    
-| Zuverlässigkeit 
+| Absturzsicherheit
+|
+| Zuverlässigkeit
 
-| Administrierbarkeit 
-| Benötigter Aufwand zur Administration (Verwaltung) einer Software 
+| Administrierbarkeit
+| Benötigter Aufwand zur Administration (Verwaltung) einer Software
 | Betreibbarkeit
 
 
-| Analysierbarkeit 
-| Aufwand, um Mängel oder Ursachen von Versagen zu diagnostizieren oder um änderungsbedürftige Teile zu bestimmen 
+| Analysierbarkeit
+| Aufwand, um Mängel oder Ursachen von Versagen zu diagnostizieren oder um änderungsbedürftige Teile zu bestimmen
 | Änderbarkeit
 
-| *Änderbarkeit* 
-| Aufwand, der zur Durchführung vorgegebener Änderungen notwendig ist. Änderungen sind Korrekturen, Verbesserungen oder Anpassungen der Umgebung, Infrastruktur, Betriebsmittel, der Anforderungen, der internen Struktur, der Implementierung oder technischer Konzepte. 
+| *Änderbarkeit*
+| Aufwand, der zur Durchführung vorgegebener Änderungen notwendig ist. Änderungen sind Korrekturen, Verbesserungen oder Anpassungen der Umgebung, Infrastruktur, Betriebsmittel, der Anforderungen, der internen Struktur, der Implementierung oder technischer Konzepte.
 |
 
-| Angemessenheit 
+| Angemessenheit
 | Liefern der richtigen oder vereinbarten Ergebnisse oder Wirkungen, z.B. die benötigte Genauigkeit berechneter Ergebnisse.
-| Funktionalität 
+| Funktionalität
 
 
-| Anpassbarkeit 
-| Fähigkeit der Software zur Anpassung an verschiedene Umgebungen oder Nutzungsszenarien. 
+| Anpassbarkeit
+| Fähigkeit der Software zur Anpassung an verschiedene Umgebungen oder Nutzungsszenarien.
 | Änderbarkeit
 
-| Antwortzeit 
+| Antwortzeit
 | Zeit, bis die Software ein gewünschtes Ergebnis erzielt oder errechnet.
 | Effizienz
 
-| Auditierbarkeit 
-| 
-| Prüfbarkeit 
+| Auditierbarkeit
+|
+| Prüfbarkeit
 
 
-| Ausfallsicherheit 
+| Ausfallsicherheit
 | Fähigkeit des Systems, auch bei Ausfall einiger Bestandteile (Hardware oder Software) ein definiertes Leistungsniveau erhalten zu können.
-Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen einzelner Netzsegmente. 
-| Zuverlässigkeit, Partitionstoleranz 
+Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen einzelner Netzsegmente.
+| Zuverlässigkeit, Partitionstoleranz
 
 
-| Ausschaltzeit | | Effizienz 
+| Ausschaltzeit | | Effizienz
 
 | Austauschbarkeit
 | Möglichkeit (und der dafür nötiger Aufwand), diese Software anstelle einer spezifizierten anderen in der Umgebung jener Software zu verwenden.
@@ -69,7 +71,7 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 
 
 | Autonomie
-| Fähigkeit eines Systems, sein Leistungsniveau unabhängig von anderen Systemen zu erbringen. 
+| Fähigkeit eines Systems, sein Leistungsniveau unabhängig von anderen Systemen zu erbringen.
 | **Betreibbarkeit**
 
 
@@ -89,11 +91,11 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 
 | Berechenbarkeit
 |
-| Zuverlässigkeit 
+| Zuverlässigkeit
 
 
 | Betreibbarkeit
-| 
+|
 * Fähigkeit zur Erfüllung vorgegebener Aufgaben im Rahmen allgemeiner Anforderungen an Wirtschaftlichkeit, Verfügbarkeit, Sicherheit etc.
 * Möglichkeit das System mit wirtschaftlich und organisatorisch angemessenem Aufwand in seiner Ablaufumgebung zu betreiben
 | Administrierbarkeit
@@ -115,10 +117,10 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 
 
 | Einfachheit
-| 
+|
 - Einfache Bedienbarkeit
 - Einfache Änderbarkeit
-| Bedienbarkeit, Änderbarkeit, 
+| Bedienbarkeit, Änderbarkeit,
 
 
 | Einheitlichkeit
@@ -161,7 +163,7 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 
 
 | Geschwindigkeit
-|  
+|
 | Effizienz
 
 
@@ -175,7 +177,7 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 | Effizienz
 
 
-| Gültigkeit 
+| Gültigkeit
 | i.d.R. bezogen auf Daten
 | Zuverlässigkeit, Funktionalität
 
@@ -186,7 +188,7 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 
 
 | Integrität
-| 
+|
 |
 
 
@@ -202,12 +204,12 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 
 | Konformität
 | Grad, zu dem die Software Normen oder Vereinbarungen erfüllt. Differenziert nach Merkmalen (etwa bezüglich Normen zur Sicherheit oder Zuverlässigkeit)
-| 
+|
 
 
 | Konsistenz
 | Synonym: Integrität.
-* Bezüglich Daten: 
+* Bezüglich Daten:
   + Maß, in dem Daten sowie deren Beziehungen deren Gültigkeitsregeln genügen.
   + Clienten einer Datenbank erhalten bei identischen Anfragen identische Ergebnisse.
 * Bezüglich Verhalten: Maß, in dem sich ein System schlüssig und nachvollziehbar verhält.
@@ -247,7 +249,7 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Modularität
-| Zerlegung eines Systems in Einzelbausteine mit definierten Schnittstellen. 
+| Zerlegung eines Systems in Einzelbausteine mit definierten Schnittstellen.
 | Änderbarkeit
 
 
@@ -288,7 +290,7 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Personalisierbarkeit
-| 
+|
 | Änderbarkeit, Betreibbarkeit
 
 
@@ -323,7 +325,7 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 | **Sicherheit**
 | Fähigkeit, unberechtigten Zugriff, sowohl versehentlich als auch vorsätzlich, auf Programme und Daten zu verhindern.
-| 
+|
 
 
 | Skalierbarkeit
@@ -332,7 +334,7 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Stabilität
-| Wahrscheinlichkeit des Auftretens unerwarteter Wirkungen, entweder aufgrund von Benutzung oder Änderungen 
+| Wahrscheinlichkeit des Auftretens unerwarteter Wirkungen, entweder aufgrund von Benutzung oder Änderungen
 | Zuverlässigkeit, Robustheit
 
 
@@ -342,7 +344,7 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Strapazierfähigkeit
-| 
+|
 | Zuverlässigkeit
 
 
@@ -363,12 +365,12 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Überwachbarkeit
-| Fähigkeit, (Betriebs-)Ablauf, Störungsfreiheit, Auslastung, Ressourcennutzung oder sonstige Eigenschaften zur Laufzeit ohne funktionale Beeinträchtigung zu beobachten. 
-| Betreibbarkeit 
+| Fähigkeit, (Betriebs-)Ablauf, Störungsfreiheit, Auslastung, Ressourcennutzung oder sonstige Eigenschaften zur Laufzeit ohne funktionale Beeinträchtigung zu beobachten.
+| Betreibbarkeit
 
 
 | Unterstützbarkeit
-| 
+|
 | Betreibbarkeit
 
 
@@ -379,14 +381,14 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Verfügbarkeit
-| 
+|
 | Zuverlässigkeit, Robustheit
 
 
 
 | Verständlichkeit
 | 1.) Externe ~: Aufwand für den Benutzer, das Konzept und die Anwendung zu verstehen
-2.) Interne ~: Aufwand, die interne Struktur, deren Konzepte und Implementierung zu verstehen 
+2.) Interne ~: Aufwand, die interne Struktur, deren Konzepte und Implementierung zu verstehen
 
 
 | 1.) Benutzbarkeit
@@ -417,7 +419,7 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Wiederherstellbarkeit
-| Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten 
+| Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten
 wiederzugewinnen.
 | Zuverlässigkeit
 

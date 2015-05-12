@@ -14,8 +14,8 @@
 :icons: font
 
 
-Dr. Gernot Starke <gernot.starke@innoq.com>
-Version {version}
+[small]#Dr. Gernot Starke <gernot.starke@innoq.com>
+Version {version}#
 
 
 

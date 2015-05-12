@@ -28,7 +28,7 @@ Manche Qualitätsziele oder -anforderungen gehören zu mehreren
 Kategorien oder Kpiteln fiel mir deswegen manchmal schwer.
 
 Falls Sie Ihre spezifischen Qualitätsanforderungen in der Gliederung
-nicht finden, so schauen Sie bitte im Anhang: <<qmerkmale, Q-Merkmale>> - dort finden
+nicht finden, so schauen Sie bitte im Anhang: <<Q-Merkmale>> - dort finden
 Sie eine umfangreiche Tabelle der Q-Merkmale mit ihren Synonymen und
 Oberbegriffen.
 
