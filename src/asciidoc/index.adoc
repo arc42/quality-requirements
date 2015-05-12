@@ -13,6 +13,17 @@
 
 :icons: font
 
+:caution-caption: Achtung
+:important-caption: Wichtig
+:note-caption: Hinweis
+:tip-caption: Tip
+:warning-caption: Warnung
+
+:appendix-caption: Anhang
+:example-caption: Beispiel
+:figure-caption: Abbildung
+:table-caption: Tabelle
+
 
 [small]#Dr. Gernot Starke <gernot.starke@innoq.com>
 Version {version}#
