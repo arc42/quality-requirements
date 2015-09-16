@@ -11,5 +11,6 @@
 
 * [[[eeles05]]] Peter Eeles: http://www.ibm.com/developerworks/rational/library/4706.html[Capturing Architectural Requirements]. Erläutert das FURPS+ Modell zur Erfassung von Qualitätsanforderungen an Software.
 
-
+* http://a2build.com/architectedagile/Architected%20Agile.html?ISO25010.html[Zusammenfassung
+von ISO-25010]
 
