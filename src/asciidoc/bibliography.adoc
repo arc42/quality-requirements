@@ -1,6 +1,4 @@
 
-[bibliography]
-
 * [[[bass09]]] Len Bass et.al.: Software Architecture in Practice. Addision-Wesley, 2. Auflage 2009.
 
 * [[[clements01]]] Paul Clements et.al.: Evaluating Software Architectures. Addision-Wesley, 2001.
@@ -14,3 +12,4 @@
 * http://a2build.com/architectedagile/Architected%20Agile.html?ISO25010.html[Zusammenfassung
 von ISO-25010]
 
+* https://de.wikipedia.org/wiki/ISO/IEC_25000[ISO-25000 bei Wikipedia]

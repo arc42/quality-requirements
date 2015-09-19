@@ -1,6 +1,4 @@
-:numbered:
 
-[appendix]
 [[Q-Merkmale]]
 ## Q-Merkmale
 
@@ -151,6 +149,16 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 | Vorhandensein von Funktionen mit festgelegten Eigenschaften;diese Funktionen erfüllen die definierten Anforderungen
 |
 
+| **Funktionale Tauglichkeit**
+| Grad, in dem ein Produkt oder System Funktionen bereitstellt, die vorgegebene oder implizite Anforderungen erfüllen, sofern das Produkt unter
+spezifizierten Bedingungen genutzt wird.
+(EN: degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions)
+| in ISO-9126 <Funktionalität>
+
+| Funktionale Vollständigkeit
+| Grad, zu dem die Menge der Funktionen alle 
+spezifizierten Aufgaben und Nutzerziele abdeckt.  
+| Funktionalität
 
 | Gefahrlosigkeit
 |

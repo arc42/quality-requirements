@@ -8,7 +8,7 @@ Die Qualität eines Produktes oder Systems ist ganz allgemein als Menge von Eige
 
 
 In der Praxis haben sich einige Kategorien (Oberbegriffe) für häufig auftretende _Qualitätsanforderungen_
-(synonym: Qualitätsziele) etabliert, im wesentlichen durch das DIN/ISO 9126 Begriffsmodell geprägt.
+(synonym: Qualitätsziele) etabliert, im wesentlichen durch die Begriffsmodell von DIN/ISO 9126 bzw. 25010 geprägt.
 
 
 === Die Kategorien
