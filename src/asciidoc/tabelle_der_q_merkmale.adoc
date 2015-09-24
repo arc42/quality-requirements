@@ -149,6 +149,16 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 | Vorhandensein von Funktionen mit festgelegten Eigenschaften;diese Funktionen erfüllen die definierten Anforderungen
 |
 
+| Funktionale Angemessenheit
+| Grad, zu dem die Funktionen die Erreichung bestimmter
+Aufgaben erleichtern (Aufgabenangemessenheit).
+| Funktionalität
+
+| Funktionale Korrektheit
+| Grad, zu dem ein Produkt oder System die korrekten Ergebnisse mit der
+erforderlichen Präzision liefert.
+| Funktionalität
+
 | **Funktionale Tauglichkeit**
 | Grad, in dem ein Produkt oder System Funktionen bereitstellt, die vorgegebene oder implizite Anforderungen erfüllen, sofern das Produkt unter
 spezifizierten Bedingungen genutzt wird.
@@ -156,8 +166,7 @@ spezifizierten Bedingungen genutzt wird.
 | in ISO-9126 <Funktionalität>
 
 | Funktionale Vollständigkeit
-| Grad, zu dem die Menge der Funktionen alle 
-spezifizierten Aufgaben und Nutzerziele abdeckt.  
+| Grad, zu dem die Menge der Funktionen alle spezifizierten Aufgaben und Nutzerziele abdeckt.
 | Funktionalität
 
 | Gefahrlosigkeit
