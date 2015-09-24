@@ -56,7 +56,7 @@ Zielwert:: 3 Personenmonate
 
 ==== Szenario: Jährliche Aktualisierung
 
-Das Datenformat des jährlichen Buchungsreports wird jedes Jahr am 31. Dezember aktualisiert, 
+Das Datenformat des jährlichen Buchungsreports wird jedes Jahr am 31. Dezember aktualisiert,
 um den gesetzlichen und steuerlichen Änderungen zu genügen. Das System muss das neue Format erzeugen können.
 
 [horizontal]
@@ -259,8 +259,8 @@ kurzer Zeit umsetz- und testbar sein
 Auslöser:: Auftraggeber benötigt die Ergebnisse des
 Buchungsreports
 
-Reaktion:: 
-* Entwickler implementiert diese Funktion innerhalb von 3 Arbeitstagen. 
+Reaktion::
+* Entwickler implementiert diese Funktion innerhalb von 3 Arbeitstagen.
 * Tester testet diese Funktion gegen die Spezifikation innerhalb von 2 Arbeitstagen.
 
 
@@ -279,7 +279,7 @@ Reaktion und Zielwert:: Entwickler erweitern die Schnittstelle um OAuth
 2.0 innerhalb von 5 PT Entwicklungszeit.
 
 
-==== Szenario: Kommerzielle durch Open-Source Datenbank ersetzen 
+==== Szenario: Kommerzielle durch Open-Source Datenbank ersetzen
 Das verwendete Datenbanksystem muss von einem kommerziellen
 durch ein Open-Source System ersetzt werden können.
 
@@ -322,7 +322,7 @@ bearbeitet werden.
 Kontext:: Mehr als 20 Benutzer haben unvollständige Projekte (Daten) auf
 Basis des aktuellen XY-Prozesses gespeichert.
 
-Reaktion / Zielwert: Das System aktualisiert selbständig und ohne
+Reaktion / Zielwert:: Das System aktualisiert selbständig und ohne
 Datenverlust die vorhandenen Daten der unvollständigen Projekte
 (automatische Migration der Benutzerspezifischen Daten auf die neue
 Version von XY).
@@ -331,7 +331,7 @@ Die Änderung des XY-Prozesses dauert nicht länger als 80 Personenstunden
 (Aufwand).
 
 
-==== Szenario: 
+==== Szenario: Änderung am Geschäftsprozess
 Der einzelne Verarbeitungsschritt AB innerhalb des
 Anwendungsfalls XY wird von der Regulierungsbehörde für ungültig erklärt
 und im System entfernt. Die vom System bearbeiteten Daten sind nicht
@@ -377,7 +377,7 @@ sämtliche Klassen sowie Schnittstellen des Subsystems X.
 Zielwert:: Gesamtaufwand der Änderungen liegt unter 200 Personentagen.
 
 
-Szenario: Neuer Typ von Client
+==== Szenario: Neuer Typ von Client
 Erweitere das XY-System um einen mobilen Client (Android,
 iOS), ohne die Performance der übrigen GUI-Teile zu beeinträchtigen.
 
