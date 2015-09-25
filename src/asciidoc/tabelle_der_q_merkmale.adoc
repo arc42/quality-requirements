@@ -109,7 +109,7 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 | Effizienz
 
 
-| **Effizienz**
+|[[Effizienz]] **Effizienz**
 | Verhältnis zwischen dem Leistungsniveau der Software und dem Umfang der eingesetzten Betriebsmittel unter festgelegten Bedingungen
 | Performance
 
@@ -302,7 +302,7 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Performanz
-| Siehe Effizienz.
+| Siehe <<Effizienz>>.
 | Effizienz
 
 
