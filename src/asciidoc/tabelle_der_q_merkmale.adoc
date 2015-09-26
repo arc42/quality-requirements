@@ -9,10 +9,10 @@ zu kategorisieren.
 
 
 
-[cols="3", frame="topbot", options="header"]
+[cols="1,3a,1",  options="header"]
 |=======
 | Q-Merkmal
-| Bedeutung
+a| Bedeutung
 | Oberbegriffe
 
 
@@ -24,9 +24,21 @@ zu kategorisieren.
 | Benötigter Aufwand zur Administration (Verwaltung) einer Software
 | Betreibbarkeit
 
+| Ästhetik (der Benutzungsschnittstelle)
+| Grad, zu dem eine Benutzungsschnittstelle eine für
+ Nutzer angenehme und zufriedenstellende Interaktion ermöglicht
+| Gebrauchstauglichkeit
 
 | Analysierbarkeit
-| Aufwand, um Mängel oder Ursachen von Versagen zu diagnostizieren oder um änderungsbedürftige Teile zu bestimmen
+| * Aufwand, um Mängel oder Ursachen von Versagen zu diagnostizieren oder um änderungsbedürftige Teile zu bestimmen
+* Grad der Effektivität und Effizienz, mit der es möglich ist, den Einfluss von
+beabsichtigten Änderungen eines Produkts oder Systems auf seine
+Bestandteile zu bewerten, ein Produkt auf Mängel oder Ausfallgründe zu
+prüfen oder zu ändernde Teile zu identifizieren.
+* (engl.: degree to which the software product can be diagnosed for
+  deficiencies or causes of failures in the software, or for the parts to be
+  modified to be identified.)
+
 | Änderbarkeit
 
 | *Änderbarkeit*
@@ -37,10 +49,17 @@ zu kategorisieren.
 | Liefern der richtigen oder vereinbarten Ergebnisse oder Wirkungen, z.B. die benötigte Genauigkeit berechneter Ergebnisse.
 | Funktionalität
 
+| Angemessenheitserkennung (engl: Appropriateness recognisability)
+| Grad, zu dem Nutzer erkennen können, ob ein Produkt oder System
+  für ihre Bedürfnisse angemessen ist (funktionale Angemessenheit).
+| Gebrauchstauglichkeit
 
 | Anpassbarkeit
-| Fähigkeit der Software zur Anpassung an verschiedene Umgebungen oder Nutzungsszenarien.
-| Änderbarkeit
+| * Fähigkeit der Software zur Anpassung an verschiedene Umgebungen oder Nutzungsszenarien.
+* Grad der Effektivität und Effizienz, mit der ein System von
+  einer Hardware-, Software- oder Nutzungsumgebung in eine andere
+  transferiert werden kann.
+| Übertragbarkeit
 
 | Antwortzeit
 | Zeit, bis die Software ein gewünschtes Ergebnis erzielt oder errechnet.
@@ -60,11 +79,17 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 | Ausschaltzeit | | Effizienz
 
 | Austauschbarkeit
-| Möglichkeit (und der dafür nötiger Aufwand), diese Software anstelle einer spezifizierten anderen in der Umgebung jener Software zu verwenden.
+|
+* Möglichkeit (und der dafür nötiger Aufwand), diese Software anstelle einer spezifizierten anderen in der Umgebung jener Software zu verwenden.
+* Grad, zu dem ein Produkt ein anderes bestimmtes Softwareprodukt mit
+ demselben Zweck in derselben Umgebung ersetzen kann.  
 | Übertragbarkeit
 
 
-
+| Authentizität
+| Grad, zu dem nachgewiesen werden kann, dass die Identität einer Person oder
+Ressource der angegebenen Identität entspricht.
+| Sicherheit
 
 
 
@@ -72,13 +97,18 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 | Fähigkeit eines Systems, sein Leistungsniveau unabhängig von anderen Systemen zu erbringen.
 | **Betreibbarkeit**
 
+| Barrierefreiheit
+| Grad, zu dem ein Produkt oder System von Personen mit verschiedensten
+Eigenschaften und Fähigkeiten genutzt werden kann, um ein
+bestimmtes Ziel in einem bestimmten Nutzungskontext zu erreichen.
+| Gebrauchstauglichkeit
 
 | Bedienbarkeit
 | Aufwand für den Benutzer, die Anwendung zu bedienen.
 | Benutzbarkeit
 
 
-| **Benutzbarkeit**
+| *Benutzbarkeit*
 | Aufwand, der zur Benutzung erforderlich ist, und individuelle Beurteilung der Benutzung durch eine festgelegte oder vorausgesetzte Benutzergruppe.
 |
 
@@ -109,7 +139,7 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 | Effizienz
 
 
-|[[Effizienz]] **Effizienz**
+| **Effizienz**
 | Verhältnis zwischen dem Leistungsniveau der Software und dem Umfang der eingesetzten Betriebsmittel unter festgelegten Bedingungen
 | Performance
 
@@ -126,17 +156,30 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 | Verständlichkeit, Bedienbarkeit, Änderbarkeit
 
 | Erlernbarkeit
-| Aufwand für den Benutzer, die Anwendung zu erlernen (z.B. Bedienung, Ein-, Ausgabe)
-| Bedienbarkeit
+|
+* Aufwand für den Benutzer, die Anwendung des Systems zu erlernen
+(z.B. Bedienung, Ein-, Ausgabe)
+| Bedienbarkeit.
 
+| Erwartungskonformität
+| Grad, zu dem ein Produkt oder System die Nutzerbedürfnisse in einem
+bestimmten Nutzungskontext erfüllt.
+| Gebrauchstauglichkeit
 
 | Erweiterbarkeit
 |
 | Änderbarkeit
 
+| Fehlersicherheit
+| Grad, zu dem ein System seine Nutzer vor Fehler bewahrt.
+| Bedienbarkeit
 
 | Fehlertoleranz
-| Fähigkeit, ein spezifiziertes Leistungsniveau bei Softwarefehlern oder Nichteinhaltung spezifizierter Schnittstellen zu bewahren
+|
+* Grad, zu dem ein Produkt, System oder eine Systemkomponente trotz
+vorliegender Hardware- oder Softwarefehlern wie beabsichtigt arbeitet.
+* Fähigkeit, ein spezifiziertes Leistungsniveau bei Softwarefehlern oder
+ Nichteinhaltung spezifizierter Schnittstellen zu bewahren
 | Zuverlässigkeit
 
 
@@ -159,7 +202,7 @@ Aufgaben erleichtern (Aufgabenangemessenheit).
 erforderlichen Präzision liefert.
 | Funktionalität
 
-| **Funktionale Tauglichkeit**
+| *Funktionale Tauglichkeit*
 | Grad, in dem ein Produkt oder System Funktionen bereitstellt, die vorgegebene oder implizite Anforderungen erfüllen, sofern das Produkt unter
 spezifizierten Bedingungen genutzt wird.
 (EN: degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions)
@@ -168,6 +211,12 @@ spezifizierten Bedingungen genutzt wird.
 | Funktionale Vollständigkeit
 | Grad, zu dem die Menge der Funktionen alle spezifizierten Aufgaben und Nutzerziele abdeckt.
 | Funktionalität
+
+| *Gebrauchstauglichkeit* (engl: operability, auch: useabilty)
+| Grad, zu dem ein Produkt oder System von bestimmten Nutzern genutzt werden
+  kann, um deren Ziele in einem bestimmten Nutzungskontext effektiv,
+  effizient und zufriedenstellend  zu erreichen.
+|
 
 | Gefahrlosigkeit
 |
@@ -205,14 +254,45 @@ spezifizierten Bedingungen genutzt wird.
 
 
 | Integrität
-|
-|
+| * Verhinderung unautorisierter Modifikation von Information (ITSEC)
+* Korrektheit (Unversehrtheit) von Daten und der korrekten Funktionsweise
+ von Systemen (BSI)
+* Grad, zu dem ein System oder eine Systemkomponente
+die Genauigkeit und Vollständigkeit von Daten und Abläufen sicherstellt.
+
+Arten der Integrität: korrekter Inhalt, unmodifizierter Zustand, Erkennung
+von Modifikationen, temporale Korrektheit
+| Sicherheit
 
 
 | Interoperabilität
-| Fähigkeit, mit vorgegebenen Systemen zusammenzuwirken.Hierunter fällt auch die Einbettung in die Betriebsumgebung oder technische Infrastruktur.
+| Fähigkeit, mit vorgegebenen Systemen zusammenzuwirken.
+  Hierunter fällt auch die Einbettung in die Betriebsumgebung oder technische Infrastruktur.
 | Kompatibilität
 
+| Installierbarkeit
+| Grad der Effektivität und Effizienz, mit der ein System in einer bestimmten
+Umgebung erfolgreich installiert und/oder deinstalliert werden kann.
+| Übertragbarkeit
+
+| Kapazität
+| Grad, zu dem die Höchstgrenzen eines Produkt- oder Systemparameters die
+  Anforderungen erfüllen.
+| Effizienz
+
+| Koexistenz
+| Grad, zu dem ein Produkt die erforderlichen Funktionen effizient ausführen
+  kann, während es sich eine gemeinsame Umgebung und gemeinsame
+  Ressourcen mit anderen Produkten teilt, ohne dabei schädlichen
+  Einfluss auf ein anderes Produkt zu haben.
+| Kompatibilität
+
+| *Kompatibilität*
+| Grad, zu dem ein Produkt, System oder eine Komponente Informationen mit
+  anderen Produkten, Systemen oder Komponenten austauschen kann und/oder
+  seine erforderlichen Funktionen ausführen kann, während es dieselbe
+  Hardware- oder Softwareumgebung teilt
+|
 
 | Konfigurierbarkeit
 |
@@ -261,13 +341,21 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Modifizierbarkeit
-| Aufwand zur Ausführung von Verbesserungen, zur Fehlerbeseitigung oder Anpassung an Umgebungsänderungen.
+|
+* Aufwand zur Ausführung von Verbesserungen, zur Fehlerbeseitigung oder
+Anpassung an Umgebungsänderungen.
+* Grad, zu dem ein Produkt oder System effektiv und effizient
+geändert werden kann, ohne Mängel zu verursachen oder die bestehende
+Produktqualität zu verringern.
 | Änderbarkeit
 
 
 | Modularität
-| Zerlegung eines Systems in Einzelbausteine mit definierten Schnittstellen.
-| Änderbarkeit
+|
+* Zerlegung eines Systems in Einzelbausteine mit definierten Schnittstellen.
+* Grad, zu dem ein System oder Computerprogramm aus einzelnen Komponenten besteht,
+so dass eine Änderung einer Komponente nur minimalen Einfluss auf andere Komponenten hat.
+| Wartbarkeit, Änderbarkeit
 
 
 
@@ -275,9 +363,14 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 |
 |
 
+| Nachweisbarkeit
+| Grad, zu dem es möglich ist, nachzuweisen, dass Aktionen oder
+Ereignisse tatsächlich stattgefunden haben, so dass Ereignisse und
+Aktionen später nicht in Frage gestellt werden können.
+| Sicherheit, Nichtabstreitbarkeit
 
 | Nichtabstreitbarkeit
-|
+| ->Nachweisbarkeit
 | Sicherheit
 
 
@@ -327,8 +420,15 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Reife
-| Geringe Versagenshäufigkeit durch Fehlzustände
+| Grad, zu dem ein Produkt, System oder eine Systemkomponente
+Zuverlässigkeitsbedürfnisse bei normaler Benutzung erfüllt.
 | Zuverlässigkeit
+
+| Ressourcenverbrauch
+| Grad, zu dem die Menge und Typen von Ressourcen (keine menschlichen Ressourcen),
+die von einem Produkt oder System bei der Ausführung seiner Funktionen
+ genutzt werden, die Anforderungen erfüllen. Beispiele: Speicher, CPU, Threads
+| Performanz, Effizienz
 
 | Richtigkeit
 | Eignung der Funktionen für spezifizierte Aufgaben.
@@ -340,8 +440,12 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 | Zuverlässigkeit
 
 
-| **Sicherheit**
-| Fähigkeit, unberechtigten Zugriff, sowohl versehentlich als auch vorsätzlich, auf Programme und Daten zu verhindern.
+| *Sicherheit*
+| * Fähigkeit, unberechtigten Zugriff, sowohl versehentlich als auch
+vorsätzlich, auf Programme und Daten zu verhindern.
+* Grad, zu dem ein Produkt oder System Daten und Informationen schützt,
+so dass Personen oder andere Systeme nur den Grad an Datenzugriff erhalten,
+der für sie angemessen ist.
 |
 
 
@@ -366,7 +470,10 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Testbarkeit
-|
+| Grad der Effektivität und Effizienz, mit der Testkriterien für ein Produkt,
+System oder eine Komponente festgelegt und Tests durchgeführt werden
+ können, um festzustellen, ob diese Testkriterien erfüllt werden.
+(engl.: degree to which the software product enables modified software to be validated.)
 | Zuverlässigkeit
 
 
@@ -376,8 +483,9 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 | Zuverlässigkeit
 
 
-| **Übertragbarkeit**
-| Wie leicht lässt sich die Software in eine andere (Hardware-, Software- oder organisatorische) Umgebung übertragen?
+| *Übertragbarkeit*
+| Wie leicht lässt sich die Software in eine andere
+(Hardware-, Software- oder organisatorische) Umgebung übertragen?
 |
 
 
@@ -390,7 +498,10 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 |
 | Betreibbarkeit
 
-
+| Verantwortlichkeit (engl: accountability)
+| Grad, zu dem Aktionen einer Entität zu genau dieser
+ Entität zurückverfolgt werden können.
+| Sicherheit
 
 | Verbrauchsverhalten
 | Anzahl und Dauer der benötigten Betriebsmittel für die Erfüllung der Funktionen
@@ -420,7 +531,9 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Vertraulichkeit
-|
+| Grad, zu dem ein Produkt oder System sicherstellt,
+dass Daten nur für diejenigen Nutzer, Produkte und Systeme zugänglich
+sind, die die entsprechende Autorisierung haben.
 | Sicherheit
 
 
@@ -430,24 +543,38 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 
-| Wartbarkeit
-| Welchen Aufwand erfordert es, vorgegebene Änderungen an der Software durchzuführen?
+| *Wartbarkeit*
+|
+* Welchen Aufwand erfordert es, vorgegebene Änderungen an der Software durchzuführen?
+* Grad der Effektivität und Effizienz, mit der ein System geändert werden kann
+(umfasst Korrekturen, Verbesserungen und Anpassungen)
+* Mit welcher Energie und welchem Erfolg können Änderungen an einem System
+  durchgeführt werden.
 | Änderbarkeit
 
 
 | Wiederherstellbarkeit
-| Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und die direkt betroffenen Daten
-wiederzugewinnen.
+|
+* Grad, zu dem ein Produkt oder System im Falle einer Störung oder eines
+ Ausfalls Daten, die von der Störung oder dem Ausfall direkt betroffen
+ waren, und den gewünschten Systemzustand wiederherstellen kann
+* Fähigkeit, bei einem Versagen das Leistungsniveau wiederherzustellen und
+ die direkt betroffenen Daten wiederzugewinnen.
 | Zuverlässigkeit
 
 
 | Wiederverwendbarkeit
-| Eigenschaft eines Systems oder Bausteins, auch ausserhalb des ursprünglich geplanten Einsatzzwecks oder -ortes verwendet zu werden.
-| Flexibilität, Portabilität
+|
+* Eigenschaft eines Systems oder Bausteins, auch ausserhalb des ursprünglich geplanten Einsatzzwecks oder -ortes verwendet zu werden.
+* Grad, zu dem Systemteile oder Daten (engl: assets) für mehr als ein
+  System oder zur Entwicklung weiterer Systeme genutzt werden können.
+| Wartbarkeit (auch: Flexibilität)
 
 
 | Zeitverhalten
-| Antwort- und Verarbeitungszeiten sowie Durchsatz bei der Funktionsausführung
+| Grad, zu dem die Antwort- und Bearbeitungszeiten sowie die
+Durchsatzraten eines Produkts oder Systems bei der Ausführung
+seiner Funktionen die Anforderungen erfüllen.
 | Effizienz, Performance
 
 
@@ -457,7 +584,7 @@ wiederzugewinnen.
 | Sicherheit
 
 
-| **Zuverlässigkeit**
+| *Zuverlässigkeit*
 | Fähigkeit der Software, ihr Leistungsniveau unter festgelegten Bedingungen über einen festgelegten Zeitraum zu bewahren
 | Robustheit
 
