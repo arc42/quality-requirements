@@ -64,6 +64,12 @@ asciidoctor {
             version: project.version
     ]
 
+    resources {
+            // include architecture diagrams
+            from("${projectDir}/src/") {
+              include 'images/**'
+            }
+        }
 
 } // asciidoctor
 

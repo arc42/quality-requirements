@@ -46,4 +46,3 @@ include::07_sonstige_anforderungen.adoc[]
 
 [appendix]
 include::tabelle_der_q_merkmale.adoc[]
-
