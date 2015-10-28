@@ -104,7 +104,7 @@ integrieren.
 Reaktion:: Es gibt keinerlei Seiteneffekte auf andere Bausteine des
 Systems.
 
-Zielwert:: Es lediglich ein einziger Softwarebaustein (Modul, Komponente,
+Zielwert:: Es ist lediglich ein einziger Softwarebaustein (Modul, Komponente,
 Package) betroffen, der eigentliche Austausch des alten gegen den neuen
 Algorithmus geschieht innerhalb von 4h (inklusive eventuelle Anpassungen
 der Build-Umgebung).
