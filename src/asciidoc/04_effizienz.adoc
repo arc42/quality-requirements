@@ -1,6 +1,6 @@
 
 
-== Effizienz
+== Effizienz (_performance efficiency_)
 
 === Was bedeutet Effizienz?
 Nach DIN/ISO 9126: Verhältnis zwischen dem Leistungsniveau der Software und dem Umfang der eingesetzten Betriebsmittel unter festgelegten Bedingungen.
