@@ -82,7 +82,7 @@ Im Zuge von verteilten Systemen auch: Toleranz gegenüber partiellen Ausfällen 
 |
 * Möglichkeit (und der dafür nötiger Aufwand), diese Software anstelle einer spezifizierten anderen in der Umgebung jener Software zu verwenden.
 * Grad, zu dem ein Produkt ein anderes bestimmtes Softwareprodukt mit
- demselben Zweck in derselben Umgebung ersetzen kann.  
+ demselben Zweck in derselben Umgebung ersetzen kann.
 | Übertragbarkeit
 
 
@@ -249,8 +249,11 @@ spezifizierten Bedingungen genutzt wird.
 
 
 | Installierbarkeit
-| Aufwand, der zum Installieren der Software in einer festgelegten Umgebung notwendig ist
-| **Übertragbarkeit**, Betreibbarkeit
+| * Aufwand, der zum Installieren der Software in einer festgelegten Umgebung notwendig ist
+  * Grad der Effektivität und Effizienz, mit der ein System in einer bestimmten
+Umgebung erfolgreich installiert und/oder deinstalliert werden kann.
+|  **Übertragbarkeit**, Betreibbarkeit
+
 
 
 | Integrität
@@ -269,11 +272,6 @@ von Modifikationen, temporale Korrektheit
 | Fähigkeit, mit vorgegebenen Systemen zusammenzuwirken.
   Hierunter fällt auch die Einbettung in die Betriebsumgebung oder technische Infrastruktur.
 | Kompatibilität
-
-| Installierbarkeit
-| Grad der Effektivität und Effizienz, mit der ein System in einer bestimmten
-Umgebung erfolgreich installiert und/oder deinstalliert werden kann.
-| Übertragbarkeit
 
 | Kapazität
 | Grad, zu dem die Höchstgrenzen eines Produkt- oder Systemparameters die
