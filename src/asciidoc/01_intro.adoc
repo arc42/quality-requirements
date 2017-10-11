@@ -8,7 +8,7 @@ Die Qualität eines Produktes oder Systems ist ganz allgemein als Menge von Eige
 
 
 In der Praxis haben sich einige Kategorien (Oberbegriffe) für häufig auftretende _Qualitätsanforderungen_
-(synonym: Qualitätsziele) etabliert, im wesentlichen durch die Begriffsmodell von DIN/ISO 9126 bzw. 25010 geprägt.
+(synonym: Qualitätsziele) etabliert, im Wesentlichen durch die Begriffsmodelle von DIN/ISO 9126 bzw. 25010 geprägt.
 
 .ISO 25010 Quality Model
 image::ISO-25010-EN-Tree.png[]
@@ -18,16 +18,16 @@ image::ISO-25010-EN-Tree.png[]
 * <<aenderbarkeit, Änderbarkeit>>
 * <<benutzbarkeit, Benutzbarkeit>>
 * <<effizienz, Effizienz>>
-
 * <<zuverlaessigkeit, Zuverlässigkeit>>
 * <<betreibbarkeit, Betreibbarkeit>>
 * <<sonstige, Sonstiges (u.a. Funktionalität)>>
 
 
 === Einordnung kann mehrdeutig sein
+
 Manche Qualitätsziele oder -anforderungen gehören zu mehreren
 "Oberbegriffen" oder Kategorien - die Zuordnung der Beispiele zu
-Kategorien oder Kpiteln fiel mir deswegen manchmal schwer.
+Kategorien oder Kapiteln fiel uns deswegen manchmal schwer.
 
 Falls Sie Ihre spezifischen Qualitätsanforderungen in der Gliederung
 nicht finden, so schauen Sie bitte im Anhang: <<Q-Merkmale>> - dort finden
@@ -41,8 +41,8 @@ Oberbegriffen.
 
 Die Ideen zu den hier aufgeführten Szenarien und Qualitätsanforderungen
 stammen aus unterschiedlichen Quellen und Projekten. Ich habe alle
-überarbeitet und weitgehend neutralisiert. Die Erklärungen von
-Qualitätsmerkmalen stammen teilweise aus DIN/ISO 9126 bzw. dem FURPS-Modell+.
+überarbeitet und weitgehend anonymisiert. Die Erklärungen von
+Qualitätsmerkmalen stammen teilweise aus DIN/ISO 9126 bzw. dem https://en.wikipedia.org/wiki/FURPS[FURPS-Modell+].
 
 include::bibliography.adoc[]
 
