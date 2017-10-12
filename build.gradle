@@ -41,7 +41,7 @@ apply plugin: 'org.asciidoctor.convert'
 
 
 project.description = "arc42 - Examples for Software Quality Requirements"
-project.version = "0.7.5"
+project.version = "0.7.6"
 
 ext {
     srcDir  = "$projectDir/src/asciidoc"
@@ -70,8 +70,7 @@ asciidoctor {
 
   attributes = [
 				'release-branch': 'master',
-				'revnumber' : project.version,
-				'outputfile': '$outputDir/quality-requirements.pdf',
+        'outputFile': "$outputDir/quality-requirements.pdf",
 				'source-highlighter': 'coderay', // TODO switch to 'rouge' once supported by the html5 backend and on MS Windows
 				'tabsize': '4',
 				'toc': 'left',
