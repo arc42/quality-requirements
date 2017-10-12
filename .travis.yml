@@ -1,5 +1,8 @@
 language: java
 sudo: false
+addons:
+  apt_packages:
+    - pandoc
 install: ''
 script:
 - export TERM=dumb
