@@ -1,3 +1,12 @@
+language: java
+sudo: false
+install: ''
+script:
+- export TERM=dumb
+- './gradlew wrapper'
+- './gradlew asciidoctor'
+jdk:
+- oraclejdk8
 deploy:
   provider: releases
   api_key:
