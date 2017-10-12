@@ -3,7 +3,6 @@ sudo: false
 install: ''
 script:
 - export TERM=dumb
-- './gradlew wrapper'
 - './gradlew asciidoctor'
 jdk:
 - oraclejdk8
@@ -11,6 +10,8 @@ deploy:
   provider: releases
   api_key:
     secure: N4258zuzvzKlhJGnuX3Qy4hK9/L8l3Tph00Z3sMnhmqRzG/f4BYMJEsZ9tSrDntP6qrqy4YUoHf6/AGrg5ZzCVV6vkEupd6jcV3r9e4VFl3Uwatw7+K3iM75nOMVBH6j0ZB5ThR4MmPO1zMG2GXD/tglT2x37rtDMy/v2CJG5No=
-  file: build/index.pdf
+  file: $TRAVIS_BUILD_DIR/build/index.pdf
+  skip_cleanup: true
   on:
+    tags: true
     repo: arc42/quality-requirements
