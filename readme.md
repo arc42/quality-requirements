@@ -4,9 +4,8 @@ Hier finden Sie Beispiele von Qualitätsanforderungen an Software.
 Die Ideen zu den hier aufgeführten Szenarien und Qualitätsanforderungen stammen aus unterschiedlichen Quellen und Projekten. Ich habe alle überarbeitet und weitgehend neutralisiert. Die Erklärungen von Qualitätsmerkmalen stammen teilweise aus DIN/ISO 9126 und DIN/ISO 25010.
 
 ## Download
-Zur Zeit gibt es diese Szenarien in html, docx und docbook Format.
 
-Download [hier, direkt von Github](https://github.com/arc42/quality-requirements/downloads/ "Qualitätsanforderungen-Beispiele-docx").
+Zur Zeit gibt es diese Szenarien im PDF-Format [direkt von Github Releases](https://github.com/arc42/quality-requirements/releases/).
 
 ## Build / Generierung
 ### Voraussetzungen
@@ -19,10 +18,10 @@ Download [hier, direkt von Github](https://github.com/arc42/quality-requirements
 Entweder
 
 ```
-gradle
+gradle asciidoctor generateDocx
 ```
 
-startet die defaultTasks generateDocx, oder
+oder
 
 ```
 ./build.sh
