@@ -16,25 +16,32 @@
 ***************************************************************/
 
 
-project.description = "arc42 - Examples for Software Quality Requirements"
-project.version = "0.7.5"
-
-
 buildscript {
     repositories {
       jcenter()
 
     }
 
-    dependencies {
-      classpath ( 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.2')
+	dependencies {
+		// upgrade to latest jruby version due to a bugfix needed for Windows 10.
+		// can be removed, when asciidoctorj uses this as a default version.
+		classpath('org.jruby:jruby-complete:9.1.13.0')
 
-  }
-
+		// classpath('org.asciidoctor:asciidoctorj-epub3:1.5.0-alpha.16')
+		classpath('org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.16')
+		classpath('org.asciidoctor:asciidoctorj-diagram:1.5.4.1')
+	}
 }
 
+plugins {
+	id 'org.asciidoctor.convert' version '1.5.3'
+}
 
 apply plugin: 'org.asciidoctor.convert'
+
+
+project.description = "arc42 - Examples for Software Quality Requirements"
+project.version = "0.7.5"
 
 ext {
     srcDir  = "$projectDir/src/asciidoc"
@@ -42,34 +49,51 @@ ext {
 }
 
 
+asciidoctorj {
+    version = '1.5.6'
+}
+
 asciidoctor {
   outputDir = file( targetDir )
   sourceDir = file("$srcDir")
   println "outputDir = " + outputDir
   println "sourceDir = " + sourceDir
 
+  // enable the Asciidoctor Diagram extension
+	requires 'asciidoctor-diagram'
+
   separateOutputDirs = false
 
-    sources  { include "index.adoc" }
+  sources  { include "index.adoc" }
 
-    backends = ['html5', 'docbook']
+  backends 'html5' , 'pdf' //, 'docbook' , 'epub3'
 
-    attributes = [
-            doctype: 'book',
-            icons: 'font',
-            toc: 'left',
-            sectlink: true,
-            sectanchors: true,
-            numbered: true,
-            version: project.version
-    ]
-
-    resources {
-            // include architecture diagrams
-            from("${projectDir}/src/") {
-              include 'images/**'
-            }
-        }
+  attributes = [
+				'release-branch': 'master',
+				'revnumber' : project.version,
+				'outputfile': '$outputDir/quality-requirements.pdf',
+				'source-highlighter': 'coderay', // TODO switch to 'rouge' once supported by the html5 backend and on MS Windows
+				'tabsize': '4',
+				'toc': 'left',
+				'icons': 'font',
+        'sectlink': true,
+				'sectanchors': true,
+				'idprefix': '',
+				'idseparator': '-',
+        'doctype': 'book',
+        'toclevels': 3,
+        'imagesdir': './images',
+        'homepage': 'http://github.com/arc42/quality-requirements',
+        'icons': 'font',
+        'numbered': true,
+        'version': project.version
+]
+  resources {
+          // include architecture diagrams
+          from("${projectDir}/src/asciidoc") {
+            include 'images/**'
+          }
+      }
 
 } // asciidoctor
 
@@ -88,6 +112,12 @@ the IntelliJ JetGradle environment.
 
     args "create_docx_with_pandoc.sh"
 
+}
+
+task wrapper(type: Wrapper) {
+	description = 'Generates gradlew and gradlew.bat scripts'
+	gradleVersion = '4.1'
+	distributionType = Wrapper.DistributionType.BIN
 }
 
 defaultTasks 'generateDocx'

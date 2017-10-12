@@ -6,10 +6,6 @@
 
 
 :toc:
-:toclevels: 3
-:imagesdir: ./images
-:homepage: http://github.com/arc42/quality-requirements
-:numbered:
 
 :icons: font
 

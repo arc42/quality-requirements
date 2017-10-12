@@ -22,8 +22,8 @@ In der Praxis gehören hierzu folgende Teilmerkmale:
 
 === Szenarien für Betreibbarkeit
 
-==== Szenario: 
-Das Werkzeug zur Messung der aktuellen Datenbank-Performance muss sowohl unter MySQL, Oracle und DB2 laufen. 
+==== Szenario:
+Das Werkzeug zur Messung der aktuellen Datenbank-Performance muss sowohl unter MySQL, Oracle und DB2 laufen.
 
 [horizontal]
 Geschäftsziel(e)::
@@ -37,7 +37,7 @@ Initialisierung und Erkennung des verbundenen DB-Typs erfolgt in weniger als 30 
 
 
 ==== Szenario: Automatische Installation
-Das XY-System lässt sich inklusive sämtlicher benötigten Softwarekomponenten vollständig automatisiert installieren. 
+Das XY-System lässt sich inklusive sämtlicher benötigten Softwarekomponenten vollständig automatisiert installieren.
 
 [horizontal]
 Geschäftsziel(e)::
@@ -55,10 +55,10 @@ Die gesamte Installation dauert auf Basis eines bereits installierten Ubuntu-Lin
 
 ==== Szenario: Langlebigkeit
 
-Die Software kann &uuml;ber 20 Jahre hinweg auf jeweils aktueller Hardware und Software (Betriebssysteme, DB-Systeme usw.)  portiert werden, wozu nicht mehr als 5 Personentage pro Monat investiert werden m&uuml;ssen.
+Die Software kann über 20 Jahre hinweg auf jeweils aktueller Hardware und Software (Betriebssysteme, DB-Systeme usw.)  portiert werden, wozu nicht mehr als 5 Personentage pro Monat investiert werden müssen.
 
 
 ==== Szenario: Installation ohne Internetzugang
-Unabh&auml;ngigkeit der Installation von Zuf&auml;llen des Internets
+Unabhängigkeit der Installation von Zufällen des Internets
 
-Die Software l&auml;sst sich auf einem System  installieren, ohne dass ein Internetzugang vorhanden ist.
+Die Software lässt sich auf einem System  installieren, ohne dass ein Internetzugang vorhanden ist.
