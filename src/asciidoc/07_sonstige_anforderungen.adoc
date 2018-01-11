@@ -1,6 +1,6 @@
 == Sonstige Qualitätsanforderungen
 
-Da hätten wir noch eine nahzu beliebige Menge weiterer Qualitätsanforderungen, beispielsweise Funktionalität. Oder diverse Synonyme bereits vorgestellter Q-Merkmale :-)
+Da hätten wir noch eine nahezu beliebige Menge weiterer Qualitätsanforderungen, beispielsweise Funktionalität. Oder diverse Synonyme bereits vorgestellter Q-Merkmale :-)
 
 Einige Definitionen:
 
@@ -112,7 +112,7 @@ Reaktion::
 Zielwert::
 Die Ergebnisse zweier Testreihen sind bei 90% aller Einzeltests ähnlich.
 
-==== Szenario: Testausführung mit einelnem Befehl
+==== Szenario: Testausführung mit einzelnem Befehl
 Ein Tester möchte mehrere Testszenarien mit einem einzelnen Befehl durchführen können. 
 
 

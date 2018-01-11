@@ -83,7 +83,7 @@ Erweiterung ("PlugIn") für das System erstellen
 
 Reaktion:: Unabhängige Entwickler sind in der Lage, auf Basis
 vordefinierter Erweiterungspunkte das System zu erweitern. Dafür sind
-nebem dem System ausschliesslich Open Source Komponenten notwendig.
+neben dem System ausschließlich Open Source Komponenten notwendig.
 
 Zielwert:: Einfache PlugIns sollen innerhalb von 8 Personenstunden
 umsetzbar sein.
@@ -124,7 +124,7 @@ Auslöser:: Die Fach-, Business- oder Marketingabteilung
 benötigt in den Stammdaten ein neues Attribut vom Typ "String" (maximale
 Länge 80 Zeichen)
 
-Reaktion:: Ein Entwickler identifziert die zugehörigen Programmteile,
+Reaktion:: Ein Entwickler identifiziert die zugehörigen Programmteile,
 nimmt die notwendigen Erweiterungen vor, testet die Erweiterungen in
 Integrations- und Systemtestumgebung.
 
@@ -132,7 +132,7 @@ Zielwert:: Alle notwendigen Änderungen und zugehörigen Tests sind
 innerhalb von 40h (Aufwand) abgeschlossen.
 
 
-==== Szenario: Unterstütze ANSI SQL-92 kompatibe Datenbanksysteme.
+==== Szenario: Unterstütze ANSI SQL-92 kompatible Datenbanksysteme.
 
 Biete das System Kunden mit verschiedenen DB-Systeme an.
 
@@ -244,7 +244,7 @@ Session-ID oÄ).
 
 Reaktion:: Entwickler müssen die betroffenen Stellen im
 Quellcode innerhalb von als 40h anpassen können. Anmerkung: Für dieses
-Szenarion ist das Verhältnis aus Zielwert und Umfang des betroffenen
+Szenario ist das Verhältnis aus Zielwert und Umfang des betroffenen
 Quellcodes (LoC) relevant:
 
 
@@ -270,7 +270,7 @@ Authentifizierung.
 
 [horizontal]
 Geschäftsziel(e):: Die XY-Schnittstelle benötigt ab sofort eine sichere
-Authentifizerung.
+Authentifizierung.
 
 Auslöser:: Regularien oder Kundenanforderungen erfordern eine
 sichere Authentifizierung über OAuth 2.0 der XY-Schnittstelle
@@ -287,11 +287,11 @@ durch ein Open-Source System ersetzt werden können.
 Geschäftsziele:: Bei Bedarf und in bestimmten Einsatzszenarien des
 Systems müssen Lizenzkosten reduziert werden.
 
-Auslöser:: Betreiber/Kunde des Systems möchte die LIzenzkosten
+Auslöser:: Betreiber/Kunde des Systems möchte die Lizenzkosten
 des verwendeten Datenbanksystems reduzieren.
 
-Reaktion:: Entwickler können die standardmässig verwendete Oracle (™)
-Datenbank durch eine quelloffene (etwa: MySQL oder PostgreS ersetzen.
+Reaktion:: Entwickler können die standardmäßig verwendete Oracle (™)
+Datenbank durch eine quelloffene (etwa: MySQL oder PostgreSQL ersetzen.
 
 Zielwert::
 
@@ -411,7 +411,7 @@ unabhängig von allen anderen Subsystemen möglich sein.
 Geschäftsziel(e):: Leichte Änderbarkeit, schnelle Reaktion auf Fehler.
 
 Auslöser:: Entwicklungsteam ändern innerhalb eines
-Subsystems - die Aussenschnittstellen dieses Subsystems bleiben dabei
+Subsystems - die Außenschnittstellen dieses Subsystems bleiben dabei
 identisch!
 
 Zielwert:: Kein anderes Subsystem muss geändert werden. Für sämtliche
