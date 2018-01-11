@@ -324,7 +324,7 @@ Write-Follows-Read-Consistency. Siehe Erläuterungen zum CAP-Theorem. http://www
 
 
 | Laufzeiteffizienz
-| Sparsamkeit eines Systems (meist: eines Algorithmus) bezüglich der Resource "Rechenzeit"
+| Sparsamkeit eines Systems (meist: eines Algorithmus) bezüglich der Ressource "Rechenzeit"
 | Effizienz
 
 
@@ -448,7 +448,7 @@ der für sie angemessen ist.
 
 
 | Skalierbarkeit
-| Fähigkeit eines Systems, unter Nutzung zusätzlicher Resourcen seine Kapazitäten zur Leistungserbringung zu steigern.
+| Fähigkeit eines Systems, unter Nutzung zusätzlicher Ressourcen seine Kapazitäten zur Leistungserbringung zu steigern.
 | Effizienz
 
 
@@ -578,7 +578,7 @@ seiner Funktionen die Anforderungen erfüllen.
 
 
 | Zugriffsschutz
-| Maßnahmen gegen unerwünschten Zugriff auf Resourcen oder Systemteile
+| Maßnahmen gegen unerwünschten Zugriff auf Ressourcen oder Systemteile
 | Sicherheit
 
 

@@ -108,7 +108,7 @@ Bemerkung:: Die Generierung dieses Reports läuft in mehreren parallelen Threads
 
 
 ==== Szenario: Aussagekräftige Fehlermeldungen ohne Absturz
-Falls eine Fehlersituation auftritt, wird dies dem Benutzer in aussagekräftigen Meldungen angezeigt. Das System stürzt bei Ausnahmesituationen (Speicherüberlauf, Hardwarefehler) nicht ab, sondern fährt höchstens kontrolliert heruntre.
+Falls eine Fehlersituation auftritt, wird dies dem Benutzer in aussagekräftigen Meldungen angezeigt. Das System stürzt bei Ausnahmesituationen (Speicherüberlauf, Hardwarefehler) nicht ab, sondern fährt höchstens kontrolliert herunter.
 
 [horizontal]
 Geschäftsziel(e)::
@@ -121,7 +121,7 @@ Reaktion::
 Das System erkennt den Fehler, meldet (soweit möglich) an den Benutzer und fährt kontrolliert herunter. 
 
 Zielwert::
-Fehlererkennung erfolgt innrehalb von 15 Sekunden, Meldung an Benutzer (sofern noch möglich) innerhalb von 1 Sekunde, herunterfahren innerhalb von 15 Sekunden. 
+Fehlererkennung erfolgt innerhalb von 15 Sekunden, Meldung an Benutzer (sofern noch möglich) innerhalb von 1 Sekunde, herunterfahren innerhalb von 15 Sekunden. 
 
 ==== Szenario: Status lang laufender Prozesse erkennbar
 Das System zeigt den Fortschritt der lange laufenden XY-Konvertierungsprozesse in der grafischen Oberfläche dem Benutzer an. 

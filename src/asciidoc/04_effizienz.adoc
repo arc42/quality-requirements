@@ -76,7 +76,7 @@ Geschäftsziel(e)::
 Risikoarme Änderungen und Erweiterungen.
 
 Auslöser::
-Entwickler führt eine Änderung am Quellcode im Subsystem XY durch und startet anschliessend die automatisierte Testsuite (der Initegrations- und Unittsts) dieses Subsystems. 
+Entwickler führt eine Änderung am Quellcode im Subsystem XY durch und startet anschließend die automatisierte Testsuite (der Integrations- und Unittests) dieses Subsystems. 
 
 Reaktion::
 Das Testframework führt sämtliche Testfälle aus und berichtet die Testergebnisse an den Benutzer.
@@ -152,7 +152,7 @@ Auslöser::
 Benutzer startet die Konfigurationsoberfläche für Reports.
 
 Reaktion und Zielwert::
-Beim Start der Report-Konfigurationsoberfläche erscheint eine gemäß des Benutzeprofils aufbereitete grafische Oberfläche in weniger als 2 Sekunden.
+Beim Start der Report-Konfigurationsoberfläche erscheint eine gemäß des Benutzerprofils aufbereitete grafische Oberfläche in weniger als 2 Sekunden.
 
 
 ==== Szenario: Nutzung von höchstens 1GB RAM
