@@ -3,7 +3,8 @@
 :numbered!:
 
 == Über Qualität
-Die Qualität eines Produktes oder Systems ist ganz allgemein als Menge von Eigenschaften oder Merkmalen definiert.
+Die Qualität eines Produktes oder Systems ist ganz allgemein als
+_Menge von Eigenschaften oder Merkmalen_ definiert.
 
 
 
