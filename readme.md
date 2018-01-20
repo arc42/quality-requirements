@@ -15,13 +15,7 @@ Zur Zeit gibt es diese Szenarien im PDF-Format [direkt von Github Releases](http
 - Zur Konvertierung in docx: [pandoc](http://johnmacfarlane.net/pandoc/)
 
 ### Build selbst ausführen
-Entweder
-
-```
-gradle asciidoctor generateDocx
-```
-
-oder
+Entweder `gradle` oder
 
 ```
 ./build.sh
@@ -30,7 +24,7 @@ oder
 - Quellen liegen in asciidoc-Format unter /src/asciidoc.
 
 ### Einschränkungen
-- gradle baut zZt nur die html-Version sowie eine einfache (ungestylte) docx.
+- gradle baut zZt nur html- und pdf-Versionen sowie eine einfache (ungestylte) docx.
 - Daher: docx manuell korrigiert (gestyled) unter build/docs bzw. resources  
 - aktuelle Versionen (ohne styling) in docbook und docx im Build-Verzeichnis
 
@@ -43,7 +37,10 @@ Ich freue mich über konstruktive Kritik und Verbesserungsvorschläge sowie Beit
 ## Status
 ![Issues](http://img.shields.io/github/issues/arc42/quality-requirements.svg)
 
-## Changes
+## Danke
+Alex Heusingfeld, Christoph Iserlohn, Roland Weisleder
+
+## Changes (sofern nicht aus dem Commit-Log ersichtlich)
 - 2015-09-22: Ergänzung um ISO-25010
 - 2015-05-11: Issue-Tracker Links korrigiert
 - 2013-09-28: Links korrigiert, Voraussetzungen, Vorgehen bei build

@@ -37,9 +37,14 @@ oder Erweiterbarkeit.
 === Szenarien für Änderbarkeit
 
 
+==== Szenario: Aktualisierung Betriebssystem auf Endgeräten
+Auf den (mehr als 1000) im Feld verteilten Endgeräten müssen
+Betriebssystem-Updates (insbesondere Security-Patches) in weniger
+als 4 Wochen vollständig verteilt werden können.
+
+
 
 ==== Szenario: Neuer Konnektor
-:awestruct-tags: [flexibilitaet, reaktionsfaehigkeit, erweiterbarkeit]
 
 Wenn die Datenimport-Komponente Daten aus einer zusätzlichen
 Datenquelle einlesen soll, so muss der dafür notwendige Konnektor

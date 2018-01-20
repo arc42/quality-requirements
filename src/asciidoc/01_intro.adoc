@@ -35,6 +35,36 @@ nicht finden, so schauen Sie bitte im Anhang: <<Q-Merkmale>> - dort finden
 Sie eine umfangreiche Tabelle der Q-Merkmale mit ihren Synonymen und
 Oberbegriffen.
 
+=== Formulierung von Szenarien
+Ein (Qualitäts-)Szenario beschreibt das _Verhalten_ (1) eines Systems (3)
+beim Eintreffen eines Events oder Stimulus (2).
+
+==== (1) Verhalten eines System
+Das _Verhalten_ kann sich auf eine Software oder Hardware beziehen, oder
+auch auf beteiligte Personen, Rollen oder Organisationen beziehen.
+
+Verhalten sollte in Szenarien immer _meß- oder entscheidbar_ formuliert werden.
+
+==== (2) Event oder Stimulus
+Ein Benutzer löst während der Arbeit mit dem System eine Funktion aus, etwa:
+
+* wählt einen Menüpunkt / eine Funktion aus
+* klickt einen Button einer grafischen Oberfläche
+* startet eine Verarbeitung
+
+Ein Stakeholder ändert etwas im System, etwa:
+
+* modifiziert Sourcecode oder Konfiguration des Systems
+* ändert an der Hardware des Systems
+* verändert das Deployment des Systems
+
+Ein Stakeholder ändert etwas an beteiligten Prozessen oder Organisationen.
+
+==== (3) System
+Der Begriff "System" ist hier sehr breit gefasst: Dazu gehören Software,
+Software-Komponenten, beteiligte Hardware, Netze, Middleware, Datenbanken,
+aber auch sämtliche beteiligten Personen, Rollen oder Organisationen.
+
 
 
 === Quellen

@@ -1,5 +1,3 @@
-
-
 /***
  * arc42 - quality requirements examples - gradle build script
  =============================================================
@@ -71,7 +69,7 @@ asciidoctor {
   attributes = [
 				'release-branch': 'master',
         'outputFile': "$outputDir/quality-requirements.pdf",
-				'source-highlighter': 'coderay', // TODO switch to 'rouge' once supported by the html5 backend and on MS Windows
+				'source-highlighter': 'coderay',
 				'tabsize': '4',
 				'toc': 'left',
 				'icons': 'font',
