@@ -8,7 +8,7 @@ script:
 - export TERM=dumb
 - './gradlew generateDocx'
 jdk:
-- oraclejdk8
+- openjdk8
 deploy:
   provider: releases
   api_key:
