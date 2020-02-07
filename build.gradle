@@ -111,10 +111,5 @@ the IntelliJ JetGradle environment.
 
 }
 
-task wrapper(type: Wrapper) {
-	description = 'Generates gradlew and gradlew.bat scripts'
-	gradleVersion = '4.1'
-	distributionType = Wrapper.DistributionType.BIN
-}
 
 defaultTasks 'generateDocx'
