@@ -248,7 +248,7 @@ Logmeldungen (beispielsweise IP-Adresse des ausführenden Webservers,
 Session-ID oÄ).
 
 Reaktion:: Entwickler müssen die betroffenen Stellen im
-Quellcode innerhalb von als 40h anpassen können. Anmerkung: Für dieses
+Quellcode innerhalb von weniger als 40h anpassen können. Anmerkung: Für dieses
 Szenario ist das Verhältnis aus Zielwert und Umfang des betroffenen
 Quellcodes (LoC) relevant:
 
