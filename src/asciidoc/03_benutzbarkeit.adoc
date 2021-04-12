@@ -1,43 +1,51 @@
 [[benutzbarkeit]]
-== Benutzbarkeit
+== Gebrauchstauglichkeit
+// Benutzbarkeit
 
-=== Was bedeutet Benutzbarkeit?
+=== Was bedeutet Gebrauchstauglichkeit ?
+// Benutzbarkeit?
 
-Aufwand, der zur Benutzung erforderlich ist, und individuelle Beurteilung der Benutzung durch eine festgelegte oder vorausgesetzte Benutzer-gruppe. Hierunter fällt auch der Bereich Softwareergonomie.
+Aufwand, der zur Benutzung erforderlich ist, und individuelle Beurteilung der Benutzung durch eine festgelegte oder vorausgesetzte Benutzergruppe. Hierunter fällt auch der Bereich _Softwareergonomie_.
 
-Zu Benutzbarkeit gehören nach DIN/ISO 9126 folgende Teilmerkmale:
+Zu Gebrauchtstauglichkeit gehören nach DIN/ISO 25010 folgende Teilmerkmale:
 
-[horizontal]
-*Verständlichkeit*:: Aufwand für den Benutzer, das Konzept und die Anwendung zu verstehen.
-*Erlernbarkeit*:: Aufwand für den Benutzer, die Anwendung zu erlernen (z.B. Bedienung, Ein-, Ausgabe)
-*Bedienbarkeit*:: Aufwand für den Benutzer, die Anwendung zu bedienen.
-
-
-
+*Verständlichkeit:*:: Aufwand für den Benutzer, das Konzept und die Anwendung zu verstehen.
+*Erlernbarkeit:*:: Aufwand für den Benutzer, die Anwendung zu erlernen (z.B. Bedienung, Ein-, Ausgabe)
+*Bedienbarkeit:*:: Aufwand für den Benutzer, die Anwendung zu bedienen.
+*Nützlichkeit:*:: .
+*Ästetik der Benutzerschnittstelle:*:: .
 
 === Szenarien für Benutzbarkeit
 
+
 ==== Szenario: Einfache Benutzbarkeit von Testwerkzeug
-Das interaktive Testwerkzeug muss einfach benutzbar sein. Tester (für den Benutzer-Akzeptanztest) müssen innerhalb von zwei Stunden die Bedienung erlernen können.  
+
+Das interaktive Testwerkzeug muss einfach benutzbar sein.
+Tester, welche die Benutzer-Akzeptanztests (BA) durchführen, müssen die Bedienung des Testwerkzeuges schnell erlernen können.
 
 [horizontal]
+Qualitätsziel:: Erlernbarkeit
+
 Geschäftsziel(e):: 
 Produktive und schnelle Akzeptanztests, schnelle Durchläufe 
 
 Auslöser::
-Ein BA-Tester testet mit dem Testwerkzeug ein neues Release der Software.
+Ein neue BA-Tester soll mit dem Testwerkzeug ein Release einer Software testen.
 
 Reaktion::
-Der Tester kann das Testwerkzeug vollständig bedienen.
+Der Tester erlernt das Testwerkzeug und kann danach das Testwerkzeug vollständig bedienen.
 
 Zielwert::
-Benötigt dafür weniger als zwei Stunden Einarbeitung.
+Ein Benutzer-Akzeptanztester benötigt für das Erlernen des Testwerkzeugs weniger als zwei Stunden Einarbeitung.
 
 
 ==== Szenario: Konsistente Tastaturkürzel
-Endanwender / Endbenutzer können identische Tastaturkürzel ("keyboard shortcuts") in allen, unabhängig voneinander entwickelten, Modulen des Systems verwenden. 
+
+Endanwender / Endbenutzer können identische Tastaturkürzel ("keyboard shortcuts") in allen, unabhängig voneinander entwickelten, Modulen des Systems verwenden.
 
 [horizontal]
+Qualitätsziel:: Erlernbarkeit
+
 Geschäftsziel(e)::
 Konsistente Benutzerführung ("User experience") im gesamten Produkt
 
@@ -74,6 +82,8 @@ Navigation zum gewünschten Thema erfolgt in weniger als 10 Sekunden, die Rückk
 Benutzer werden grundsätzlich auf inkonsistente oder fehlerhafte Eingaben hingewiesen. 
 
 [horizontal]
+Qualitätsziel:: Bedienbarkeit, Fehlertoleranz
+
 Geschäftsziel(e)::
 Konsistenz bei Benutzereingaben
 
@@ -88,9 +98,12 @@ Im Falle inkonsistenter oder fehlerhafter Eingabedaten gibt das System eine pass
 
 
 ==== Szenario: Benutzerfreundliches Verhalten bei Backend-Prozess
-Falls ein Benutzer die pdf-Generierung des XY-Reports unterbricht, hält das System diese Generierung an und übergibt die Kontrolle innerhalb von 15 Sekunden wieder an die Benutzeroberfläche. 
+
+Falls ein Benutzer die pdf-Generierung des XY-Reports unterbricht, hält das System diese Generierung an und übergibt die Kontrolle innerhalb von 15 Sekunden wieder an die Benutzeroberfläche.
 
 [horizontal]
+Qualitätsziel:: Bedienbarkeit
+
 Geschäftsziel(e)::
 Verbessere die Benutzbarkeit der pdf-Generierung
 
@@ -106,11 +119,13 @@ Benutzer erhält Kontrolle über das UI innerhalb von 15 Sekunden (d.h. In spät
 Bemerkung:: Die Generierung dieses Reports läuft in mehreren parallelen Threads (oder Prozessen), eventuell sogar auf mehreren unterschiedlichen Prozessoren oder (virtuellen) Maschinen. Die Unterbrechung muss synchron und konsistent über alle diese Ausführungsinstanzen erfolgen.
 
 
-
 ==== Szenario: Aussagekräftige Fehlermeldungen ohne Absturz
+
 Falls eine Fehlersituation auftritt, wird dies dem Benutzer in aussagekräftigen Meldungen angezeigt. Das System stürzt bei Ausnahmesituationen (Speicherüberlauf, Hardwarefehler) nicht ab, sondern fährt höchstens kontrolliert herunter.
 
 [horizontal]
+Qualitätsziele:: Fehlertoleranz, Bedienbarkeit
+
 Geschäftsziel(e)::
 Verbessere die Benutzbarkeit (und gefühlte Zuverlässigkeit). Ermögliche Benutzern, zu Fehlern führende Kombinationen von Eingabedaten zu korrigieren, ohne dass das System abstürzt.
 
@@ -123,17 +138,19 @@ Das System erkennt den Fehler, meldet (soweit möglich) an den Benutzer und fäh
 Zielwert::
 Fehlererkennung erfolgt innerhalb von 15 Sekunden, Meldung an Benutzer (sofern noch möglich) innerhalb von 1 Sekunde, herunterfahren innerhalb von 15 Sekunden. 
 
+
 ==== Szenario: Status lang laufender Prozesse erkennbar
-Das System zeigt den Fortschritt der lange laufenden XY-Konvertierungsprozesse in der grafischen Oberfläche dem Benutzer an. 
+
+Das System zeigt den Fortschritt der lange laufenden XY-Konvertierungsprozesse in der grafischen Oberfläche dem Benutzer an.
 
 [horizontal]
-Anmerkung:: Diese XY-Konvertierung dauert 1-18 Stunden.
+Qualitätsziele:: Bedienbarkeit
 
 Geschäftsziel(e)::
 Fortschrittsüberwachung, Benutzerfreundlichkeit
 
 Auslöser::
-Benutzer möchte über Fortschritt der lang laufenden Berechnungen/Prozesse informiert werden.
+Benutzer möchte über Fortschritt von lang laufenden Berechnungen/Prozessen informiert werden.
 
 Reaktion::
 Das System zeigt die Anzahl der bisher verarbeiteten Datensätze, das verarbeitete Datenvolumen in Megabyte sowie den geschätzten verbleibenden Restaufwand an der GUI an. 
@@ -141,10 +158,16 @@ Das System zeigt die Anzahl der bisher verarbeiteten Datensätze, das verarbeite
 Zielwert::
 Die Aktualisierung dieser Informationen erfolgt mindestens alle 60 Sekunden - höchstens alle 5 Sekunden.
 
-==== Szenario: Einhaltung der Windows-8 User Experience Guidelines
-Das System soll den Auflagen und Vorschlägen der Microsoft Windows User Experience Guidelines für Windows-8 entsprechen. 
+Anmerkung:: Diese XY-Konvertierung dauert 1-18 Stunden.
+
+
+==== Szenario: Einhaltung der betriebssystem spezifischen User Experience Guidelines
+
+Das System soll den Auflagen und Vorschlägen der Microsoft Windows User Experience Guidelines für Windows-8 entsprechen.
 
 [horizontal]
+Qualitätsziel:: Ästetik der Benutzungsschnittstelle, Erlernbarkeit
+
 Geschäftsziel(e)::
 Einheitliches, dem Windows-8 Look-and-Feel entsprechendes Aussehen und Verhalten.
 
@@ -155,9 +178,12 @@ Zielwert::
 Ein fachkundiger Auditor testiert die Übereinstimmung mit o.g. Guidelines ohne Einschränkung.
 
 ==== Szenario: Benutzerinteraktionen an grafischer Oberfläche
-Sämtliche Benutzerinteraktion und -meldungen im System sind als GUI implementiert. 
+
+Sämtliche Benutzerinteraktion und -meldungen im System sind als GUI implementiert.
 
 [horizontal]
+Qualitätsziel:: Nützlichkeit
+
 Geschäftsziel(e)::
 Erhöhe die Akzeptanz und Produktivität der Arbeit mit dem System.
 
