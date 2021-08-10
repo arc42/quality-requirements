@@ -85,9 +85,9 @@ include::bibliography.adoc[]
 :numbered!:
 === Mitwirkende
 
-* Christoph Iserlohn (innoQ), neue Szenarien
-* Oliver Tigges (innoQ), neue Szenarien
-* Alex Heusingfeld (innoQ), Infrastruktur, AsciiDoc
+* Christoph Iserlohn (INNOQ), neue Szenarien
+* Oliver Tigges (INNOQ), neue Szenarien
+* Alex Heusingfeld (Vorwerk), Infrastruktur, AsciiDoc
 * Roland Krummenacher & div. N.N.: Reviews, Korrekturen
 
 Ideen und Anregungen zu einigen Szenarien auch von Firebrand-Softwarearchitectures.
