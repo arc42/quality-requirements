@@ -42,6 +42,7 @@ Alex Heusingfeld, Christoph Iserlohn, Roland Weisleder
 
 ## Changes (sofern nicht aus dem Commit-Log ersichtlich)
 
+- 2021-08-10: Upgrade gradle, etwas Kosmetik, update build, rename master to main
 - 2015-09-22: Ergänzung um ISO-25010
 - 2015-05-11: Issue-Tracker Links korrigiert
 - 2013-09-28: Links korrigiert, Voraussetzungen, Vorgehen bei build
