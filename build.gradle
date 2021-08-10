@@ -39,7 +39,7 @@ apply plugin: 'org.asciidoctor.convert'
 
 
 project.description = "arc42 - Examples for Software Quality Requirements"
-project.version = "0.8.0"
+project.version = "0.8.1"
 
 ext {
     srcDir  = "$projectDir/src/asciidoc"
