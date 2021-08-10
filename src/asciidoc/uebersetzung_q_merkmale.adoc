@@ -1,0 +1,198 @@
+
+[[Uebersetzung-Q-Merkmale]]
+## Übersetzung der Qualitätskategorien aus der ISO/IEC 25010
+
+Qualitäten eines Softwareproduktes nach ISO/IEC 25010
+
+
+[cols="2,2,3a",  options="header"]
+|=======
+| ISO 25010
+| Übersetzung
+| Anmerkungen
+
+| System/Software product quality
+| Qualitäten eines Systems/Softwareproduktes
+|
+
+| *Functional suitability*
+| Funktionalität [embarc] Funktionale Tauglichkeit  [usec] _Funktionale Eignung_ [istqb]
+|
+
+| Appropriateness
+| (funktionale) Angemessenheit
+|
+
+| Accuracy [a42] / functional correctness [enzy]
+| (funktionale) Korrektheit
+|
+
+| functional completeness [enzy]
+| (funktionale) Vollständigkeit
+| [embarc] [usec]
+
+| *Reliability*
+| Zuverlässigkeit
+|
+
+|
+| Reife [usec]
+|
+
+| Availability
+| Verfügbarkeit
+|
+
+| Fault tolerance
+| Fehlertoleranz
+|
+
+| Recoverability
+| Wiederherstellbarkeit
+|
+
+| *Performance efficiency*
+| Effizienz (Performanz [usec])
+|
+
+| Time-behaviour
+| Zeitverhalten
+|
+
+| Resource-utilisation
+| Ressourcenverbrauch [embarc] _Ressourcenverwendung_ [usec]
+|
+
+|
+| Kapazität
+| [embarc] [usec]
+
+| *Operability (Useability)*
+| Benutzbarkeit [embarc] Gebrauchstauglichkeit [usec]
+|
+
+| Appropriateness-recogniseability
+| Angemessenheitserkennung [usec]
+|
+
+| Learnability
+| Erlernbarkeit
+|
+
+| Ease-of-use
+| Bedienbarkeit
+|
+
+| Helpfulness
+| Nützlichkeit
+|
+
+| Attractiveness
+| Ästetik der Benutzungsschnittstelle [usec]
+|
+
+| Technical-accessibility
+| Barrierefreiheit
+|
+
+|
+| Schutz vor Fehlern des Benutzers [embarc] Fehlersicherheit [usec]
+| [embarc]
+
+| *Security*
+| Sicherheit
+|
+
+| Confidentiality
+| Vertraulichkeit
+|
+
+| Integrity
+| Integrität
+|
+
+| Non-repudiation
+| Nachweisbarkeit [embarc] Verbindlichkeit [usec] Nicht-Abstreitbarkeit [usec]
+|
+
+| Accountability
+| Ordnungsmäßigkeit [embarc] Zurechenbarkeit [usec]
+|
+
+| Authenticity
+| Authentizität
+|
+
+| *Compatibility*
+| Kompatibilität
+|
+
+| Replace-ability
+| Austauschbarkeit
+|
+
+| Coexistence
+| Koexistenz
+|
+
+| Interoperability
+| Interoperabilität
+|
+
+| *Maintainability*
+| Wartbarkeit
+|
+
+| Modularity
+| Modularität
+|
+
+| Reuseability
+| Wiederverwendbarkeit
+|
+
+| Analyzability
+| Analysierbarkeit
+|
+
+| Changeability
+| Änderbarkeit
+|
+
+| Modification stability
+| Änderungsstabilität
+|
+
+| Testability
+| Testbarkeit
+|
+
+| *Transferability* / *Portability*[embarc]
+| Portabilität [embarc] Übertragbarkeit [usec]
+|
+
+| Portability
+| Portabilität
+|
+
+| Adaptability
+| Anpassbarkeit
+|
+
+| Installability
+| Installierbarkeit
+|
+
+| Replaceability
+| Ersetzbarkeit
+|
+
+Quelle:
+
+[a42] arc42/quality-requirements (insb. ISO-25010-EN-Tree.png)
+[embarc] https://www.embarc.de/software-qualitaet-iso-25010/
+[usec] USecureD: E 1.4 USecureD-Qualitätsmodell (https://www.usecured.de/UseWP/wp-content/uploads/2015/04/E-1.4-USecureD-Qualitätsmodell-V.2.pdf)
+[enzy] https://www.enzyklopaedie-der-wirtschaftsinformatik.de/wi-enzyklopaedie/lexikon/is-management/Systementwicklung/Management-der-Systementwicklung/Software-Qualitatsmanagement/Qualitatsmerkmale-von-Software/index.html
+[nocomp] https://nocomplexity.com/overview-of-iso-25010/
+
+[istqb] GTB Standardglossar der Testbegriffe Deutsch V3.2

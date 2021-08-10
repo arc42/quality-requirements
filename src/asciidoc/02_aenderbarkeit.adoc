@@ -1,21 +1,23 @@
 :numbered:
 
+== Wartbarkeit
 
-== Änderbarkeit
+=== Was bedeutet Wartbarkeit?
 
+// ISTQB
+// Maintainability: The degree to which a component or system can be modified by the intended maintainer.
+// Wartbarkeit/Änderbarkeit: Der Grad, zu dem eine Komponente oder ein System von den dafür vorgesehenen Personen gewartet werden kann. [Nach ISO 25010]
 
-
-=== Was bedeutet Änderbarkeit?
-
-
-Änderbarkeit: Aufwand, der zur Durchführung vorgegebener Änderungen notwendig ist.
-
-
+Wartbarkeit:: Aufwand, der zur Durchführung vorgegebener Änderungen notwendig ist.
 Änderungen sind dabei Korrekturen, Verbesserungen oder Anpassungen an
 Änderungen der Umgebung, der Anforderungen & der funktionalen
 Spezifikationen.
 
-Zur Änderbarkeit gehören gemäß DIN/ISO 9126 folgende Teilmerkmale:
+Zur Änderbarkeit gehören gemäß DIN/ISO 25010 folgende Teilmerkmale:
+
+*Modularität:*:: Aufwand für die Herstellung und Aufrechterhaltung einer guten funktionalen und technischen Aufteilung der Anwendung in Bausteine
+
+*Wiederverwendbarkeit:*:: Aufwand für die Verwendung von Bausteinen in einem anderen, als ihrem ursprünglichen Kontext
 
 *Analysierbarkeit:*:: Aufwand, um Mängel oder Ursachen von Versagen zu
 diagnostizieren oder um änderungsbedürftige Teile zu bestimmen.
@@ -23,7 +25,7 @@ diagnostizieren oder um änderungsbedürftige Teile zu bestimmen.
 *Modifizierbarkeit:*:: Aufwand zur Ausführung von Verbesserungen, zur
 Fehlerbeseitigung oder Anpassung an Umgebungsänderungen
 
-*Stabilität:*:: Wahrscheinlichkeit des Auftretens unerwarteter Wirkungen
+*Änderungsstabilität:*:: Wahrscheinlichkeit des Auftretens unerwarteter Wirkungen
 von Änderungen.
 
 *Testbarkeit:*:: Aufwand, der zur Prüfung der geänderten Software
@@ -34,15 +36,22 @@ oder Erweiterbarkeit.
 
 
 
-=== Szenarien für Änderbarkeit
+=== Szenarien für Wartbarkeit
 
 
 ==== Szenario: Aktualisierung Betriebssystem auf Endgeräten
 Auf den (mehr als 1000) im Feld verteilten Endgeräten müssen
-Betriebssystem-Updates (insbesondere Security-Patches) in weniger
+Updates des Betriebssystems (insbesondere Security-Patches) in weniger
 als 4 Wochen vollständig verteilt werden können.
 
+[horizontal]
+Geschäftsziele:: Betriebsbereitschaft
 
+Auslöser:: Betriebssystemupdates stehen bereit
+
+Reaktion:: Auf allen Endgeräten sind die Updates installiert.
+
+Zielwert:: 4 Wochen
 
 ==== Szenario: Neuer Konnektor
 
@@ -54,6 +63,8 @@ genommen werden können.
 [horizontal]
 Geschäftsziele:: Flexibilität, Reaktionsfähigkeit, Entgegenkommen
 
+Auslöser:: Datenimport aus einer zusätzlichen Datenquelle wird notwendig
+
 Reaktion:: Der neue Konnektor ist programmiert und in Betrieb.
 
 Zielwert:: 3 Personenmonate
@@ -61,14 +72,16 @@ Zielwert:: 3 Personenmonate
 
 ==== Szenario: Jährliche Aktualisierung
 
-Das Datenformat des jährlichen Buchungsreports wird jedes Jahr am 31. Dezember aktualisiert,
+Das Datenausgabeformat des jährlichen Buchungsreports wird jedes Jahr am 31. Dezember angepasst,
 um den gesetzlichen und steuerlichen Änderungen zu genügen. Das System muss das neue Format erzeugen können.
 
 [horizontal]
 Geschäftsziele:: Betriebsbereitschaft
 
-Reaktion:: Die Buchungs- und Reportingkomponente ist geändert und liefert
-für den Buchungsreport das neue Format.
+Auslöser:: Bereitstellung der neuen Spezifikation des Datenausgabeformates für Buchungsreports
+
+Reaktion:: Die Buchungs- und Reportingkomponenten sind geändert und lieferen
+den Buchungsreport entsprechend der neuen Spezifikation.
 
 Zielwert:: Die Änderung muss in weniger als 80 Personenstunden umgesetzt
 werden können.
@@ -102,19 +115,18 @@ Wechsel des Algorithmus zur Routenberechnung.
 Geschäftsziele:: Setze Änderungen oder Verbesserungen in der
 Routenoptimierung möglichst schnell und einfach um
 
-Auslöser:: Entwickler möchte einen neuen / anderen Algorithmus zur
+Auslöser:: Entwickler möchte einen alternativen Algorithmus zur
 Berechnung passender Routen entwickeln und in das Gesamtsystem
 integrieren.
 
-Reaktion:: Es gibt keinerlei Seiteneffekte auf andere Bausteine des
+Reaktion:: Der Algorithmus zur Routenberechnung ist ausgetauscht.
+Es gibt keinerlei Seiteneffekte auf andere Bausteine des
 Systems.
 
 Zielwert:: Es ist lediglich ein einziger Softwarebaustein (Modul, Komponente,
-Package) betroffen, der eigentliche Austausch des alten gegen den neuen
+Package) betroffen, der eigentliche Austausch des bestehenden gegen einen alternativen
 Algorithmus geschieht innerhalb von 4h (inklusive eventuelle Anpassungen
 der Build-Umgebung).
-
-
 
 
 ==== Szenario: Neues Feld in Stammdaten
@@ -122,11 +134,11 @@ der Build-Umgebung).
 Ein Entwickler möchte ein neues Feld in die XY-Stammdaten aufnehmen.
 
 [horizontal]
-Geschäftsziele:: Fähigkeit zur Änderung / Anpassung des Domänenmodells
+Geschäftsziele:: Fähigkeit zur Änderung/Anpassung des Domänenmodells
 (fachliche Datenstruktur) inklusive Oberfläche und Datenbank.
 
 Auslöser:: Die Fach-, Business- oder Marketingabteilung
-benötigt in den Stammdaten ein neues Attribut vom Typ "String" (maximale
+benötigt in den XY-Stammdaten ein neues Attribut vom Typ "String" (maximale
 Länge 80 Zeichen)
 
 Reaktion:: Ein Entwickler identifiziert die zugehörigen Programmteile,
@@ -145,8 +157,7 @@ Biete das System Kunden mit verschiedenen DB-Systeme an.
 Geschäftsziel(e):: Flexibilität, biete das System Kunden mit
 unterschiedlichen Datenbanksystemen an.
 
-Auslöser:: Ein Kunde möchte das System mit einer (für uns
-neuen) (ANSI-SQL-92 kompatiblen) Datenbank verwenden.
+Auslöser:: Ein Kunde möchte das System mit einer (bisher nicht unterstützten) (ANSI-SQL-92 kompatiblen) Datenbank verwenden.
 
 Reaktion:: Entwickler und Tester nehmen das System mit der Datenbank in
 Betrieb und führen sämtliche Systemtests durch, insbesondere die SQL-92
@@ -154,9 +165,14 @@ Kompatibilitätstests.
 
 Zielwert:: Sofern die Datenbank die Kompatibilitätstests erfolgreich
 durchläuft, sind auch alle übrigen Systemtests erfolgreich.
+In diesen Falle beträgt:
+
+* der Arbeitsaufwand für Systemaufbau, Inbetriebnahme und Testdurchführung maximal 20h
+* die Gesamtdauer maximal eine Kalenderwoche.
 
 
 ==== Szenario: Verständlichkeit von generiertem Code
+
 Generierter Code für Testfälle ist leicht verständlich und
 manuell modifizierbar.
 
@@ -170,7 +186,7 @@ Auslöser:: Ein Tester beschreibt einen Testfall in einer
 (semi-formalen) Sprache.
 
 Reaktion:: Testcode (in C, Java oder C#) für bestimmte Teile des Systems
-wird durch den XY-Generator automatisch auf Basis dieser
+wird durch den Code-Generator für Testfälle automatisch auf Basis dieser
 Testfallbeschreibung erzeugt.
 
 Zielwert:: Ein Tester kann den generierten (C- oder Java) Quellcode für
@@ -184,6 +200,7 @@ in anderen Szenarien gestellt werden.
 
 
 ==== Szenario: Schnelle Lokalisierung von Fehlern
+
 Entwickler kann die Ursache fehlgeschlagener Testfälle in
 kurzer Zeit lokalisieren.
 
@@ -193,8 +210,9 @@ geringes Risiko bei Änderungen
 
 Auslöser:: Entwickler, Tester oder das Build-System führen
 automatische Testfälle (Unit- oder Integrationstests) aus.
+Dabei schlägt ein Test fehl.
 
-Reaktion:: Ein Testfall schlägt fehl. Aus den Fehler- und/oder
+Reaktion:: Aus den Fehler- und/oder
 Log-Nachrichten kann ein Entwickler die Ursache/den Auslöser des Fehlers
 in kurzer Zeit lokalisieren.
 
@@ -203,23 +221,24 @@ Zielwert:: Entwickler findet die Ursache durchschnittlich in weniger als
 
 ==== Szenario: Neue Funktion
 
-* Der Auftraggeber fordert eine neue Funktion im System.
-* Entwickler identifizieren kurzer Zeit die für diese Erweiterung passende Stelle innerhalb des Quellcodes.
+Der Auftraggeber fordert eine neue Funktion im System.
+Entwickler identifizieren innerhalb kurzer Zeit die für diese Erweiterung passende Stelle innerhalb des Quellcodes.
 
 [horizontal]
-Geschäftsziel(e):: Eine neue Funktion soll in kurzer Zeit implementiert
-werden können.
+Geschäftsziel(e):: Schnelle Aufwandsbewertung von Kundenwünschen
 
 Auslöser:: Änderungsanforderung
 
 Reaktion:: Entwickler suchen innerhalb des Quellcodes die geeignete
-Stelle für die Erweiterung.
+Stelle für die gewünschte Erweiterung.
+Darauf aufbauend kann er den Aufwand und die Risiken der gewünschten
+Erweiterung besser bewerten/abschätzen.
 
 Zielwert:: Entwickler finden die geeignete Stelle in weniger als zwei
 Stunden.
 
-
 ==== Szenario: Kurze Implementierungszeit für neue Funktion
+
 Eine neue Funktion mittlerer Komplexität soll in kurzer Zeit
 implementiert werden können.
 
@@ -229,12 +248,14 @@ kurzer Zeit implementiert werden können.
 
 Auslöser:: Änderungsanforderung
 
-Reaktion und Zielwert: Entwickler implementieren diese Funktion
-inklusive automatisierter Testfälle (Unit-Tests) innerhalb von weniger
+Reaktion:: Entwickler identifiziert die anzupassenden Bausteine, implementieren in diesen die geforderte Funktion sowie automatisierter Testfälle (Unit-Tests)
+
+Zielwert:: Der Aufwand für die Fertigstellung der neuen Funktion beträgt weniger
 als 5 PT.
 
 
 ==== Szenario: Erweiterte Logmeldungen
+
 Das bisherige Format der Logmeldungen genügt für den Betreiber
 nicht mehr. Sämtliche Logmeldungen müssen um zusätzliche Informationen
 ergänzt werden.
@@ -248,12 +269,17 @@ Logmeldungen (beispielsweise IP-Adresse des ausführenden Webservers,
 Session-ID oÄ).
 
 Reaktion:: Entwickler müssen die betroffenen Stellen im
-Quellcode innerhalb von weniger als 40h anpassen können. Anmerkung: Für dieses
+Quellcode identifizieren, anpassen, testen und in Betrieb nehmen.
+
+Zielwert:: Die Umsetzung erfolgt innerhalb von weniger als 40h.
+
+Anmerkung:: Für dieses
 Szenario ist das Verhältnis aus Zielwert und Umfang des betroffenen
-Quellcodes (LoC) relevant:
+Quellcodes (LoC) relevant.
 
 
 ==== Szenario: Report in kurzer Zeit implementieren
+
 Ein Entwickler möchte einen Report über alle Buchungen eines
 Tages implementieren
 
@@ -268,8 +294,11 @@ Reaktion::
 * Entwickler implementiert diese Funktion innerhalb von 3 Arbeitstagen.
 * Tester testet diese Funktion gegen die Spezifikation innerhalb von 2 Arbeitstagen.
 
+Zielwert:: Der neue Report wird mit einem maximalen Aufwand von 16h und nach einer maximalen Dauer von 5 Arbeitstagen zur Verfügung.
+
 
 ==== Szenario: Schnittstelle um Authentifizierung erweitern
+
 Entwickler erweitert die externe XY-Schnittstelle um
 Authentifizierung.
 
@@ -280,13 +309,15 @@ Authentifizierung.
 Auslöser:: Regularien oder Kundenanforderungen erfordern eine
 sichere Authentifizierung über OAuth 2.0 der XY-Schnittstelle
 
-Reaktion und Zielwert:: Entwickler erweitern die Schnittstelle um OAuth
-2.0 innerhalb von 5 PT Entwicklungszeit.
+Reaktion:: Der Entwickler erweitern die Schnittstelle um OAuth 2.0 basierter Authentifizierung.
+
+Zielwert:: Absicherung der XY-Schnittstelle benötigt einen Entwicklungsaufwand von max 5 PT.
 
 
 ==== Szenario: Kommerzielle durch Open-Source Datenbank ersetzen
-Das verwendete Datenbanksystem muss von einem kommerziellen
-durch ein Open-Source System ersetzt werden können.
+
+Das verwendete, kommerzielle Datenbankmanagementsystem muss
+durch ein lizenzkostenfreies, Open-Source-Produkt ersetzt werden können.
 
 [horizontal]
 Geschäftsziele:: Bei Bedarf und in bestimmten Einsatzszenarien des
@@ -295,24 +326,24 @@ Systems müssen Lizenzkosten reduziert werden.
 Auslöser:: Betreiber/Kunde des Systems möchte die Lizenzkosten
 des verwendeten Datenbanksystems reduzieren.
 
-Reaktion:: Entwickler können die standardmäßig verwendete Oracle (™)
-Datenbank durch eine quelloffene (etwa: MySQL oder PostgreSQL ersetzen.
+Reaktion:: Entwickler ersetzen die standardmäßig verwendete kommerzielle
+Datenbank durch ein quelloffenes, lizenzkostenfreies DBMS ersetzen.
+Es wird sichergestellt, dass alle funktionalen Anforderungen erfüllt werden.
+Dies wird durch die Ausführung der automatisierten Integrations-, System- und Abnahmetests nachgewiesen.
 
 Zielwert::
 
-* Der Wechsel der Datenbank ist mit weniger als 40 PT Aufwand
-durchführbar.
-* Alle funktionalen Anforderungen werden danach erfüllt, nachgewiesen
-durch Integrations-, System- und Abnahmetests.
+* Die zusätzlichen Unterstützung des alternativen Datenbankmanagementsystems
+ist mit weniger als 40 PT Aufwand durchführbar.
 * Die Laufzeiten der wichtigsten 15 Anwendungsfälle verschlechtert sich
 gegenüber der kommerziellen Datenbank um höchstens 15%.
 * Die Laufzeiten aller übrigen Anwendungsfälle verschlechtert sich
 gegenüber der kommerziellen Dankbank um höchstens 25%.
 
 
-
 ==== Szenario: Geschäftsprozess erweitern
-Der XY-Geschäftsprozess kann zur Laufzeit um zusätzlicher
+
+Der Geschäftsprozess XY kann zur Laufzeit um zusätzlicher
 Verarbeitungsschritte ergänzt werden
 
 [horizontal]
@@ -327,16 +358,18 @@ bearbeitet werden.
 Kontext:: Mehr als 20 Benutzer haben unvollständige Projekte (Daten) auf
 Basis des aktuellen XY-Prozesses gespeichert.
 
-Reaktion / Zielwert:: Das System aktualisiert selbständig und ohne
+Reaktion:: Das System aktualisiert selbständig und ohne
 Datenverlust die vorhandenen Daten der unvollständigen Projekte
-(automatische Migration der Benutzerspezifischen Daten auf die neue
+(automatische Migration der benutzerspezifischen Daten auf die neue
 Version von XY).
 
+Zielwert::
 Die Änderung des XY-Prozesses dauert nicht länger als 80 Personenstunden
 (Aufwand).
 
 
 ==== Szenario: Änderung am Geschäftsprozess
+
 Der einzelne Verarbeitungsschritt AB innerhalb des
 Anwendungsfalls XY wird von der Regulierungsbehörde für ungültig erklärt
 und im System entfernt. Die vom System bearbeiteten Daten sind nicht
@@ -351,20 +384,21 @@ Regulierungsbehörde, untersagt die Verwendung des Verarbeitungsschrittes
 AB.
 
 Reaktion:: Ein Entwickler oder Architekt entfernt im System den
-Verarbeitungsschritt AB (durch löschen der entsprechenden Aufrufe oder
+Verarbeitungsschritt AB (durch Löschen der entsprechenden Aufrufe oder
 durch Neukonfiguration der Prozessabläufe).
-
-Zielwert:: Die Änderung erfordert höchstens 24 Zeitstunden mit höchstens
-48 Personenstunden Aufwand. Nach dieser Zeit ist das System wieder
-völlig funktionsfähig.
-
++
 Diese Änderung hat keine Auswirkung auf die im System vorhandenen Daten
 der Anwender/Kunden bezüglich des XY-Anwendungsfalles. Eine
 (automatische) Migration einiger Daten ist zulässig, darf allerdings die
 24 Zeitstunden-Grenze nicht überschreiten.
 
+Zielwert:: Die Änderung erfordert höchstens 24 Zeitstunden mit höchstens
+48 Personenstunden Aufwand. Nach dieser Zeit ist das System wieder
+völlig funktionsfähig.
+
 
 ==== Szenario: Erweiterung um automatisierte Testsuite
+
 Erweitere das X-Subsystem um eine vollständig automatisierte
 Testsuite.
 
@@ -383,6 +417,7 @@ Zielwert:: Gesamtaufwand der Änderungen liegt unter 200 Personentagen.
 
 
 ==== Szenario: Neuer Typ von Client
+
 Erweitere das XY-System um einen mobilen Client (Android,
 iOS), ohne die Performance der übrigen GUI-Teile zu beeinträchtigen.
 
@@ -397,9 +432,10 @@ Produktportfolios.
 Reaktion:: Entwicklungsteam entwirft und implementiert mobile Clients
 für das XY-System sowie die dazu benötigte (Daten-)Schnittstelle.
 
-Zielwert:: - Die bisherigen (Browser- und Rich-)Clients werden in ihrer
-Performance in keiner Weise beeinträchtigt. - Bei 100 parallelen
-Browser-Benutzern und 100 gleichzeitig angemeldeten mobilen Clients
+Zielwert::
+- Die bisherigen (Browser- und Rich-)Clients werden in ihrer Funktion und
+Performance in keiner Weise beeinträchtigt.
+- Bei 100 parallelen Browser-Benutzern und 100 gleichzeitig angemeldeten mobilen Clients
 dürfen maximal 3% der Datenzugriffe maximal 20% mehr Zeit beanspruchen
 als vor der Einführung der mobilen Clients.
 
@@ -409,6 +445,7 @@ Attraktivität, Effizienz/Performance, Verfügbarkeit, Robustheit und
 
 
 ==== Szenario: Unabhängige Erweiterung eines Subsystems
+
 Erweiterungen oder Änderungen eines Subsystems sollen
 unabhängig von allen anderen Subsystemen möglich sein.
 

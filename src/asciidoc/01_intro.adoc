@@ -36,22 +36,26 @@ Sie eine umfangreiche Tabelle der Q-Merkmale mit ihren Synonymen und
 Oberbegriffen.
 
 === Formulierung von Szenarien
-Ein (Qualitäts-)Szenario beschreibt das _Verhalten_ (1) eines Systems (3)
-beim Eintreffen eines Events oder Stimulus (2).
+Ein (Qualitäts-)Szenario beschreibt die _Reaktion_ (1) eines _Systems_ (3)
+beim Eintreffen eines _Ereignisses oder Stimulus_ (2).
 
-==== (1) Verhalten eines System
-Das _Verhalten_ kann sich auf eine Software oder Hardware beziehen, oder
+==== (1) Reaktion eines System
+Die _Reaktion_ kann sich auf eine Software, Hardware oder einen Datenbestand, oder
 auch auf beteiligte Personen, Rollen oder Organisationen beziehen.
 
-Verhalten sollte in Szenarien immer _meß- oder entscheidbar_ formuliert werden.
+Die Reaktion des Systems und damit das resultierende Verhalten sollte in Szenarien immer _meß- oder entscheidbar_ formuliert werden.
 
-==== (2) Event oder Stimulus
+==== (2) Ereignis oder Stimulus
+Unterscheidung zwischen Nutzungsereignis und Änderungsereignis.
+
+===== Nutzungsereignis
 Ein Benutzer löst während der Arbeit mit dem System eine Funktion aus, etwa:
 
 * wählt einen Menüpunkt / eine Funktion aus
 * klickt einen Button einer grafischen Oberfläche
 * startet eine Verarbeitung
 
+===== Änderungsereignis
 Ein Stakeholder ändert etwas im System, etwa:
 
 * modifiziert Sourcecode oder Konfiguration des Systems
@@ -61,8 +65,8 @@ Ein Stakeholder ändert etwas im System, etwa:
 Ein Stakeholder ändert etwas an beteiligten Prozessen oder Organisationen.
 
 ==== (3) System
-Der Begriff "System" ist hier sehr breit gefasst: Dazu gehören Software,
-Software-Komponenten, beteiligte Hardware, Netze, Middleware, Datenbanken,
+Der Begriff _System_ ist hier sehr breit gefasst: Dazu gehören Software,
+Softwarekomponenten, beteiligte Hardware, Netze, Middleware, Datenbanken,
 aber auch sämtliche beteiligten Personen, Rollen oder Organisationen.
 
 
