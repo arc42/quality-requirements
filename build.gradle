@@ -67,7 +67,7 @@ asciidoctor {
   backends 'html5' , 'pdf' , 'docbook' //, 'epub3'
 
   attributes = [
-				'release-branch': 'master',
+				'release-branch': 'main',
         'outputFile': "$outputDir/quality-requirements.pdf",
 				'source-highlighter': 'coderay',
 				'tabsize': '4',
