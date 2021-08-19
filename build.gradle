@@ -110,5 +110,23 @@ the IntelliJ JetGradle environment.
 
 }
 
+task copyReleaseAssets(dependsOn: 'generateDocx', type: Copy) {
+    from(layout.buildDirectory) {
+        include '**/*.*'
+        exclude 'toArchive'
+    }
+    into layout.buildDirectory.dir("toArchive")
+}
+
+task createReleaseBundle( dependsOn: 'copyReleaseAssets', type: Zip) {
+    description =
+"""
+Create a ZIP file with all release assets.
+"""
+    archiveFileName = "${project.name}.zip"
+    destinationDirectory = layout.buildDirectory.dir('dist')
+    from layout.buildDirectory.dir("toArchive")
+}
+
 
 defaultTasks 'generateDocx'
