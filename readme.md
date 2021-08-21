@@ -1,4 +1,8 @@
 # Qualitätsanforderungen ![](icon.png)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/arc42/quality-requirements?style=plastic)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/arc42/quality-requirements/Java%20CI?style=plastic)
+![Issues](http://img.shields.io/github/issues/arc42/quality-requirements.svg?style=plastic)
+
 Hier finden Sie Beispiele von Qualitätsanforderungen an Software.
 
 Die Ideen zu den hier aufgeführten Szenarien und Qualitätsanforderungen stammen aus unterschiedlichen Quellen und Projekten. Ich habe alle überarbeitet und weitgehend neutralisiert. Die Erklärungen von Qualitätsmerkmalen stammen teilweise aus DIN/ISO 9126 und DIN/ISO 25010.
@@ -33,9 +37,6 @@ Siehe den [Issue-Tracker](https://github.com/arc42/quality-requirements/issues) 
 
 ## Feedback
 Ich freue mich über konstruktive Kritik und Verbesserungsvorschläge sowie Beiträge jeglicher Art :-) - in unserem [Issue-Tracker](https://github.com/arc42/quality-requirements/issues "issue-Tracker for arc42-quality-requirements on Github").
-
-## Status
-![Issues](http://img.shields.io/github/issues/arc42/quality-requirements.svg)
 
 ## Danke
 Alex Heusingfeld, Christoph Iserlohn, Roland Weisleder
