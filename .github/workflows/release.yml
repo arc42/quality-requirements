@@ -27,7 +27,7 @@ jobs:
         uses: gradle/wrapper-validation-action@v1
 
       - name: Build with Gradle
-        run: ./gradlew -Pversion=${GITHUB_REF##*/v} createReleaseBundle
+        run: ./gradlew -Pversion=${GITHUB_REF##*/v} createReleaseBundle prepareGithubPagesContent
 
       - name: create Github Release
         uses: docker://ghcr.io/anton-yurchenko/git-release:v4
@@ -41,3 +41,9 @@ jobs:
         with:
           args: |
             ./build/dist/quality-requirements.zip
+
+      - name: deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/gh-pages
