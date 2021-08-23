@@ -128,5 +128,13 @@ Create a ZIP file with all release assets.
     from layout.buildDirectory.dir("toArchive")
 }
 
+task prepareGithubPagesContent(dependsOn: 'generateDocx', type: Copy) {
+    from(layout.buildDirectory) {
+        include 'images/**/*.*'
+        include '*.html'
+    }
+    into layout.buildDirectory.dir("gh-pages")
+}
+
 
 defaultTasks 'generateDocx'
