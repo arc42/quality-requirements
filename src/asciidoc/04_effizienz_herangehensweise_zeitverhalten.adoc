@@ -1,0 +1,32 @@
+
+
+== Herangehensweise Zeitverhalten
+
+Zeitverhalten (Zeitverhalten) hat viele Facetten, von Webseiten, Mobile Apps, der Durchlauf von Batches oder von eingebetteten Systemen.
+
+=== Webseiten
+
+Was die Performance von Webseiten angeht, gibt es sehr viele Untersuchungen, welche Performance denn nun "gut" bzw. "schlecht" ist. Untersuchungen von Google sagen, dass 0-2,5 Sekunden Ladezeit bis eine Webseite den "Largest Contentful Paint" anzeigt, gut ist, bei 2,5 bis 4 Sekunden Verbesserung braucht und alles langsamer als 4 Sekunden schlecht ist. Google schaut hier auf das 75ste Perzentil.
+Bevor wir uns mit diesen Zahlen kritisch auseinandersetzen, müssen wir nun erstmal Begriffe klären:
+
+Der *Largest Contentful Paint - LCP -* (web.dev/lcp/) ist grob gesagt, das Gefühl des Nutzers, dass eine Webseite grundsätzlich geladen und nutzbar ist, weil der größte Block von Text und/oder Bild angezeigt wird. Eine detaillierte Erklärung mit Bilderfolge gibt es auf der LCP Webseite. Dort wird auch gezeigt, wie man LCP z.B. mit einem Chrome-Browser messen kann. Gängige Performance-Monitoring Tools wie z.B. Dynatrace oder Instana können das auch.
+
+Wenn man nun z.B. sagen würde, dass eine Produktdetailseite innerhalb von 2,5 Sekunden den LCP im 75sten Perzentil anzeigen soll, dann bedeutet das, dass von 100 Aufrufen der Produktdetailseite 75 Aufrufe innerhalb von 0 und 2,5 Sekunden liegen müssen und es OK ist, wenn 25 Aufrufe langsamer sind. Warum ist es in diesem Falle OK, wenn so viele Aufrufe langsamer sind? Wir als Entwickler haben nicht immer die Kontrolle über die Umgebung des Nutzers. Fährt dieser gerade durch einen Tunnel, dann ist der LCP sicher sehr langsam, dafür können wir nichts.
+
+Müssen jetzt alle Webseiten einer Anwendung im 75sten Perzentil schneller als 2,5 Sekunden sein? Nein, es kommt darauf an. Es gibt einen Ankereffekt bei der Nutzung von Webseiten, d.h. wir sind daran gewöhnt, dass gewisse Aktionen wie z.B. Zahlvorgänge länger dauern und seltener durchgeführt werden als andere, z.B. Produktdetailseiten. Daher kann ein Zahlvorgang ruhig auch mal 5 Sekunden dauern. Seiten, die oft aufgerufen werden wie z.B. Suche oder Produktdetails müssen aber zwingend schnell sein, also unter 2,5 Sekunden liegen. Wie ist das bei der Landingpage? Hier fällt auf, dass selbst Amazon.com mehr als 3,5 Sekunden braucht um den LCP aufzubauen. Das liegt daran, dass es auch immer einen Trade-Off gibt: will ich nur schnell sein oder auch attraktiv sein, z.B. viele schöne Bilder und personalisierte Empfehlungen anbieten? Wenn ja, dann darf eine oft aufgerufene Seite auch langsamer als 2,5 Sekunden sein.
+
+Wir müssen uns diese Anforderungen auch nicht für alle Seiten überlegen. Die wichtigsten Use Cases reichen erst einmal aus.
+
+Wir müssen also vorher überlegen:
+
+* Welche Use Cases müssen wir betrachten?
+* Welche Zeiten braucht der Nutzer um zufrieden zu sein? Müssen es 2,5 Sekunden sein, weil es oft aufgerufen wird bzw. weil Nutzer es wegen dem Ankereffekt erwarten? Oder sind auch 4 Sekunden akzeptabel?
+
+Um die Anforderungen einfach zu halten, sollten wir nicht mehr als 3 unterschiedliche Anforderungen definieren, d.h. dass wir uns z.B. auf "schnell" (= 2,5 Sekunden), mittel (= 4 Sekunden) und langsam (= 5,5 Sekunden) festlegen und nicht noch feingranularer werden.
+
+In Produktion kann man dann mit einer APM (Application Performance Monitoring) überwachen, ob diese Werte dann auch einigermaßen eingehalten werden. "Einigermaßen" weil niemand bei einer Verletzung von 100 Millisekunden direkt handeln wird, aber gesunder Menschenverstand hilft mögliche Abweichung entsprechend zu bewerten.
+
+Du hast kein Monitoring? Dann leg Dir eins zu. Das reicht von einfachen synthetischen Clients, die deine Webseite z.B. alle 5 Minuten aufrufen und den LCP messen bis hin zu Observability-Lösungen, die "alles" (Monitoring, Tracing, Logging, Alerting) anbieten.
+
+Beispiel-Szenario:
+Ein Nutzer aus Europa erhält nach dem Klick auf "Suchen" den LCP der Suchresultatseite innerhalb von 2,5 Sekunden im 75sten Perzentil angezeigt.
