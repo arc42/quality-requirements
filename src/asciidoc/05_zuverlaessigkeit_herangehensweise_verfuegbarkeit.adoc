@@ -1,0 +1,26 @@
+
+
+== Herangehensweise Verfügbarkeit bei Webanwendungen
+
+Verfügbarkeit ist als Anforderung notorisch schwer zu definieren. Eine gute Verfügbarkeit bedeutet, dass die Nutzer des Systems glücklich sind. Aber was soll das sein? 5 min Ausfall pro Jahr sind für die meisten Systeme absolut großartig, aber auch extrem schwer zu erreichen und damit auch extrem teuer. Ein System, welches 250 Tage im Jahr nicht verfügbar ist, macht z.B. nicht notwendigerweise deren Nutzer unglücklich. Stellt euch ein internes Verwaltungssystem für Lebensversicherungen vor. Es reicht, wenn das System Montag bis Freitag zu den normalen Arbeitszeiten, 7:00 bis 19:00, verfügbar ist und am Wochenende oder nachts nicht verfügbar. Bei einem Webshop, der rund um die Uhr auf allen Kontinenten Waren anbietet, sieht das schon ganz anders aus. Vor allem am Black Friday. Es kommt also auf das System an.
+
+Wir müssen also mit unseren Stakeholdern sprechen:
+
+* Welche Use Cases sind uns besonders wichtig? Für die wichtigsten Use Cases gelten die folgenden Fragen.
+* Zu welchen Zeiten soll das System laufen? Wann wird es am Tag oder in der Nacht genutzt?
+* Soll es jeden Tag laufen oder nur Mo-Fr? Vielleicht sogar nur zu gewissen Zeitpunkten.
+* Gibt es Zeiträume, wo Verfügbarkeit besonders wichtig ist? Bei Autoversicherungen ist es der November, bei Webshops für Karnevalsartikel der Januar und Februar und bei der Ampelsteuerung das ganze Jahr.
+* Wie teuer sind die Konsequenzen eines Ausfall? Nicht gemachter Umsatz? 10.000 Menschen können während des Ausfalls nicht arbeiten?
+* Zu den Zeitpunkten, wo das System laufen soll: wie viel Ausfall (in Minuten/Stunden/Tagen pro Jahr/Quartal/Monat) ist tolerabel? Kein System funktioniert zu 100%, nicht mal ein Herzschrittmacher.
+* Dann versuchen wir mit unseren Stakeholdern tolerable Ausfallzeiten zu definieren ("educated guess"), von denen wir glauben, dass die Nutzer diese auch tolerieren würden
+* Wir brauchen Feedbacksysteme um herauszufinden, ob die Nutzer auch wirklich  noch glücklich mit der Verfügbarkeit sind
+
+Nehmen wir als Beispiel einen Webshop, der innerhalb Deutschlands irgendwelche Dinge verkauft. Die wichtigsten Use Cases sind die (1) Suche, (2)die Produktdetailseite anzeigen, (3) Artikel in den Warenkorb legen und (4) der Bezahlvorgang. Das System soll 7 Tage die Woche von 7:00 bis 0:00 Uhr hochverfügbar sein. Ausfälle außerhalb dieser Zeiten sind akzeptabel. Was "hochverfügbar" bedeutet, werden wir noch definieren. Es gibt keinerlei besondere Zeiträume, währenddessen das System besonders verfügbar sein sollte. Ein Ausfall führt nicht notwendigerweise zu Umsatzeinbußen, die Kunden kommen einfach später nochmal. Fällt das System aber entweder sehr lange und/oder sehr oft aus, gibt es die Gefahr, dass Nutzer zu einem anderen Anbieter wechseln.
+
+Ein guter Startpunkt für sehr viele (Web-)Anwendungen, so auch unsere Beispielanwendung, sind 99,9% bis 99,95% Verfügbarkeit pro Use Case zu den Zeiten 7:00 bis 0:00 Uhr. Was bedeuten diese "Neuner"? 99,9% bedeuten knapp 9 Stunden Ausfall über das Jahr gesehen, 99,95% sind ca. 4,5 Stunden Ausfall pro Jahr. Mit diesen Zahlen kann sich normalerweise jedes "Business" anfreunden. Wir sollten versuchen, die Verfügbarkeitsanforderungen unserer Use Cases so einheitlich wie möglich zu definieren. Vielleicht ist es dem Kunden wichtiger, dass die Suche und Produktdetailseite funktioniert, als das der Bezahlvorgang geht. Ich will erstmal suchen und finden. Zu viele unterschiedliche Anforderungen sind allerdings verwirrend, daher
+
+Eine ausführliche Tabelle gibt es bei Wikipedia: https://en.wikipedia.org/wiki/High_availability. Kritische Infrastruktur bei Google erreicht z.B. 9,995% Verfügbarkeit, 24x7, also nicht mal 30 Minuten Ausfall pro Jahr. Das bedeutet u.a., dass auch ein Fehler um 3 Uhr morgens innerhalb von Sekunden gefunden, innerhalb von Minuten gefixt und deployt werden kann. Da niemand so schnell aufwachen kann, müssen Menschen in allen Zeitzonen diese Infrastrukturen betreiben.
+
+Wie finden wir nun heraus, ob unsere Anforderung gut war? Wir müssen die Nutzer fragen! Entweder haben wir direkte Möglichkeiten, z.B. im B2B Bereich. Im Consumerbereich müssen wir auch mit dem Marketing oder Sales zusammenarbeiten. Diese Abteilungen haben normalerweise gute Einblicke in Social Media, App Store Reviews oder Net Promoter Scores. Keine Nachrichten sind hier gute Nachrichten. Beschwert sich niemand, dann ist alles gut. Lob zur Verfügbarkeit kann man nicht erwarten. Gibt es allerdings Beschwerden, dann muss nachgebessert werden.
+
+Zudem müssen wir messen, wie verfügbar unsere Use Cases sind. Hier macht es keinen Sinn, die Verfügbarkeit der gesamten Anwendung anzuschauen. Viele Web-Anwendungen haben einfache, aber sehr oft auftretende Anfragen, z.B. um einen Teaser anzuzeigen. Diese einfachen Anfragen verwässern unsere Sicht auf die wichtigen Use Cases. Daher müssen wir unsere wichtigen Use Cases monitoren.
